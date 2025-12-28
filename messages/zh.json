@@ -1,0 +1,41 @@
+{
+    "nav": {
+        "home": "首頁",
+        "education": "教育背景",
+        "experience": "工作經歷",
+        "awards": "獲獎記錄",
+        "skills": "技能證照"
+    },
+    "hero": {
+        "title": "FinTech 愛好者 | 投資銀行分析師",
+        "summary": "專注於金融科技的國際經營與貿易學系學生，在投資銀行、創投及金融研究領域擁有豐富經驗，精通估值、併購分析及市場情報。",
+        "contact": {
+            "email": "電子郵件",
+            "linkedin": "領英",
+            "phone": "電話"
+        },
+        "scroll": "向下滾動查看更多"
+    },
+    "education": {
+        "title": "教育背景",
+        "subtitle": "商業與科技的學術基礎",
+        "achievements": "學術成就",
+        "courses": "核心課程"
+    },
+    "experience": {
+        "title": "專業經歷",
+        "subtitle": "金融、研究與投資銀行之旅"
+    },
+    "awards": {
+        "title": "獲獎與成就",
+        "subtitle": "競賽與研究的卓越表現"
+    },
+    "skills": {
+        "title": "技能與證照",
+        "subtitle": "技術專業知識與專業資格"
+    },
+    "footer": {
+        "copyright": "版權所有",
+        "builtWith": "使用 Next.js、Tailwind CSS 和 Framer Motion 構建"
+    }
+}

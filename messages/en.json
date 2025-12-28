@@ -1,0 +1,41 @@
+{
+    "nav": {
+        "home": "Home",
+        "education": "Education",
+        "experience": "Experience",
+        "awards": "Awards",
+        "skills": "Skills"
+    },
+    "hero": {
+        "title": "FinTech Enthusiast | Aspiring Investment Banking Analyst",
+        "summary": "An ambitious undergraduate specializing in International Business with a focus on FinTech, currently pursuing opportunities in the financial services industry. Experienced in investment banking, venture capital, and financial research with a strong foundation in valuation, M&A analysis, and market intelligence.",
+        "contact": {
+            "email": "Email",
+            "linkedin": "LinkedIn",
+            "phone": "Phone"
+        },
+        "scroll": "Scroll to explore"
+    },
+    "education": {
+        "title": "Education",
+        "subtitle": "Academic foundation in business and technology",
+        "achievements": "Achievements",
+        "courses": "Core Courses"
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "subtitle": "A journey through finance, research, and investment banking"
+    },
+    "awards": {
+        "title": "Awards & Achievements",
+        "subtitle": "Recognition for excellence in competition and research"
+    },
+    "skills": {
+        "title": "Skills & Certifications",
+        "subtitle": "Technical expertise and professional qualifications"
+    },
+    "footer": {
+        "copyright": "All rights reserved",
+        "builtWith": "Built with Next.js, Tailwind CSS, and Framer Motion"
+    }
+}
