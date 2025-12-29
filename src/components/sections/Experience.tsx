@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function ExperienceSection() {
     const { experience } = resumeData;
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
             <div className="container mx-auto max-w-6xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -45,33 +46,43 @@ export default function ExperienceSection() {
 
                                 {/* Content Card */}
                                 <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"} pl-8 md:pl-0`}>
-                                    <Card className="group hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-blue-500">
-                                        <CardHeader>
-                                            <div className="flex justify-between items-start mb-2">
-                                                <div className="flex-1">
-                                                    <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
-                                                        {exp.company}
-                                                    </h3>
-                                                    <p className="text-base font-semibold text-blue-600">
-                                                        {exp.role}
-                                                    </p>
+                                    <Link href={`/experience/${exp.id}`} className="block">
+                                        <Card className="group hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-blue-500 cursor-pointer">
+                                            <CardHeader>
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <div className="flex-1">
+                                                        <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
+                                                            {exp.company}
+                                                        </h3>
+                                                        <p className="text-base font-semibold text-blue-600">
+                                                            {exp.role}
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <p className="text-sm text-slate-500 font-medium">
-                                                {exp.startDate} - {exp.endDate}
-                                            </p>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <ul className="space-y-3">
-                                                {exp.description.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-2 text-slate-700">
-                                                        <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
-                                                        <span className="text-sm leading-relaxed">{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
+                                                <p className="text-sm text-slate-500 font-medium">
+                                                    {exp.startDate} - {exp.endDate}
+                                                </p>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <ul className="space-y-3 mb-4">
+                                                    {exp.description.map((item, i) => (
+                                                        <li key={i} className="flex items-start gap-2 text-slate-700">
+                                                            <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
+                                                            <span className="text-sm leading-relaxed">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+
+                                                {/* View Details Button */}
+                                                <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
+                                                    <span>查看詳細介紹</span>
+                                                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                    </svg>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    </Link>
                                 </div>
                             </motion.div>
                         ))}

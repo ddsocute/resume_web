@@ -34,6 +34,45 @@ export interface JobExperience {
     logoUrl?: string;
 }
 
+// Detailed Experience Types for Individual Pages
+export interface ExperienceMetric {
+    label: string;
+    value: string;
+    icon?: string;
+    description?: string;
+}
+
+export interface ExperienceAchievement {
+    title: string;
+    description: string;
+    impact?: string;
+    metrics?: string[];
+    category: "quantitative" | "qualitative" | "recognition";
+}
+
+export interface ExperienceProject {
+    id: string;
+    title: string;
+    description: string;
+    role: string;
+    technologies: string[];
+    deliverables: string[];
+    outcomes: string[];
+    timeline?: string;
+}
+
+export interface DetailedExperience extends JobExperience {
+    overview: string;
+    responsibilities: string[];
+    keyAchievements: ExperienceAchievement[];
+    projects: ExperienceProject[];
+    skills: string[];
+    metrics: ExperienceMetric[];
+    companyDescription?: string;
+    department?: string;
+    teamSize?: string;
+}
+
 export interface Project {
     id: string;
     title: string;
