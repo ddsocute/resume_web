@@ -54,5 +54,5 @@ export default async function AwardsPage({ params }: PageProps) {
         notFound();
     }
 
-    return <DetailedExperiencePage experience={award} />;
+    return <DetailedExperiencePage experience={award} locale={locale} />;
 }

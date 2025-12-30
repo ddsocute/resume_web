@@ -56,5 +56,5 @@ export default async function ExtracurricularPage({ params }: PageProps) {
         notFound();
     }
 
-    return <DetailedExperiencePage experience={experience} />;
+    return <DetailedExperiencePage experience={experience} locale={locale} />;
 }

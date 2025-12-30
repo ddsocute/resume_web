@@ -56,6 +56,6 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
         notFound();
     }
 
-    return <DetailedExperiencePage experience={experience} />;
+    return <DetailedExperiencePage experience={experience} locale={locale} />;
 }
 // Force rebuild
