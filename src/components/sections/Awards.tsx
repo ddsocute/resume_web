@@ -51,7 +51,7 @@ export default function AwardsSection() {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <Link
-                                    href={`/${locale}/awards/${award.id}`}
+                                    href={`/${locale}/awards/${id}`}
                                     className="block group h-full"
                                 >
                                     <div className="h-full border border-gray-200 bg-white p-6 hover:border-[#0A192F] transition-colors duration-300 flex flex-col">
