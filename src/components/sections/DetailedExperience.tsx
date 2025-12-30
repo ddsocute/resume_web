@@ -70,8 +70,8 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
             <main className="container mx-auto px-6 lg:px-12 pt-32 pb-24">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
-                    {/* Left Column: Meta Info (Sticky Sidebar - 3 Columns) */}
-                    <div className="lg:col-span-3 lg:sticky lg:top-32 lg:self-start space-y-8 h-fit border-r border-gray-100 pr-0 lg:pr-8">
+                    {/* Left Column: Meta Info (Sticky Sidebar - 4 Columns) */}
+                    <div className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start space-y-8 h-fit border-r border-gray-100 pr-0 lg:pr-8">
                         {/* Logo */}
                         <div className="relative w-24 h-24 border border-gray-100 bg-white p-2 mb-6">
                             {logoSrc ? (
@@ -152,8 +152,8 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         )}
                     </div>
 
-                    {/* Right Column: Main Content (Scrollable - 9 Columns) */}
-                    <div className="lg:col-span-9 pl-0 lg:pl-4">
+                    {/* Right Column: Main Content (Scrollable - 8 Columns) */}
+                    <div className="lg:col-span-8 pl-0 lg:pl-4">
 
                         {/* Section 1: Overview */}
                         <section className="mb-16 pb-12 border-b border-gray-100">
