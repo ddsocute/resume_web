@@ -34,17 +34,17 @@ export default function AwardsSection() {
                 </motion.div>
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {awards.map((award, index) => {
-                        const itemKey = `items.${award.id}`;
+                    {awards.map((id, index) => {
+                        const itemKey = `items.${id}`;
                         const title = t(`${itemKey}.title`);
                         const organization = t(`${itemKey}.organization`);
                         const rank = t(`${itemKey}.rank`);
                         const achievement = t(`${itemKey}.achievement`);
-                        const logoSrc = LOGO_MAP[award.id];
+                        const logoSrc = LOGO_MAP[id];
 
                         return (
                             <motion.div
-                                key={award.id}
+                                key={id}
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

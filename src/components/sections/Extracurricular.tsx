@@ -13,7 +13,7 @@ const LOGO_MAP: Record<string, string> = {
 };
 
 export default function ExtracurricularSection() {
-    const { extracurricular } = resumeData;
+    const { extracurriculars } = resumeData;
     const t = useTranslations("extracurricular");
     const locale = useLocale();
 
@@ -35,7 +35,7 @@ export default function ExtracurricularSection() {
 
                 {/* List Items (similar to Experience) */}
                 <div className="space-y-12">
-                    {extracurricular.map((id, index) => {
+                    {extracurriculars.map((id, index) => {
                         const itemKey = `items.${id}`;
                         const companyName = t(`${itemKey}.company`);
                         const role = t(`${itemKey}.role`);
@@ -114,7 +114,7 @@ export default function ExtracurricularSection() {
                                     </div>
                                 </Link>
                                 {/* Separator */}
-                                {index < extracurricular.length - 1 && (
+                                {index < extracurriculars.length - 1 && (
                                     <div className="h-px bg-gray-200 mt-12 w-full"></div>
                                 )}
                             </motion.div>

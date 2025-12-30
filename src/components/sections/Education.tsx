@@ -30,20 +30,20 @@ export default function EducationSection() {
                 </motion.div>
 
                 <div className="space-y-12">
-                    {education.map((edu, index) => {
-                        const itemKey = `items.${edu.id}`;
+                    {education.map((id, index) => {
+                        const itemKey = `items.${id}`;
                         const school = t(`${itemKey}.school`);
                         const degree = t(`${itemKey}.degree`);
                         const program = t(`${itemKey}.program`);
                         const date = t(`${itemKey}.date`);
-                        const logoSrc = LOGO_MAP[edu.id];
+                        const logoSrc = LOGO_MAP[id];
 
                         const achievements = t.raw(`${itemKey}.achievements`) as string[];
                         const courses = t.raw(`${itemKey}.courses`) as string[];
 
                         return (
                             <motion.div
-                                key={edu.id}
+                                key={id}
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
