@@ -66,7 +66,7 @@ export default function PDFViewer({ files }: PDFViewerProps) {
             </div>
 
             {/* Viewer Stage */}
-            <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-gray-100">
+            <div className="relative w-full h-[600px] md:h-[800px] bg-gray-100">
                 <iframe
                     src={`${activeFile.url}#toolbar=0&navpanes=0&scrollbar=0`}
                     className="absolute inset-0 w-full h-full border-0"
