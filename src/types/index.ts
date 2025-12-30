@@ -64,6 +64,7 @@ export interface ExperienceProject {
 export interface DetailedExperience extends JobExperience {
     overview: string;
     responsibilities: string[];
+    insights?: string; // New field for "心得見解"
     keyAchievements: ExperienceAchievement[];
     projects: ExperienceProject[];
     skills: string[];

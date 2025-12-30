@@ -187,6 +187,11 @@
         "coreAchievements": "核心成就",
         "keyProjects": "重點專案",
         "skillsAndTools": "技能與工具",
+        "timeline": "時程",
+        "location": "地點",
+        "department": "部門",
+        "insights": "心得見解",
+        "deliverables": "核心產出",
         "backToHome": "返回首頁",
         "breadcrumbs": {
             "home": "首頁",

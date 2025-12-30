@@ -187,6 +187,11 @@
         "coreAchievements": "Core Achievements",
         "keyProjects": "Key Projects",
         "skillsAndTools": "Skills & Tools",
+        "timeline": "Timeline",
+        "location": "Location",
+        "department": "Department",
+        "insights": "Insights & Reflections",
+        "deliverables": "Key Deliverables",
         "backToHome": "Back to Home",
         "breadcrumbs": {
             "home": "Home",

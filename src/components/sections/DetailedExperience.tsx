@@ -4,14 +4,11 @@ import { motion } from "framer-motion";
 import { DetailedExperience } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import MetricsCard from "@/components/ui/MetricsCard";
-import ProjectShowcase from "@/components/ui/ProjectShowcase";
-import AchievementsList from "@/components/ui/AchievementsList";
 import { useTranslations } from "next-intl";
 
 interface DetailedExperiencePageProps {
     experience: DetailedExperience;
+    locale: string;
 }
 
 // Map IDs to Logos
@@ -32,225 +29,204 @@ const LOGO_MAP: Record<string, string> = {
     "mbs-2024": "/images/awards/mbs.webp"
 };
 
-export default function DetailedExperiencePage({ experience }: DetailedExperiencePageProps) {
+export default function DetailedExperiencePage({ experience, locale }: DetailedExperiencePageProps) {
     const t = useTranslations("detailedExperience");
     const logoSrc = LOGO_MAP[experience.id];
 
     return (
-        <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
-            {/* Navigation / Breadcrumbs */}
-            <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm backdrop-blur-md bg-white/90">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <Breadcrumbs
-                        items={[
-                            { label: t("breadcrumbs.home"), href: "/" },
-                            { label: t("breadcrumbs.experience"), href: "/#experience" },
-                            { label: experience.company, href: "#" }
-                        ]}
-                    />
+        <div className="min-h-screen bg-white font-sans text-[#333333] selection:bg-gray-200 selection:text-black">
+            {/* Top Navigation - Minimal */}
+            <div className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 py-4">
+                <div className="container mx-auto px-6 lg:px-12">
+                    <Link
+                        href={`/${locale}/#experience`}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-black transition-colors"
+                    >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        {t("backToHome")}
+                    </Link>
                 </div>
             </div>
 
-            {/* Hero Section */}
-            <section className="bg-[#0A192F] text-white py-24">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }} // Reduced y offset
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:items-center"
-                    >
-                        {/* Logo - Square, No Rounding */}
-                        <div className="flex-shrink-0">
-                            <div className="relative w-24 h-24 md:w-32 md:h-32 bg-white p-2">
-                                {logoSrc ? (
-                                    <Image
-                                        src={logoSrc}
-                                        alt={experience.company}
-                                        fill
-                                        className="object-contain"
-                                    />
-                                ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-4xl font-serif font-bold text-gray-300">
-                                        {experience.company.charAt(0)}
-                                    </div>
-                                )}
-                            </div>
-                        </div>
+            <main className="container mx-auto px-6 lg:px-12 pt-32 pb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
-                        {/* Text Content */}
-                        <div className="flex-1 text-center md:text-left">
-                            <h1 className="text-4xl md:text-5xl font-serif font-medium text-white mb-4 tracking-wide">
-                                {experience.company}
-                            </h1>
-                            <h2 className="text-xl md:text-2xl font-sans font-light text-gray-300 mb-6 uppercase tracking-widest">
-                                {experience.role}
-                            </h2>
-
-                            <div className="flex flex-wrap justify-center md:justify-start gap-y-2 gap-x-8 text-sm md:text-base text-gray-400 font-sans tracking-wide">
-                                <div className="flex items-center gap-2">
-                                    <span>{experience.startDate} - {experience.endDate}</span>
+                    {/* Left Column: Meta Info (Narrower) */}
+                    <div className="lg:col-span-4 space-y-8">
+                        {/* Logo */}
+                        <div className="relative w-24 h-24 border border-gray-100 bg-white p-2">
+                            {logoSrc ? (
+                                <Image
+                                    src={logoSrc}
+                                    alt={experience.company}
+                                    fill
+                                    className="object-contain p-1"
+                                />
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center bg-gray-50 text-3xl font-serif font-medium text-gray-400">
+                                    {experience.company.charAt(0)}
                                 </div>
-                                {experience.location && (
-                                    <div className="flex items-center gap-2">
-                                        <span>{experience.location}</span>
-                                    </div>
-                                )}
-                                {experience.department && (
-                                    <div className="flex items-center gap-2">
-                                        <span>{experience.department}</span>
-                                    </div>
-                                )}
+                            )}
+                        </div>
+
+                        {/* Title & Company */}
+                        <div>
+                            <h1 className="text-2xl font-serif font-medium text-black leading-tight mb-2">
+                                {experience.role}
+                            </h1>
+                            <div className="text-lg text-gray-600 font-medium">
+                                {experience.company}
                             </div>
                         </div>
-                    </motion.div>
-                </div>
-            </section>
 
-            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="max-w-5xl mx-auto space-y-16">
-
-                    {/* Overview & Company Description */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-                    >
-                        {/* Description Card */}
-                        <div className="lg:col-span-2 space-y-8">
-                            {/* Overview */}
-                            <div className="mb-10">
-                                <h3 className="text-lg font-serif font-medium text-[#0A192F] mb-4 uppercase tracking-widest border-b border-gray-200 pb-2">
-                                    {t("overview")}
+                        {/* Meta Data */}
+                        <div className="space-y-4 pt-4 border-t border-gray-100">
+                            <div>
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                    {t("timeline")}
                                 </h3>
-                                <p className="text-[#333333] leading-7 text-base font-sans">
-                                    {experience.overview}
+                                <p className="font-mono text-sm text-gray-700">
+                                    {experience.startDate} — {experience.endDate}
                                 </p>
                             </div>
 
-                            {/* Responsibilities */}
-                            {experience.responsibilities && experience.responsibilities.length > 0 && (
-                                <div className="mb-10">
-                                    <h3 className="text-lg font-serif font-medium text-[#0A192F] mb-4 uppercase tracking-widest border-b border-gray-200 pb-2">
-                                        {t("responsibilities")}
+                            {experience.location && (
+                                <div>
+                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                        {t("location")}
                                     </h3>
-                                    <ul className="space-y-3">
-                                        {experience.responsibilities.map((resp, index) => (
-                                            <li key={index} className="flex gap-4 items-start">
-                                                <span className="flex-shrink-0 w-6 h-6 border border-[#0A192F] text-[#0A192F] text-xs font-bold flex items-center justify-center mt-0.5">
-                                                    {index + 1}
-                                                </span>
-                                                <span className="text-[#4B5563] leading-relaxed text-sm font-sans">{resp}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Sidebar: Metrics & Skills */}
-                        <div className="lg:col-span-1 space-y-8">
-                            {/* Skills */}
-                            {experience.skills && experience.skills.length > 0 && (
-                                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                                    <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
-                                        {t("skillsAndTools")}
-                                    </h3>
-                                    <div className="flex flex-wrap gap-2">
-                                        {experience.skills.map((skill, index) => (
-                                            <span
-                                                key={index}
-                                                className="px-3 py-1.5 rounded-md bg-gray-50 text-gray-700 text-sm font-medium border border-gray-100"
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
+                                    <p className="text-sm text-gray-700">
+                                        {experience.location}
+                                    </p>
                                 </div>
                             )}
 
-                            {/* About Company */}
-                            {experience.companyDescription && (
-                                <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                                    <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
-                                        {t("aboutCompany")}
+                            {experience.department && (
+                                <div>
+                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                        {t("department")}
                                     </h3>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        {experience.companyDescription}
+                                    <p className="text-sm text-gray-700">
+                                        {experience.department}
                                     </p>
                                 </div>
                             )}
                         </div>
-                    </motion.div>
 
-                    {/* Metrics Section */}
-                    {experience.metrics && experience.metrics.length > 0 && (
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-8 text-center">
-                                {t("keyMetrics")}
-                            </h2>
-                            <div className="bg-white rounded-2xl p-2 shadow-sm border border-gray-100">
-                                <MetricsCard metrics={experience.metrics} />
+                        {/* Skills / Tools */}
+                        {experience.skills && experience.skills.length > 0 && (
+                            <div className="pt-4 border-t border-gray-100">
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                                    {t("skillsAndTools")}
+                                </h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {experience.skills.map((skill, index) => (
+                                        <span
+                                            key={index}
+                                            className="px-2 py-1 bg-gray-50 text-gray-600 text-xs border border-gray-100"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        </motion.section>
-                    )}
-
-                    {/* Key Achievements */}
-                    {experience.keyAchievements && experience.keyAchievements.length > 0 && (
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <div className="flex items-center gap-4 mb-8">
-                                <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900">
-                                    {t("coreAchievements")}
-                                </h2>
-                                <div className="h-px bg-gray-200 flex-1"></div>
-                            </div>
-                            <AchievementsList achievements={experience.keyAchievements} />
-                        </motion.section>
-                    )}
-
-                    {/* Projects */}
-                    {experience.projects && experience.projects.length > 0 && (
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <div className="flex items-center gap-4 mb-8">
-                                <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900">
-                                    {t("keyProjects")}
-                                </h2>
-                                <div className="h-px bg-gray-200 flex-1"></div>
-                            </div>
-                            <ProjectShowcase projects={experience.projects} />
-                        </motion.section>
-                    )}
-
-                    {/* Footer Nav */}
-                    <div className="pt-12 text-center">
-                        <Link
-                            href="/"
-                            className="inline-flex items-center gap-2 text-gray-500 hover:text-blue-600 font-medium transition-colors"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            {t("backToHome")}
-                        </Link>
+                        )}
                     </div>
 
+                    {/* Right Column: Main Content (Wider) */}
+                    <div className="lg:col-span-8 space-y-16">
+
+                        {/* Section 1: Overview */}
+                        <section>
+                            <h2 className="font-serif text-2xl font-medium text-black mb-6 pb-2 border-b border-gray-200">
+                                {t("overview")}
+                            </h2>
+                            <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
+                                {experience.overview}
+                            </p>
+                        </section>
+
+                        {/* Section 2: Detailed Responsibilities */}
+                        {experience.responsibilities && experience.responsibilities.length > 0 && (
+                            <section>
+                                <h2 className="font-serif text-2xl font-medium text-black mb-6 pb-2 border-b border-gray-200">
+                                    {t("responsibilities")}
+                                </h2>
+                                <ul className="space-y-4">
+                                    {experience.responsibilities.map((resp, index) => (
+                                        <li key={index} className="flex gap-4 items-start group">
+                                            <span className="font-mono text-xs text-gray-400 mt-1.5 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                {(index + 1).toString().padStart(2, '0')}
+                                            </span>
+                                            <span className="text-gray-700 leading-relaxed text-base">
+                                                {resp}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        {/* Section 3: Insights (New) */}
+                        {experience.insights && (
+                            <section className="bg-gray-50 p-8 border-l-2 border-[#0A192F]">
+                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                                    {t("insights")}
+                                </h2>
+                                <p className="text-gray-700 leading-relaxed text-base italic">
+                                    &ldquo;{experience.insights}&rdquo;
+                                </p>
+                            </section>
+                        )}
+
+                        {/* Section 4: Projects (Minimalist) */}
+                        {experience.projects && experience.projects.length > 0 && (
+                            <section>
+                                <h2 className="font-serif text-2xl font-medium text-black mb-8 pb-2 border-b border-gray-200">
+                                    {t("keyProjects")}
+                                </h2>
+                                <div className="grid gap-8">
+                                    {experience.projects.map((project) => (
+                                        <div key={project.id} className="border border-gray-200 p-6 hover:border-[#0A192F] transition-colors duration-300">
+                                            <div className="flex justify-between items-start mb-4">
+                                                <h3 className="font-serif text-xl font-medium text-black">
+                                                    {project.title}
+                                                </h3>
+                                                {project.timeline && (
+                                                    <span className="font-mono text-xs text-gray-400 bg-gray-50 px-2 py-1">
+                                                        {project.timeline}
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <p className="text-gray-600 mb-6 leading-relaxed">
+                                                {project.description}
+                                            </p>
+
+                                            {/* Deliverables */}
+                                            {project.deliverables && project.deliverables.length > 0 && (
+                                                <div className="space-y-2">
+                                                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                                        {t("deliverables")}
+                                                    </h4>
+                                                    <ul className="text-sm text-gray-600 space-y-1">
+                                                        {project.deliverables.map((item, i) => (
+                                                            <li key={i} className="flex items-center gap-2">
+                                                                <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+                                                                {item}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+
+                    </div>
                 </div>
             </main>
         </div>

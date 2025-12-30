@@ -11,6 +11,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Strategic Investment Department",
         companyDescription: "O-Bank is a leading digital bank in Taiwan, focusing on FinTech innovation and strategic investments, committed to driving the digital transformation of Taiwan's financial industry.",
         overview: "As a Strategy Investment Intern, I am deeply involved in investment evaluation, market research, and M&A support. I am responsible for initial screening and analysis of potential deals and have independently completed multiple board-level research reports. I provide key data support for investment decisions through rigorous financial analysis and market insights.",
+        insights: "My internship at O-Bank provided deep insights into how financial institutions evaluate emerging tech investments. Through hands-on DD and writing Investment Memos, I honed both hard skills (financial modeling, market analysis) and strategic thinking. The Stablecoin project taught me how to translate complex tech concepts into actionable business insights, crucial for my future in FinTech.",
         description: [], // Not used in detailed view main text usually, but good to keep
         responsibilities: [
             "Conducted preliminary Due Diligence on potential investment targets, including business model analysis, financial health assessment, and market positioning research",
@@ -157,6 +158,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Investment Banking Department",
         companyDescription: "Huatai United Securities is a leading comprehensive securities company in China, providing full capital market services including IPOs, M&A, and bond issuance.",
         overview: "Deeply involved in the BSE IPO of a lithium battery manufacturer, responsible for DD, data verification, and prospectus drafting. Audited over 20,000 invoices and processed 1.2M+ data records. Independently completed case studies on key issues.",
+        insights: "The high-intensity environment at Huatai United Securities immersed me in top-tier investment banking operations. Handling massive data and executing IPO DD instilled in me extreme rigor and data sensitivity. Solving complex cross-border verification challenges taught me that in capital markets, details often determine success, and professional skepticism is key to deal quality.",
         description: [],
         responsibilities: [
             "Assisted in BSE IPO execution for a lithium battery manufacturer, participating in DD and document preparation",
@@ -289,6 +291,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Research Division VI",
         companyDescription: "TIER is a premier think tank in Taiwan, focusing on macroeconomic, industry, and policy research.",
         overview: "Focused on deep research of Taiwan's startup ecosystem, maintaining a database of 3,000+ companies. Participated in geopolitical projects analyzing the India-Pakistan conflict; findings were included in final reports.",
+        insights: "Interning at TIER broadened my macroeconomic perspective. Transitioning from an observer to a researcher producing policy recommendations, I learned to distill key industry drivers from geopolitical and economic data. This experience strengthened my logical reasoning and ability to construct data-driven arguments.",
         description: [],
         responsibilities: [
             "Researched Taiwan's startup ecosystem, tracking funding, business development, and trends",
@@ -407,6 +410,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Equity Research Dept",
         companyDescription: "TMBA is a top student financial club at NTU, focusing on equity research and investment education.",
         overview: "Conducted valuation analysis on Sheng Yang Semiconductor (8028.TW) and produced a full investment report. Also participated in advanced semiconductor process industry research.",
+        insights: "TMBA's rigorous training was pivotal in establishing my equity research framework. From modeling to report writing, I mastered core Sell-side analyst skills. In semiconductor research, I learned to connect upstream/downstream insights to form independent investment theses. This cemented my passion for professional investment research.",
         description: [],
         responsibilities: [
             "Executed full research on 8028.TW, including business analysis and modeling",
@@ -520,6 +524,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Research Dept",
         companyDescription: "NCCU MF Club is a premier finance club focusing on fund research and portfolio management.",
         overview: "Constructed simulated portfolios using Top-Down analysis. Deeply researched Power, Semi, and EV industries. Won 3rd place in final project competition.",
+        insights: "Practicing Top-Down portfolio construction highlighted the importance of macroeconomics in asset allocation. In team competitions, I learned to integrate diverse views (Power, Semi, EV) into logical investment strategies. This experience expanded my research breadth and taught me that successful investing often comes from critical thinking against market consensus.",
         description: [],
         responsibilities: [
             "Executed Top-Down macro analysis for portfolio construction",
@@ -659,6 +664,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         department: "Marketing Dept",
         companyDescription: "NCCU MF Club is a premier finance club educating investment talent.",
         overview: "As Marketing Strategy Director, managed social platforms with 6,300+ followers. Converted technical content into engaging visuals. Led organization of two major showcase events and controlled presentation quality.",
+        insights: "Serving as Marketing Strategy Director transformed me from an analyst to a brand manager. I learned to translate dense financial concepts into engaging social content, similar to pitching ideas to investors. Leading a team and organizing major events honed my project management and communication skills—soft skills vital for my future finance career.",
         description: [],
         responsibilities: [
             "Developed annual brand strategy",
