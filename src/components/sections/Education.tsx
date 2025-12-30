@@ -43,8 +43,9 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                         const date = t(`${itemKey}.date`);
                         const logoSrc = LOGO_MAP[id];
 
-                        const achievements = t.raw(`${itemKey}.achievements`) as string[];
                         const courses = t.raw(`${itemKey}.courses`) as string[];
+                        const paperSummary = t(`${itemKey}.paperSummary`);
+                        const projectSummary = t(`${itemKey}.projectSummary`);
 
                         return (
                             <motion.div
@@ -111,7 +112,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                         title={t("paperTitle")}
                                         company="KAP: MLLM-assisted OCR Text Enhancement"
                                         date="2025"
-                                        summary={achievements[0]?.split(' - ')[0] || "Presented at 18th NTCIR Conference"}
+                                        summary={paperSummary}
                                         link={`/${locale}/education/nccu-academic-2025`}
                                         linkText={t("viewPaper")}
                                         logo="/images/awards/ntcir.png"
@@ -120,7 +121,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                         title={t("projectTitle")}
                                         company="E.SUN Bank M&A Strategy"
                                         date="2024 Fall - 2025 Spring"
-                                        summary={achievements[1]?.split('：')[1] || "Strategy Lead for simulated M&A transaction"}
+                                        summary={projectSummary}
                                         link={`/${locale}/education/nccu-ma-project-2025`}
                                         linkText={t("viewCaseStudy")}
                                         logo="/images/companies/esun_logo.png"
