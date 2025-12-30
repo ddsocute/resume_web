@@ -68,6 +68,16 @@
                     "Industry Research: Conducted industry research on advanced semiconductor manufacturing processes, covering industry overview, technology introduction, industry momentum, and stock recommendations"
                 ]
             },
+            "nccu-ambassador-2024": {
+                "company": "NCCU Commerce Career Ambassador",
+                "role": "Marketing Department Member",
+                "date": "Sep. 2023 – Jun. 2024",
+                "description": [
+                    "Event Planning: Contributed to the planning and execution of two large-scale student recruitment events: the 'Shui An Shang Ren Experience Camp' for high school students and the 'Elite Seed Camp' for university students",
+                    "Design: Designed and produced over 10 distinct promotional materials for three major college-level events, enhancing event visibility and participation",
+                    "Social Media: Assisted in the day-to-day management of the organization's official Instagram and Facebook pages, engaging with a community of several thousand followers"
+                ]
+            },
             "mf-club-2024-member": {
                 "company": "9th NCCU Mutual Fund Club",
                 "role": "Research Analyst",
@@ -86,6 +96,15 @@
                 "description": [
                     "Brand Strategy: Managed social media platforms with over 6,300 followers, converting course and activity content into graphics and text to strengthen the club's brand image",
                     "Project Management: Coordinated cross-departmental organization of mid-term and final large-scale achievement presentations and led quality control of project presentations"
+                ]
+            },
+            "tmba-2023-algo": {
+                "company": "TMBA – Taiwan",
+                "role": "Algorithm Trading Department Project Member",
+                "date": "Jul. 2023 – Aug. 2023",
+                "description": [
+                    "Algo Trading: Developed a quantitative trading project using Python, based on a Bollinger Bands strategy for Taiwan Index Futures",
+                    "Strategy Implementation: Covered data preparation, setting entry and exit conditions, performing backtesting, and conducting parameter optimization"
                 ]
             }
         }
