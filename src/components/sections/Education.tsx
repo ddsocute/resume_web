@@ -123,28 +123,26 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                 </div>
 
                                 {/* Featured Projects / Achievements using ExperienceCard */}
-                                {id === 'nccu-2022' && (
-                                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <ExperienceCard
-                                            title="KAP: MLLM-assisted OCR Text Enhancement"
-                                            company="NTCIR-18 Conference (Tokyo)"
-                                            date="2025"
-                                            summary={achievements[0]?.split(' - ')[0] || "Presented at 18th NTCIR Conference"}
-                                            link={`/${locale}/education/nccu-academic-2025`}
-                                            linkText={t("viewPaper")}
-                                            logo="/images/awards/ntcir.png"
-                                        />
-                                        <ExperienceCard
-                                            title="E.SUN Bank M&A Strategy"
-                                            company="M&A Case Study Project"
-                                            date="2024 Fall - 2025 Spring"
-                                            summary={achievements[1]?.split('：')[1] || "Strategy Lead for simulated M&A transaction"}
-                                            link={`/${locale}/education/nccu-ma-project-2025`}
-                                            linkText={t("viewCaseStudy")}
-                                            logo="/images/companies/esun_logo.png"
-                                        />
-                                    </div>
-                                )}
+                                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <ExperienceCard
+                                        title={t("paperTitle")}
+                                        company="KAP: MLLM-assisted OCR Text Enhancement"
+                                        date="2025"
+                                        summary={achievements[0]?.split(' - ')[0] || "Presented at 18th NTCIR Conference"}
+                                        link={`/${locale}/education/nccu-academic-2025`}
+                                        linkText={t("viewPaper")}
+                                        logo="/images/awards/ntcir.png"
+                                    />
+                                    <ExperienceCard
+                                        title={t("projectTitle")}
+                                        company="E.SUN Bank M&A Strategy"
+                                        date="2024 Fall - 2025 Spring"
+                                        summary={achievements[1]?.split('：')[1] || "Strategy Lead for simulated M&A transaction"}
+                                        link={`/${locale}/education/nccu-ma-project-2025`}
+                                        linkText={t("viewCaseStudy")}
+                                        logo="/images/companies/esun_logo.png"
+                                    />
+                                </div>
                             </motion.div>
                         );
                     })}

@@ -115,6 +115,8 @@
         "courses": "修習課程",
         "viewPaper": "查看論文",
         "viewCaseStudy": "查看個案",
+        "paperTitle": "學術論文",
+        "projectTitle": "課堂專案",
         "items": {
             "nccu-2022": {
                 "school": "國立政治大學",

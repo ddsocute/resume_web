@@ -115,6 +115,8 @@
         "courses": "Core Courses",
         "viewPaper": "View Paper",
         "viewCaseStudy": "View Case Study",
+        "paperTitle": "Academic Paper",
+        "projectTitle": "Course Project",
         "items": {
             "nccu-2022": {
                 "school": "National Chengchi University",
