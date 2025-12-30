@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { DetailedExperience } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 interface DetailedExperiencePageProps {
     experience: DetailedExperience;
@@ -34,6 +35,19 @@ const LOGO_MAP: Record<string, string> = {
 export default function DetailedExperiencePage({ experience, locale }: DetailedExperiencePageProps) {
     const t = useTranslations("detailedExperience");
     const logoSrc = LOGO_MAP[experience.id] || experience.logoUrl;
+
+    // Image Slider State
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const nextImage = () => {
+        if (!experience.images) return;
+        setCurrentImageIndex((prev) => (prev + 1) % experience.images!.length);
+    };
+
+    const prevImage = () => {
+        if (!experience.images) return;
+        setCurrentImageIndex((prev) => (prev - 1 + experience.images!.length) % experience.images!.length);
+    };
 
     return (
         <div className="min-h-screen bg-white font-sans text-[#333333] selection:bg-gray-200 selection:text-black">
@@ -185,7 +199,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                             </section>
                         )}
 
-                        {/* Section 4: Project Files (New Block A) */}
+                        {/* Section A: Professional Project Files (Files) */}
                         {experience.files && experience.files.length > 0 && (
                             <section className="mb-12 pb-12 border-b border-gray-100">
                                 <h2 className="font-serif text-2xl font-medium text-black mb-6">
@@ -193,101 +207,136 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                 </h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {experience.files.map((file, idx) => (
-                                        <div key={idx} className="border border-gray-200 p-4 flex items-center justify-between hover:border-gray-400 transition-colors bg-white">
-                                            <div className="flex items-center gap-3 overflow-hidden">
-                                                <div className="w-10 h-10 bg-gray-50 flex items-center justify-center text-gray-400 shrink-0">
+                                        <div key={idx} className="border border-gray-200 p-5 flex flex-col justify-between hover:border-gray-400 transition-colors bg-white h-full">
+                                            <div className="flex items-start gap-4 mb-4">
+                                                <div className="w-10 h-10 bg-gray-50 flex items-center justify-center text-gray-400 shrink-0 border border-gray-100">
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                                     </svg>
                                                 </div>
-                                                <div className="min-w-0">
-                                                    <h4 className="font-medium text-sm text-black truncate">{file.name}</h4>
-                                                    <p className="text-xs text-gray-500 uppercase tracking-wider">{file.type || "DOC"}</p>
+                                                <div>
+                                                    <h4 className="font-medium text-base text-black mb-1 leading-snug">{file.title}</h4>
+                                                    <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{file.description}</p>
                                                 </div>
                                             </div>
-                                            <a
-                                                href={file.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="p-2 text-gray-400 hover:text-black transition-colors"
-                                            >
-                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                            </a>
+                                            <div className="flex items-center justify-between pt-4 border-t border-gray-50">
+                                                <span className="text-xs font-mono text-gray-400 uppercase">
+                                                    {file.type || "PDF"}
+                                                </span>
+                                                <a
+                                                    href={file.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                                                >
+                                                    Download
+                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
                             </section>
                         )}
 
-                        {/* Section 5: Activity Gallery (New Block B) */}
-                        {experience.images && experience.images.length > 0 && (
+                        {/* Section B: Activity Gallery (Images Slider) */}
+                        {experience.images && experience.images.length > 0 ? (
                             <section className="mb-12 pb-12 border-b border-gray-100">
                                 <h2 className="font-serif text-2xl font-medium text-black mb-6">
                                     Activity Gallery
                                 </h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {experience.images.map((img, idx) => (
-                                        <div key={idx} className="group">
-                                            <div className="relative aspect-[4/3] border border-gray-100 bg-gray-50 mb-3 overflow-hidden">
+
+                                <div className="relative group">
+                                    {/* Main Image Stage */}
+                                    <div className="relative w-full aspect-[16/9] bg-gray-50 border border-gray-100 overflow-hidden">
+                                        <AnimatePresence mode="wait">
+                                            <motion.div
+                                                key={currentImageIndex}
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="absolute inset-0"
+                                            >
                                                 <Image
-                                                    src={img.src}
-                                                    alt={img.caption}
+                                                    src={experience.images[currentImageIndex].url}
+                                                    alt={experience.images[currentImageIndex].caption}
                                                     fill
-                                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    className="object-cover"
                                                 />
+                                            </motion.div>
+                                        </AnimatePresence>
+
+                                        {/* Navigation Arrows (Desktop overlay, can be always visible or hover) */}
+                                        {experience.images.length > 1 && (
+                                            <>
+                                                <button
+                                                    onClick={prevImage}
+                                                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white text-black border border-gray-200 shadow-sm opacity-0 group-hover:opacity-100 transition-all z-10"
+                                                    aria-label="Previous Image"
+                                                >
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+                                                    </svg>
+                                                </button>
+                                                <button
+                                                    onClick={nextImage}
+                                                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white text-black border border-gray-200 shadow-sm opacity-0 group-hover:opacity-100 transition-all z-10"
+                                                    aria-label="Next Image"
+                                                >
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </>
+                                        )}
+
+                                        {/* Mobile Swipe support area - simplistic implementation */}
+                                        <div
+                                            className="absolute inset-0 md:hidden z-0"
+                                            onTouchEnd={(e) => {
+                                                const touch = e.changedTouches[0];
+                                                if (touch.clientX < window.innerWidth / 3) prevImage();
+                                                if (touch.clientX > (window.innerWidth / 3) * 2) nextImage();
+                                            }}
+                                        ></div>
+                                    </div>
+
+                                    {/* Caption & Indicators */}
+                                    <div className="mt-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <p className="text-sm font-medium text-gray-600 border-l-2 border-[#0A192F] pl-3 py-1">
+                                            {experience.images[currentImageIndex].caption}
+                                        </p>
+
+                                        {experience.images.length > 1 && (
+                                            <div className="flex items-center gap-2">
+                                                {experience.images.map((_, idx) => (
+                                                    <button
+                                                        key={idx}
+                                                        onClick={() => setCurrentImageIndex(idx)}
+                                                        className={`h-1.5 transition-all duration-300 ${idx === currentImageIndex ? 'w-8 bg-[#0A192F]' : 'w-4 bg-gray-200 hover:bg-gray-400'}`}
+                                                        aria-label={`Go to image ${idx + 1}`}
+                                                    />
+                                                ))}
                                             </div>
-                                            <p className="text-sm text-gray-500 font-medium border-l-2 border-gray-200 pl-3">
-                                                {img.caption}
-                                            </p>
-                                        </div>
-                                    ))}
+                                        )}
+                                    </div>
                                 </div>
                             </section>
-                        )}
-
-                        {/* Section 6: Key Projects */}
-                        {experience.projects && experience.projects.length > 0 && (
-                            <section>
-                                <h2 className="font-serif text-2xl font-medium text-black mb-8">
-                                    {t("keyProjects")}
+                        ) : experience.images && (
+                            /* Placeholder for when images array exists but is empty (as per user request: "若目前無資料，請先預留位置") */
+                            <section className="mb-12 pb-12 border-b border-gray-100">
+                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                                    Activity Gallery
                                 </h2>
-                                <div className="grid gap-8">
-                                    {experience.projects.map((project) => (
-                                        <div key={project.id} className="border border-gray-200 p-6 hover:border-[#0A192F] transition-colors duration-300">
-                                            <div className="flex justify-between items-start mb-4">
-                                                <h3 className="font-serif text-xl font-medium text-black">
-                                                    {project.title}
-                                                </h3>
-                                                {project.timeline && (
-                                                    <span className="font-mono text-xs text-gray-500 bg-gray-50 px-2 py-1">
-                                                        {project.timeline}
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <p className="text-gray-600 mb-6 leading-relaxed">
-                                                {project.description}
-                                            </p>
-
-                                            {/* Deliverables */}
-                                            {project.deliverables && project.deliverables.length > 0 && (
-                                                <div className="space-y-2">
-                                                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                                                        {t("deliverables")}
-                                                    </h4>
-                                                    <ul className="text-sm text-gray-600 space-y-1">
-                                                        {project.deliverables.map((item, i) => (
-                                                            <li key={i} className="flex items-center gap-2">
-                                                                <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                                                {item}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            )}
-                                        </div>
-                                    ))}
+                                <div className="w-full aspect-[16/9] bg-gray-50 border border-gray-100 border-dashed flex flex-col items-center justify-center text-gray-400">
+                                    <svg className="w-12 h-12 mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <p className="font-serif italic text-lg">影像紀錄整理中</p>
+                                    <p className="text-xs font-mono mt-1 opacity-60">Visual documentation coming soon</p>
                                 </div>
                             </section>
                         )}
