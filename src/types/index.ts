@@ -72,6 +72,15 @@ export interface DetailedExperience extends JobExperience {
     companyDescription?: string;
     department?: string;
     teamSize?: string;
+    files?: {
+        name: string;
+        url: string;
+        type?: string;
+    }[];
+    images?: {
+        src: string;
+        caption: string;
+    }[];
 }
 
 export interface Project {
