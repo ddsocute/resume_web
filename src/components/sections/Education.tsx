@@ -124,7 +124,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                         summary={projectSummary}
                                         link={`/${locale}/education/nccu-ma-project-2025`}
                                         linkText={t("viewCaseStudy")}
-                                        logo="/images/companies/esun_logo.png"
+                                        logo="/images/awards/ntcir.png"
                                     />
                                 </div>
                             </motion.div>
