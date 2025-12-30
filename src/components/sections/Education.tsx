@@ -85,24 +85,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                             </p>
                                         </div>
 
-                                        {/* Achievements */}
-                                        {achievements.length > 0 && (
-                                            <div className="mb-6">
-                                                <h4 className="font-sans text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">
-                                                    {t("achievements")}
-                                                </h4>
-                                                <ul className="space-y-2">
-                                                    {achievements.map((item, i) => (
-                                                        <li key={i} className="flex items-start gap-3">
-                                                            <span className="text-[#0A192F] mt-1.5 text-[0.6rem]">•</span>
-                                                            <span className="font-sans text-sm text-[#4B5563] leading-relaxed">
-                                                                {item}
-                                                            </span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        )}
+
 
                                         {/* Related Coursework */}
                                         {courses.length > 0 && (

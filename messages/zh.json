@@ -118,24 +118,18 @@
         "paperTitle": "學術論文",
         "projectTitle": "課堂專案",
         "items": {
-            "nccu-2022": {
-                "school": "國立政治大學",
-                "degree": "國際經營與貿易學系",
-                "program": "金融科技學程",
-                "date": "2022年9月 – 2026年6月",
-                "achievements": [
-                    "學術成果：'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J. 發表於 18th NTCIR Conference (全球三大資訊檢索評測會議之一), 東京, 2025. (Oral Presentation)",
-                    "企業併購個案研究專案：在玉山與南山的模擬併購交易中以玉山顧問角度，擔任小組策略長，並負責估值模型與策略分析"
-                ],
-                "courses": [
-                    "併購實例研習",
-                    "高等會計學",
-                    "中級會計學",
-                    "審計學",
-                    "人工智慧概論",
-                    "計算機概論"
-                ]
-            }
+            "school": "國立政治大學",
+            "degree": "國際經營與貿易學系",
+            "program": "金融科技學程",
+            "date": "2022年9月 – 2026年6月",
+            "courses": [
+                "併購實例研習",
+                "高等會計學",
+                "中級會計學",
+                "審計學",
+                "人工智慧概論",
+                "計算機概論"
+            ]
         }
     },
     "awards": {
