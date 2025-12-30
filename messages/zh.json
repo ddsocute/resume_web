@@ -118,20 +118,22 @@
         "paperTitle": "學術論文",
         "projectTitle": "課堂專案",
         "items": {
-            "school": "國立政治大學",
-            "degree": "國際經營與貿易學系",
-            "program": "金融科技學程",
-            "date": "2022年9月 – 2026年6月",
-            "paperSummary": "發表於 18th NTCIR Conference (全球三大資訊檢索評測會議之一)",
-            "projectSummary": "擔任小組策略長，負責估值模型與策略分析",
-            "courses": [
-                "併購實例研習",
-                "高等會計學",
-                "中級會計學",
-                "審計學",
-                "人工智慧概論",
-                "計算機概論"
-            ]
+            "nccu-2022": {
+                "school": "國立政治大學",
+                "degree": "國際經營與貿易學系",
+                "program": "金融科技學程",
+                "date": "2022年9月 – 2026年6月",
+                "paperSummary": "發表於 18th NTCIR Conference (全球三大資訊檢索評測會議之一)",
+                "projectSummary": "擔任小組策略長，負責估值模型與策略分析",
+                "courses": [
+                    "併購實例研習",
+                    "高等會計學",
+                    "中級會計學",
+                    "審計學",
+                    "人工智慧概論",
+                    "計算機概論"
+                ]
+            }
         }
     },
     "awards": {
