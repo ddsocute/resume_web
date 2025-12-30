@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -15,98 +14,108 @@ export default function EducationSection() {
     const t = useTranslations("education");
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
             <div className="container mx-auto max-w-5xl">
+                {/* Section Title */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-12"
+                    className="mb-16 border-b border-gray-200 pb-4"
                 >
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
+                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
                         {t("title")}
                     </h2>
-                    <div className="w-16 h-0.5 bg-gray-300"></div>
                 </motion.div>
 
-                <div className="space-y-8">
-                    {education.map((id, index) => {
-                        const itemKey = `items.${id}`;
+                <div className="space-y-12">
+                    {education.map((edu, index) => {
+                        const itemKey = `items.${edu.id}`;
+                        const school = t(`${itemKey}.school`);
+                        const degree = t(`${itemKey}.degree`);
+                        const program = t(`${itemKey}.program`);
+                        const date = t(`${itemKey}.date`);
+                        const logoSrc = LOGO_MAP[edu.id];
+
+                        const achievements = t.raw(`${itemKey}.achievements`) as string[];
+                        const courses = t.raw(`${itemKey}.courses`) as string[];
+
                         return (
                             <motion.div
-                                key={id}
-                                initial={{ opacity: 0, y: 30 }}
+                                key={edu.id}
+                                initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Card className="border border-gray-200 bg-white shadow-sm">
-                                    <CardHeader>
-                                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
-                                            <div className="flex items-start gap-6">
-                                                {/* School Logo - Larger */}
-                                                <div className="flex-shrink-0 w-24 h-24 bg-white border border-gray-200 flex items-center justify-center overflow-hidden relative rounded-md shadow-sm">
-                                                    {LOGO_MAP[id] ? (
-                                                        <Image
-                                                            src={LOGO_MAP[id]}
-                                                            alt={t(`${itemKey}.school`)}
-                                                            fill
-                                                            className="object-contain" // object-contain ensures full logo is visible without cropping
-                                                        />
-                                                    ) : (
-                                                        <span className="text-2xl font-bold text-gray-400 font-serif">
-                                                            {t(`${itemKey}.school`).charAt(0)}
-                                                        </span>
-                                                    )}
-                                                </div>
+                                <div className="flex flex-col md:flex-row md:items-start gap-6 lg:gap-8">
+                                    {/* School Logo */}
+                                    <div className="flex-shrink-0 w-20 h-20 relative bg-white border border-gray-100 p-1">
+                                        {logoSrc && (
+                                            <Image
+                                                src={logoSrc}
+                                                alt={school}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        )}
+                                    </div>
 
-                                                <div>
-                                                    <h3 className="font-sans text-xl font-bold text-gray-900 mb-1">
-                                                        {t(`${itemKey}.school`)}
-                                                    </h3>
-                                                    <p className="font-sans text-base font-semibold text-gray-700">
-                                                        {t(`${itemKey}.degree`)}
-                                                    </p>
-                                                    <p className="font-sans text-sm text-gray-600 mt-1">
-                                                        {t(`${itemKey}.program`)}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <p className="font-sans text-sm text-gray-500 whitespace-nowrap mt-1 md:mt-0">
-                                                {t(`${itemKey}.date`)}
+                                    <div className="flex-1 min-w-0">
+                                        {/* School & Date */}
+                                        <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                                            <h3 className="font-serif text-xl font-medium text-[#0A192F]">
+                                                {school}
+                                            </h3>
+                                            <span className="font-sans text-sm text-gray-500 font-medium mt-1 md:mt-0">
+                                                {date}
+                                            </span>
+                                        </div>
+
+                                        {/* Degree & Program */}
+                                        <div className="mb-6">
+                                            <p className="font-sans text-base font-semibold text-[#0A192F] uppercase tracking-wide">
+                                                {degree} {program && ` - ${program}`}
                                             </p>
                                         </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="space-y-6">
-                                            {/* Achievements */}
-                                            <div>
-                                                <h4 className="font-sans text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide border-b border-gray-100 pb-1 inline-block">
+
+                                        {/* Achievements */}
+                                        {achievements.length > 0 && (
+                                            <div className="mb-6">
+                                                <h4 className="font-sans text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">
                                                     {t("achievements")}
                                                 </h4>
                                                 <ul className="space-y-2">
-                                                    {(t.raw(`${itemKey}.achievements`) as string[]).map((achievement: string, i: number) => (
-                                                        <li key={i} className="flex items-start gap-2">
-                                                            <span className="text-gray-400 mt-1.5 flex-shrink-0">•</span>
-                                                            <span className="font-sans text-sm text-gray-600 leading-relaxed">{achievement}</span>
+                                                    {achievements.map((item, i) => (
+                                                        <li key={i} className="flex items-start gap-3">
+                                                            <span className="text-[#0A192F] mt-1.5 text-[0.6rem]">•</span>
+                                                            <span className="font-sans text-sm text-[#4B5563] leading-relaxed">
+                                                                {item}
+                                                            </span>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </div>
+                                        )}
 
-                                            {/* Courses - Plain text list instead of tags */}
+                                        {/* Related Coursework */}
+                                        {courses.length > 0 && (
                                             <div>
-                                                <h4 className="font-sans text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide border-b border-gray-100 pb-1 inline-block">
+                                                <h4 className="font-sans text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">
                                                     {t("courses")}
                                                 </h4>
-                                                <div className="font-sans text-sm text-gray-600 leading-relaxed">
-                                                    {(t.raw(`${itemKey}.courses`) as string[]).join(" • ")}
+                                                <div className="flex flex-wrap gap-x-2 gap-y-1">
+                                                    {courses.map((course, i) => (
+                                                        <span key={i} className="font-sans text-sm text-[#4B5563]">
+                                                            {course}{i < courses.length - 1 ? ',' : ''}
+                                                        </span>
+                                                    ))}
                                                 </div>
                                             </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
+                                        )}
+                                    </div>
+                                </div>
                             </motion.div>
                         );
                     })}

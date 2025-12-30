@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function AwardsSection() {
     const { awards } = resumeData;
@@ -19,72 +18,86 @@ export default function AwardsSection() {
     };
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="awards" className="py-24 px-4 sm:px-6 lg:px-8 bg-white text-[#333333]">
             <div className="container mx-auto max-w-5xl">
+                {/* Section Title */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-12"
+                    className="mb-16 border-b border-gray-200 pb-4"
                 >
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
+                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
                         {t("title")}
                     </h2>
-                    <div className="w-16 h-0.5 bg-gray-300"></div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {awards.map((id, index) => {
-                        const itemKey = `items.${id}`;
-                        const logoSrc = LOGO_MAP[id];
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {awards.map((award, index) => {
+                        const itemKey = `items.${award.id}`;
+                        const title = t(`${itemKey}.title`);
+                        const organization = t(`${itemKey}.organization`);
+                        const rank = t(`${itemKey}.rank`);
+                        const achievement = t(`${itemKey}.achievement`);
+                        const logoSrc = LOGO_MAP[award.id];
 
                         return (
                             <motion.div
-                                key={id}
-                                initial={{ opacity: 0, y: 20 }}
+                                key={award.id}
+                                initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Link href={`/${locale}/awards/${id}`} className="block h-full">
-                                    <Card className="h-full border border-gray-200 hover:shadow-lg transition-all duration-300 bg-white group cursor-pointer relative overflow-hidden">
-                                        <CardHeader>
-                                            <div className="mb-4 w-16 h-16 relative">
+                                <Link
+                                    href={`/${locale}/awards/${award.id}`}
+                                    className="block group h-full"
+                                >
+                                    <div className="h-full border border-gray-200 bg-white p-6 hover:border-[#0A192F] transition-colors duration-300 flex flex-col">
+                                        {/* Logo */}
+                                        <div className="h-16 flex items-center mb-6">
+                                            <div className="w-16 h-16 relative">
                                                 {logoSrc ? (
                                                     <Image
                                                         src={logoSrc}
-                                                        alt={t(`${itemKey}.title`)}
+                                                        alt={title}
                                                         fill
-                                                        className="object-contain"
+                                                        className="object-contain object-left"
                                                     />
                                                 ) : (
-                                                    <div className="w-full h-full bg-gray-100 flex items-center justify-center rounded-md font-serif text-lg text-gray-400 font-bold">
-                                                        {t(`${itemKey}.organization`).charAt(0)}
+                                                    <div className="w-16 h-16 bg-gray-50 flex items-center justify-center text-gray-300 text-xl font-serif">
+                                                        {title.charAt(0)}
                                                     </div>
                                                 )}
                                             </div>
+                                        </div>
 
-                                            <div className="flex items-start justify-between mb-2">
-                                                <div className="flex-1">
-                                                    <CardTitle className="font-sans text-base font-bold text-gray-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">
-                                                        {t(`${itemKey}.title`)}
-                                                    </CardTitle>
-                                                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold mb-3 border border-gray-200">
-                                                        {t(`${itemKey}.rank`)}
-                                                    </span>
-                                                </div>
+                                        {/* Content */}
+                                        <div className="flex-1">
+                                            <div className="mb-2">
+                                                <span className="font-sans text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                                    {organization}
+                                                </span>
                                             </div>
-                                            <p className="font-sans text-sm text-gray-600 font-medium mb-1">
-                                                {t(`${itemKey}.organization`)}
+                                            <h3 className="font-serif text-lg font-medium text-[#0A192F] mb-2 group-hover:text-blue-900 transition-colors line-clamp-2">
+                                                {title}
+                                            </h3>
+                                            <p className="font-sans text-sm font-semibold text-[#0A192F] mb-4">
+                                                {rank}
                                             </p>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="font-sans text-sm text-gray-600 leading-relaxed line-clamp-3">
-                                                {t(`${itemKey}.achievement`)}
+                                            <p className="font-sans text-sm text-[#4B5563] leading-relaxed line-clamp-4">
+                                                {achievement}
                                             </p>
-                                        </CardContent>
-                                    </Card>
+                                        </div>
+
+                                        {/* Footer Arrow */}
+                                        <div className="mt-6 flex justify-end">
+                                            <svg className="w-5 h-5 text-gray-300 group-hover:text-[#0A192F] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </Link>
                             </motion.div>
                         );

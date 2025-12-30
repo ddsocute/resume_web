@@ -52,17 +52,17 @@ export default function DetailedExperiencePage({ experience }: DetailedExperienc
             </div>
 
             {/* Hero Section */}
-            <section className="bg-white border-b border-gray-200">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <section className="bg-[#0A192F] text-white py-24">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }} // Reduced y offset
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 md:items-start"
+                        transition={{ duration: 0.8 }}
+                        className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:items-center"
                     >
-                        {/* Logo */}
+                        {/* Logo - Square, No Rounding */}
                         <div className="flex-shrink-0">
-                            <div className="relative w-24 h-24 md:w-32 h-24 md:h-32 rounded-xl border border-gray-100 bg-white shadow-lg overflow-hidden p-2">
+                            <div className="relative w-24 h-24 md:w-32 md:h-32 bg-white p-2">
                                 {logoSrc ? (
                                     <Image
                                         src={logoSrc}
@@ -71,7 +71,7 @@ export default function DetailedExperiencePage({ experience }: DetailedExperienc
                                         className="object-contain"
                                     />
                                 ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-3xl font-serif font-bold text-gray-400">
+                                    <div className="w-full h-full flex items-center justify-center bg-gray-50 text-4xl font-serif font-bold text-gray-300">
                                         {experience.company.charAt(0)}
                                     </div>
                                 )}
@@ -79,35 +79,25 @@ export default function DetailedExperiencePage({ experience }: DetailedExperienc
                         </div>
 
                         {/* Text Content */}
-                        <div className="flex-1">
-                            <h1 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-3 tracking-tight">
+                        <div className="flex-1 text-center md:text-left">
+                            <h1 className="text-4xl md:text-5xl font-serif font-medium text-white mb-4 tracking-wide">
                                 {experience.company}
                             </h1>
-                            <h2 className="text-xl md:text-2xl font-medium text-blue-700 mb-6">
+                            <h2 className="text-xl md:text-2xl font-sans font-light text-gray-300 mb-6 uppercase tracking-widest">
                                 {experience.role}
                             </h2>
 
-                            <div className="flex flex-wrap gap-y-2 gap-x-6 text-sm md:text-base text-gray-600 font-medium">
+                            <div className="flex flex-wrap justify-center md:justify-start gap-y-2 gap-x-8 text-sm md:text-base text-gray-400 font-sans tracking-wide">
                                 <div className="flex items-center gap-2">
-                                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
                                     <span>{experience.startDate} - {experience.endDate}</span>
                                 </div>
                                 {experience.location && (
                                     <div className="flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
                                         <span>{experience.location}</span>
                                     </div>
                                 )}
                                 {experience.department && (
                                     <div className="flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                        </svg>
                                         <span>{experience.department}</span>
                                     </div>
                                 )}
@@ -131,30 +121,28 @@ export default function DetailedExperiencePage({ experience }: DetailedExperienc
                         {/* Description Card */}
                         <div className="lg:col-span-2 space-y-8">
                             {/* Overview */}
-                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                                <h3 className="text-xl font-bold font-serif text-gray-900 mb-4 flex items-center gap-2">
-                                    <span className="w-1 h-6 bg-blue-600 rounded-full inline-block"></span>
+                            <div className="mb-10">
+                                <h3 className="text-lg font-serif font-medium text-[#0A192F] mb-4 uppercase tracking-widest border-b border-gray-200 pb-2">
                                     {t("overview")}
                                 </h3>
-                                <p className="text-gray-700 leading-relaxed text-lg">
+                                <p className="text-[#333333] leading-7 text-base font-sans">
                                     {experience.overview}
                                 </p>
                             </div>
 
                             {/* Responsibilities */}
                             {experience.responsibilities && experience.responsibilities.length > 0 && (
-                                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                                    <h3 className="text-xl font-bold font-serif text-gray-900 mb-6 flex items-center gap-2">
-                                        <span className="w-1 h-6 bg-blue-600 rounded-full inline-block"></span>
+                                <div className="mb-10">
+                                    <h3 className="text-lg font-serif font-medium text-[#0A192F] mb-4 uppercase tracking-widest border-b border-gray-200 pb-2">
                                         {t("responsibilities")}
                                     </h3>
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-3">
                                         {experience.responsibilities.map((resp, index) => (
-                                            <li key={index} className="flex gap-4">
-                                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-blue-600 text-sm font-bold flex items-center justify-center mt-0.5">
+                                            <li key={index} className="flex gap-4 items-start">
+                                                <span className="flex-shrink-0 w-6 h-6 border border-[#0A192F] text-[#0A192F] text-xs font-bold flex items-center justify-center mt-0.5">
                                                     {index + 1}
                                                 </span>
-                                                <span className="text-gray-700 leading-relaxed">{resp}</span>
+                                                <span className="text-[#4B5563] leading-relaxed text-sm font-sans">{resp}</span>
                                             </li>
                                         ))}
                                     </ul>

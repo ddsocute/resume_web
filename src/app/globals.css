@@ -2,14 +2,15 @@
 
 @layer base {
   :root {
-    /* Investment Banking Professional Color Palette */
-    --ib-navy-deep: #1e3a5f;
-    --ib-navy-dark: #152d47;
-    --ib-gray-dark: #374151;
-    --ib-gray-medium: #6b7280;
-    --ib-gray-light: #d1d5db;
+    /* Investment Banking Professional Color Palette v2 */
+    --ib-navy-deep: #0A192F;
+    --ib-navy-dark: #071221;
+    --ib-gray-dark: #333333;
+    --ib-gray-medium: #4B5563;
+    --ib-gray-light: #E5E7EB;
     --ib-white: #ffffff;
-    --ib-blue-accent: #2563eb;
+    --ib-blue-accent: #0A192F;
+    /* Accent now matches main navy for monochrome pro look, or keep slight blue? User said Navy & Charcoal. */
 
     /* Professional Typography */
     --font-serif: var(--font-playfair), 'Times New Roman', Georgia, serif;
@@ -21,7 +22,7 @@
   }
 
   body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-white text-[#333333] antialiased;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,19 +30,19 @@
 
   /* Minimal Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    @apply bg-white;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400;
+    @apply bg-gray-300;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-400;
   }
 }
 

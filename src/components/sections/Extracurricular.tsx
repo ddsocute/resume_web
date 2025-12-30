@@ -2,109 +2,121 @@
 
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
+import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
+
+const LOGO_MAP: Record<string, string> = {
+    "tmba-2025": "/images/orgs/tmba.jpg",
+    "mf-club-2024-member": "/images/orgs/mf-club.png",
+    "mf-club-2024-leader": "/images/orgs/mf-club.png",
+};
 
 export default function ExtracurricularSection() {
-    const { extracurriculars } = resumeData;
+    const { extracurricular } = resumeData;
     const t = useTranslations("extracurricular");
     const locale = useLocale();
 
-    const getInitial = (name: string) => name.charAt(0);
-
-    const LOGO_MAP: Record<string, string> = {
-        "tmba-2025": "/images/orgs/tmba.jpg",
-        "mf-club-2024-member": "/images/orgs/mf-club.png",
-        "mf-club-2024-leader": "/images/orgs/mf-club.png",
-    };
-
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section id="extracurricular" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
             <div className="container mx-auto max-w-5xl">
+                {/* Section Title */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-12"
+                    className="mb-16 border-b border-gray-200 pb-4"
                 >
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
+                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
                         {t("title")}
                     </h2>
-                    <div className="w-16 h-0.5 bg-gray-300"></div>
                 </motion.div>
 
-                <div className="space-y-0">
-                    {extracurriculars.map((id, index) => {
+                {/* List Items (similar to Experience) */}
+                <div className="space-y-12">
+                    {extracurricular.map((id, index) => {
                         const itemKey = `items.${id}`;
                         const companyName = t(`${itemKey}.company`);
+                        const role = t(`${itemKey}.role`);
+                        const date = t(`${itemKey}.date`);
+                        const descriptionList = t.raw(`${itemKey}.description`) as string[];
                         const logoSrc = LOGO_MAP[id];
 
                         return (
                             <motion.div
                                 key={id}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Link href={`/${locale}/extracurricular/${id}`} className="block">
-                                    <div className="block py-8 border-b border-gray-200 hover:bg-white hover:shadow-md transition-all duration-200 group rounded-lg px-4 -mx-4">
-                                        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-                                            <div className="flex-shrink-0 hidden md:flex w-24 h-24 bg-white border border-gray-200 items-center justify-center text-xl font-serif font-bold text-gray-400 relative overflow-hidden rounded-md shadow-sm">
-                                                {logoSrc ? (
-                                                    <Image
-                                                        src={logoSrc}
-                                                        alt={companyName}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
-                                                ) : (
-                                                    getInitial(companyName)
-                                                )}
+                                <Link
+                                    href={`/${locale}/extracurricular/${id}`}
+                                    className="block group"
+                                >
+                                    <div className="flex flex-col md:flex-row md:items-start gap-6 lg:gap-8">
+                                        {/* Logo */}
+                                        <div className="flex-shrink-0 w-20 h-20 relative bg-white border border-gray-100 p-1">
+                                            {logoSrc ? (
+                                                <Image
+                                                    src={logoSrc}
+                                                    alt={companyName}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-xl font-serif text-gray-300">
+                                                    {companyName.charAt(0)}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="flex-1 min-w-0">
+                                            {/* Header */}
+                                            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                                                <h3 className="font-serif text-xl font-medium text-[#0A192F] group-hover:text-blue-900 transition-colors">
+                                                    {companyName}
+                                                </h3>
+                                                <span className="font-sans text-sm text-gray-500 font-medium mt-1 md:mt-0">
+                                                    {date}
+                                                </span>
                                             </div>
 
-                                            <div className="flex-grow">
-                                                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="flex md:hidden w-12 h-12 bg-white border border-gray-200 items-center justify-center text-sm font-serif font-bold text-gray-400 relative overflow-hidden rounded-md">
-                                                            {logoSrc ? (
-                                                                <Image
-                                                                    src={logoSrc}
-                                                                    alt={companyName}
-                                                                    fill
-                                                                    className="object-contain"
-                                                                />
-                                                            ) : (
-                                                                getInitial(companyName)
-                                                            )}
-                                                        </div>
-                                                        <div>
-                                                            <h3 className="font-sans text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                                                                {companyName}
-                                                            </h3>
-                                                            <p className="font-sans text-base font-semibold text-gray-700">
-                                                                {t(`${itemKey}.role`)}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <span className="font-sans text-sm text-gray-500 mt-1 md:mt-0 whitespace-nowrap">
-                                                        {t(`${itemKey}.date`)}
-                                                    </span>
-                                                </div>
+                                            {/* Role */}
+                                            <div className="mb-4">
+                                                <p className="font-sans text-base font-semibold text-[#0A192F] uppercase tracking-wide">
+                                                    {role}
+                                                </p>
+                                            </div>
 
-                                                <div className="font-sans text-sm text-gray-600 leading-relaxed space-y-1 mb-4">
-                                                    <ul className="list-disc pl-4 space-y-2">
-                                                        {(t.raw(`${itemKey}.description`) as string[]).map((desc: string, i: number) => (
-                                                            <li key={i}>{desc}</li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
+                                            {/* Description */}
+                                            <ul className="space-y-2 mb-4">
+                                                {descriptionList.map((item, i) => (
+                                                    <li key={i} className="flex items-start gap-3">
+                                                        <span className="text-[#0A192F] mt-1.5 text-[0.6rem]">•</span>
+                                                        <span className="font-sans text-sm text-[#4B5563] leading-relaxed">
+                                                            {item}
+                                                        </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                            {/* View Details */}
+                                            <div className="flex items-center gap-2 text-[#0A192F] font-sans text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <span>{t("viewReport")}</span>
+                                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                                </svg>
                                             </div>
                                         </div>
                                     </div>
                                 </Link>
+                                {/* Separator */}
+                                {index < extracurricular.length - 1 && (
+                                    <div className="h-px bg-gray-200 mt-12 w-full"></div>
+                                )}
                             </motion.div>
                         );
                     })}
