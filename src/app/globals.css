@@ -2,18 +2,18 @@
 
 @layer base {
   :root {
-    /* Investment Banking Color Palette */
-    --ib-navy: #0f172a;
-    --ib-gold: #f59e0b;
-    --ib-charcoal: #1e293b;
-    --ib-blue: #3b82f6;
-    --ib-purple: #8b5cf6;
+    /* Investment Banking Professional Color Palette */
+    --ib-navy-deep: #1e3a5f;
+    --ib-navy-dark: #152d47;
+    --ib-gray-dark: #374151;
+    --ib-gray-medium: #6b7280;
+    --ib-gray-light: #d1d5db;
+    --ib-white: #ffffff;
+    --ib-blue-accent: #2563eb;
 
-    /* Premium Shadows */
-    --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
-    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-glow-blue: 0 0 30px rgba(59, 130, 246, 0.3);
-    --shadow-glow-purple: 0 0 30px rgba(139, 92, 246, 0.3);
+    /* Professional Typography */
+    --font-serif: var(--font-playfair), 'Times New Roman', Georgia, serif;
+    --font-sans: var(--font-inter), 'Helvetica Neue', Arial, sans-serif;
   }
 
   * {
@@ -22,113 +22,37 @@
 
   body {
     @apply bg-white text-slate-900 antialiased;
-    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Premium Scrollbar */
+  /* Minimal Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-slate-100;
+    @apply bg-gray-100;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-400 rounded-full;
+    @apply bg-gray-400;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-500;
+    @apply bg-gray-500;
   }
 }
 
 @layer utilities {
 
-  /* Glassmorphism */
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  /* Professional Typography Utilities */
+  .font-serif {
+    font-family: var(--font-serif);
   }
 
-  .glass-dark {
-    @apply bg-black/10 backdrop-blur-md border border-black/20;
-  }
-
-  /* Premium Gradients */
-  .gradient-ib {
-    background: linear-gradient(135deg, var(--ib-navy) 0%, var(--ib-charcoal) 100%);
-  }
-
-  .gradient-ib-reverse {
-    background: linear-gradient(135deg, var(--ib-charcoal) 0%, var(--ib-navy) 100%);
-  }
-
-  .gradient-accent {
-    background: linear-gradient(135deg, var(--ib-blue) 0%, var(--ib-purple) 100%);
-  }
-
-  /* Text Gradients */
-  .text-gradient-ib {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, var(--ib-blue), var(--ib-purple));
-  }
-
-  .text-gradient-gold {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #fbbf24, #f59e0b);
-  }
-
-  /* Premium Animations */
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  @keyframes pulse-soft {
-
-    0%,
-    100% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0.7;
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .animate-pulse-soft {
-    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-shimmer {
-    animation: shimmer 2s infinite;
-    background: linear-gradient(to right,
-        transparent 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        transparent 100%);
-    background-size: 1000px 100%;
+  .font-sans {
+    font-family: var(--font-sans);
   }
 }

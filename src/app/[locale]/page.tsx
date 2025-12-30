@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import ExperienceSection from "@/components/sections/Experience";
+import ExtracurricularSection from "@/components/sections/Extracurricular";
 import EducationSection from "@/components/sections/Education";
 import AwardsSection from "@/components/sections/Awards";
 import SkillsSection from "@/components/sections/Skills";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <EducationSection />
       <ExperienceSection />
+      <ExtracurricularSection />
       <AwardsSection />
       <SkillsSection />
       <Footer />

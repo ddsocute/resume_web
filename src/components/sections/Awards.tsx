@@ -3,65 +3,92 @@
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function AwardsSection() {
     const { awards } = resumeData;
+    const t = useTranslations("awards");
+    const locale = useLocale();
+
+    const LOGO_MAP: Record<string, string> = {
+        "ai-cup-2024": "/images/awards/ntcir.png",
+        "gtsm-2023": "/images/awards/gtsm.jpg",
+        "mbs-2024": "/images/awards/mbs.webp",
+    };
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-            <div className="container mx-auto max-w-6xl">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <div className="container mx-auto max-w-5xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
+                    className="mb-12"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
-                        Awards & Achievements
+                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
+                        {t("title")}
                     </h2>
-                    <p className="text-lg text-slate-600 mb-12 text-center max-w-2xl mx-auto">
-                        Recognition for excellence in competition and research
-                    </p>
+                    <div className="w-16 h-0.5 bg-gray-300"></div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {awards.map((award, index) => (
-                        <motion.div
-                            key={award.id}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-amber-500">
-                                <CardHeader>
-                                    <div className="flex items-start justify-between mb-2">
-                                        <div className="flex-1">
-                                            <CardTitle className="text-lg font-bold text-slate-900 mb-2 leading-tight">
-                                                {award.title}
-                                            </CardTitle>
-                                            {award.rank && (
-                                                <span className="inline-block px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold mb-3">
-                                                    {award.rank}
-                                                </span>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <p className="text-sm text-slate-600 font-medium mb-1">
-                                        {award.organization}
-                                    </p>
-                                    <p className="text-xs text-slate-500">
-                                        {award.date}
-                                    </p>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-slate-700 leading-relaxed">
-                                        {award.achievement}
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
+                    {awards.map((id, index) => {
+                        const itemKey = `items.${id}`;
+                        const logoSrc = LOGO_MAP[id];
+
+                        return (
+                            <motion.div
+                                key={id}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <Link href={`/${locale}/awards/${id}`} className="block h-full">
+                                    <Card className="h-full border border-gray-200 hover:shadow-lg transition-all duration-300 bg-white group cursor-pointer relative overflow-hidden">
+                                        <CardHeader>
+                                            <div className="mb-4 w-16 h-16 relative">
+                                                {logoSrc ? (
+                                                    <Image
+                                                        src={logoSrc}
+                                                        alt={t(`${itemKey}.title`)}
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                ) : (
+                                                    <div className="w-full h-full bg-gray-100 flex items-center justify-center rounded-md font-serif text-lg text-gray-400 font-bold">
+                                                        {t(`${itemKey}.organization`).charAt(0)}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            <div className="flex items-start justify-between mb-2">
+                                                <div className="flex-1">
+                                                    <CardTitle className="font-sans text-base font-bold text-gray-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">
+                                                        {t(`${itemKey}.title`)}
+                                                    </CardTitle>
+                                                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold mb-3 border border-gray-200">
+                                                        {t(`${itemKey}.rank`)}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p className="font-sans text-sm text-gray-600 font-medium mb-1">
+                                                {t(`${itemKey}.organization`)}
+                                            </p>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="font-sans text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                                {t(`${itemKey}.achievement`)}
+                                            </p>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

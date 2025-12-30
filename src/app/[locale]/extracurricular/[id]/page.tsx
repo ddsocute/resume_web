@@ -1,61 +1,60 @@
+
 import { notFound } from "next/navigation";
 import { detailedExperiences as detailedExperiencesZh } from "@/data/detailedExperiencesZh";
 import { detailedExperiencesEn } from "@/data/detailedExperiencesEn";
 import DetailedExperiencePage from "@/components/sections/DetailedExperience";
 import type { Metadata } from "next";
 
-interface ExperiencePageProps {
+interface PageProps {
     params: Promise<{
         locale: string;
         id: string;
     }>;
 }
 
-// Generate static params for all experiences
+// Generate static params 
 export async function generateStaticParams() {
-    const experienceIds = Object.keys(detailedExperiencesZh);
+    // Only generate for known keys in detailedExperiences
+    const ids = Object.keys(detailedExperiencesZh);
     const locales = ['en', 'zh'];
 
     return locales.flatMap(locale =>
-        experienceIds.map(id => ({
+        ids.map(id => ({
             locale,
             id
         }))
     );
 }
 
-// Helper to get data based on locale
 const getDetailedExperience = (id: string, locale: string) => {
     const data = locale === 'en' ? detailedExperiencesEn : detailedExperiencesZh;
     return data[id];
 };
 
-// Generate metadata for SEO
-export async function generateMetadata({ params }: ExperiencePageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { id, locale } = await params;
     const experience = getDetailedExperience(id, locale);
 
     if (!experience) {
         return {
-            title: "Experience Not Found"
+            title: "Activity Not Found"
         };
     }
 
     return {
         title: `${experience.role} @ ${experience.company} | Lin Jing-Di Portfolio`,
         description: experience.overview.substring(0, 160),
-        keywords: [experience.company, experience.role, ...experience.skills],
     };
 }
 
-export default async function ExperiencePage({ params }: ExperiencePageProps) {
+export default async function ExtracurricularPage({ params }: PageProps) {
     const { id, locale } = await params;
     const experience = getDetailedExperience(id, locale);
 
     if (!experience) {
+        // Fallback or 404. Since we established tmba is in detailedExperiences, this should work.
         notFound();
     }
 
     return <DetailedExperiencePage experience={experience} />;
 }
-// Force rebuild

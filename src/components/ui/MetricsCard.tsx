@@ -19,31 +19,33 @@ export default function MetricsCard({ metrics }: MetricsCardProps) {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="relative group"
                 >
-                    <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/40 transition-all">
+                    <div className="h-full p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all">
                         {/* Icon */}
                         {metric.icon && (
-                            <div className="text-4xl mb-3">{metric.icon}</div>
+                            <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform duration-300 origin-left">
+                                {metric.icon}
+                            </div>
                         )}
 
                         {/* Value */}
-                        <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        <div className="text-3xl md:text-5xl font-bold font-serif text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                             {metric.value}
                         </div>
 
                         {/* Label */}
-                        <div className="text-blue-300 font-semibold mb-2">
+                        <div className="text-base font-semibold text-gray-700 mb-2">
                             {metric.label}
                         </div>
 
                         {/* Description */}
                         {metric.description && (
-                            <div className="text-sm text-slate-400">
+                            <div className="text-sm text-gray-500 leading-relaxed">
                                 {metric.description}
                             </div>
                         )}
 
-                        {/* Animated border */}
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
+                        {/* Decorative Gradient on Hover */}
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
                     </div>
                 </motion.div>
             ))}

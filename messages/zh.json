@@ -1,41 +1,200 @@
 {
-    "nav": {
+    "HomePage": {
+        "title": "林靖迪 | 履歷",
+        "description": "金融科技愛好者 | 投資銀行分析師"
+    },
+    "Navigation": {
         "home": "首頁",
-        "education": "教育背景",
-        "experience": "工作經歷",
-        "awards": "獲獎記錄",
-        "skills": "技能證照"
+        "experience": "經歷",
+        "projects": "專案",
+        "contact": "聯絡資訊"
     },
     "hero": {
-        "title": "FinTech 愛好者 | 投資銀行分析師",
-        "summary": "專注於金融科技的國際經營與貿易學系學生，在投資銀行、創投及金融研究領域擁有豐富經驗，精通估值、併購分析及市場情報。",
+        "title": "林靖迪",
+        "subtitle": "Finance & AI Professional | 政大國貿",
+        "role": "FinTech 愛好者 | 投資銀行分析師",
+        "summary": "專注於國際商業與金融科技的充滿抱負的大學生，目前正尋求金融服務產業的機會。擁有投資銀行、創投及金融研究經驗，具備估值、併購分析與市場情報的深厚基礎。",
         "contact": {
             "email": "電子郵件",
             "linkedin": "領英",
             "phone": "電話"
-        },
-        "scroll": "向下滾動查看更多"
-    },
-    "education": {
-        "title": "教育背景",
-        "subtitle": "商業與科技的學術基礎",
-        "achievements": "學術成就",
-        "courses": "核心課程"
+        }
     },
     "experience": {
-        "title": "專業經歷",
-        "subtitle": "金融、研究與投資銀行之旅"
+        "title": "實習經歷",
+        "viewReport": "查看報告",
+        "items": {
+            "o-bank-2025": {
+                "company": "王道商業銀行 (O-Bank)",
+                "role": "策略投資部實習生",
+                "date": "2025年9月 – 目前",
+                "description": [
+                    "併購支援：透過分析可比交易的關鍵指標與洞見，支援併購案的評估",
+                    "主題研究：獨自完成提報至董事會穩定幣報告初稿，定期產出市場分析月報與產業動態雙週刊，並參與過五場論壇撰寫紀要",
+                    "案源分析：負責潛在投資案的初步分析篩選，已完成十多家公司的質化評估，並產出 Call Memo，向團隊提出明確的投資亮點與風險評估"
+                ]
+            },
+            "huatai-2025": {
+                "company": "華泰聯合證券 (Huatai United Securities)",
+                "role": "投資銀行部實習生",
+                "date": "2025年7月 – 2025年8月",
+                "description": [
+                    "IPO 執行：深度參與鋰電池製作商之北交所 IPO 專案，設計境外經銷商穿透核查程序並參與備忘錄撰寫，負責公開說明書中產業分析章節的初步撰寫，並執行收入截止性測試與高管銀行帳目核查等程序",
+                    "數據驗證：獨立審核了超過 2 萬筆銷售單據的合規性，並完成了逾 120 萬筆售後設備數據的整理",
+                    "案例研究：支援多個並行專案，獨立完成了包含 ERP 系統整合、股權激勵等關鍵議題的案例研究"
+                ]
+            },
+            "tier-2025": {
+                "company": "財團法人臺灣經濟研究院 (TIER)",
+                "role": "研究六所實習生",
+                "date": "2025年3月 – 2025年6月",
+                "description": [
+                    "市場研究：深入研究台灣新創市場，維護並更新包含逾 3,000 家企業的動態數據庫",
+                    "專題報告：於地緣時事專案中，分析印巴衝突，成果獲納入最終呈報的報告中"
+                ]
+            }
+        }
+    },
+    "extracurricular": {
+        "title": "課外活動",
+        "viewReport": "查看報告",
+        "items": {
+            "tmba-2025": {
+                "company": "第二十五屆 TMBA",
+                "role": "個股研究部專案生",
+                "date": "2025年2月 – 2025年6月",
+                "description": [
+                    "個股研究：以昇陽半導體（8028.TW）為標的，負責估值部分並使用 P/E 估值法，製作包含完整投資邏輯與個股評級的研究報告",
+                    "產業研究：以半導體先進製程產業主題，製作涵蓋產業概況、技術介紹、產業動能、個股推薦的產業報告"
+                ]
+            },
+            "mf-club-2024-member": {
+                "company": "第九屆政大共同基金研究社",
+                "role": "研究專案生",
+                "date": "2024年9月 – 2024年6月",
+                "description": [
+                    "基金配置：基於美國經濟溫和增長的預測，採用 Top-Down 方式，構建以電力產業為核心的模擬投組",
+                    "基金評析：對 SMH 基金進行評析，並分析半導體產業發展現況與成長動能並針對前三大持股進行分析",
+                    "產業研究：研究電動車產業，分析市場未來發展，並在上學期社內期末專案競賽中得到第三名",
+                    "總經研究：對歐洲總體經濟進行研究，透過分析基本指標和政策方向，預測短期和長期的宏觀經濟趨勢"
+                ]
+            },
+            "mf-club-2024-leader": {
+                "company": "第十屆政大共同基金研究社",
+                "role": "行銷策略長",
+                "date": "2024年6月 – 2025年6月",
+                "description": [
+                    "品牌策略：管理超過 6,300 人追蹤之社群平台，將社課與活動內容轉化為圖文，強化社團品牌形象",
+                    "專案管理：跨部門協調期中、期末兩場大型成果發表會的籌辦工作，並主導專案簡報的品質控管"
+                ]
+            }
+        }
+    },
+    "education": {
+        "title": "學歷",
+        "achievements": "成就",
+        "courses": "修習課程",
+        "items": {
+            "nccu-2022": {
+                "school": "國立政治大學",
+                "degree": "國際經營與貿易學系",
+                "program": "金融科技學程",
+                "date": "2022年9月 – 2026年6月",
+                "achievements": [
+                    "學術成果：'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J. 發表於 18th NTCIR Conference (全球三大資訊檢索評測會議之一), 東京, 2025. (Oral Presentation)",
+                    "企業併購個案研究專案：在玉山與南山的模擬併購交易中以玉山顧問角度，擔任小組策略長，並負責估值模型與策略分析"
+                ],
+                "courses": [
+                    "併購實例研習",
+                    "高等會計學",
+                    "中級會計學",
+                    "審計學",
+                    "人工智慧概論",
+                    "計算機概論"
+                ]
+            }
+        }
     },
     "awards": {
-        "title": "獲獎與成就",
-        "subtitle": "競賽與研究的卓越表現"
+        "title": "獲獎成就",
+        "items": {
+            "ai-cup-2024": {
+                "title": "2024 AI CUP 玉山人工智慧公開挑戰賽",
+                "organization": "玉山銀行 & 中央研究院",
+                "achievement": "回答準確率達全國前 8%（38/487），設計並實現基於檢索增強生成架構的金融智能問答系統，並結合向量檢索與大型語言模型，提升回答準確性與生成品質",
+                "rank": "全國前標 (Top 8%)"
+            },
+            "mbs-2024": {
+                "title": "2024 年國立政治大學 MBS 模擬商業管理比賽",
+                "organization": "國立政治大學",
+                "achievement": "綜合運用財務、行銷與市場策略，在企業經營模擬中制定決策，以最大化淨現值 (NPV) 為目標",
+                "rank": "亞軍"
+            },
+            "gtsm-2023": {
+                "title": "2023 年櫃買中心投資組合競賽",
+                "organization": "櫃買中心",
+                "achievement": "採用 Top-Down 分析方法，根據總體經濟趨勢進行資產配置，於 160 餘組團隊中脫穎而出",
+                "rank": "入圍優秀獎"
+            }
+        }
     },
     "skills": {
-        "title": "技能與證照",
-        "subtitle": "技術專業知識與專業資格"
+        "title": "專業技能",
+        "items": {
+            "valuation": {
+                "category": "估值與財務模型",
+                "items": [
+                    "DCF",
+                    "可比公司分析"
+                ]
+            },
+            "certifications": {
+                "category": "金融證照",
+                "items": [
+                    "證券商高級業務員",
+                    "證券商業務員",
+                    "金融道德與常識"
+                ]
+            },
+            "programming": {
+                "category": "程式語言",
+                "items": [
+                    "Python",
+                    "Java"
+                ]
+            },
+            "databases": {
+                "category": "金融資料庫",
+                "items": [
+                    "Bloomberg",
+                    "TEJ"
+                ]
+            },
+            "languages": {
+                "category": "語言能力",
+                "items": [
+                    "中文 (母語)",
+                    "英文 (TOEIC 875)"
+                ]
+            }
+        }
+    },
+    "detailedExperience": {
+        "aboutCompany": "關於公司",
+        "overview": "工作概述",
+        "keyMetrics": "關鍵指標",
+        "responsibilities": "主要職責",
+        "coreAchievements": "核心成就",
+        "keyProjects": "重點專案",
+        "skillsAndTools": "技能與工具",
+        "backToHome": "返回首頁",
+        "breadcrumbs": {
+            "home": "首頁",
+            "experience": "經歷"
+        }
     },
     "footer": {
-        "copyright": "版權所有",
-        "builtWith": "使用 Next.js、Tailwind CSS 和 Framer Motion 構建"
+        "copyright": "保留所有權利。",
+        "builtWith": "Designed for Investment Banking Standards"
     }
 }

@@ -1,41 +1,200 @@
 {
-    "nav": {
+    "HomePage": {
+        "title": "Lin Jing-Di | Portfolio",
+        "description": "FinTech Enthusiast | Aspiring Investment Banking Analyst"
+    },
+    "Navigation": {
         "home": "Home",
-        "education": "Education",
         "experience": "Experience",
-        "awards": "Awards",
-        "skills": "Skills"
+        "projects": "Projects",
+        "contact": "Contact"
     },
     "hero": {
-        "title": "FinTech Enthusiast | Aspiring Investment Banking Analyst",
+        "title": "LIN, JING-DI",
+        "subtitle": "Finance & AI Professional | NCCU International Business",
+        "role": "FinTech Enthusiast | Aspiring Investment Banking Analyst",
         "summary": "An ambitious undergraduate specializing in International Business with a focus on FinTech, currently pursuing opportunities in the financial services industry. Experienced in investment banking, venture capital, and financial research with a strong foundation in valuation, M&A analysis, and market intelligence.",
         "contact": {
             "email": "Email",
             "linkedin": "LinkedIn",
             "phone": "Phone"
-        },
-        "scroll": "Scroll to explore"
+        }
+    },
+    "experience": {
+        "title": "Internship Experience",
+        "viewReport": "View Report",
+        "items": {
+            "o-bank-2025": {
+                "company": "O-Bank",
+                "role": "Strategy Investment Intern",
+                "date": "Sep. 2025 – Present",
+                "description": [
+                    "M&A Support: Supporting M&A evaluation by analyzing key indicators and insights from comparable transactions",
+                    "Thematic Research: Independently completed the initial draft of a Stablecoin report presented to the Board. Regularly produced monthly market analysis reports and bi-weekly industry updates. Participated in five forums and drafted meeting minutes",
+                    "Deal Sourcing: Responsible for preliminary analysis and screening of potential investment cases. Completed qualitative assessments for over 10 companies and produced Call Memos, highlighting clear investment merits and risk assessments to the team"
+                ]
+            },
+            "huatai-2025": {
+                "company": "Huatai United Securities",
+                "role": "Investment Banking Intern",
+                "date": "Jul. 2025 – Aug. 2025",
+                "description": [
+                    "IPO Execution: Deeply involved in the BSE IPO project of a lithium battery manufacturer. Designed look-through verification procedures for overseas distributors, participated in drafting memos, prepared preliminary industry analysis chapters for the prospectus, and executed revenue cut-off testing and senior management bank account verification",
+                    "Data Verification: Independently audited the compliance of over 20,000 sales invoices and organized over 1.2 million post-sales equipment data records",
+                    "Case Studies: Supported multiple parallel projects and independently completed case studies on key topics such as ERP system integration and equity incentives"
+                ]
+            },
+            "tier-2025": {
+                "company": "Taiwan Institute of Economic Research (TIER)",
+                "role": "Research Intern, Division VI",
+                "date": "Mar. 2025 – Jun. 2025",
+                "description": [
+                    "Market Research: Conducted in-depth research on Taiwan's startup market, maintaining and updating a dynamic database of over 3,000 companies",
+                    "Special Reports: Analyzed the India-Pakistan conflict for a geopolitical current affairs project; findings were included in the final report submitted"
+                ]
+            }
+        }
+    },
+    "extracurricular": {
+        "title": "Extracurricular Activities",
+        "viewReport": "View Report",
+        "items": {
+            "tmba-2025": {
+                "company": "25th TMBA",
+                "role": "Equity Research Analyst",
+                "date": "Feb. 2025 – Jun. 2025",
+                "description": [
+                    "Equity Research: Focused on Sheng Yang Semiconductor (8028.TW), responsible for valuation using P/E ratio, and produced a research report including complete investment logic and stock rating",
+                    "Industry Research: Conducted industry research on advanced semiconductor manufacturing processes, covering industry overview, technology introduction, industry momentum, and stock recommendations"
+                ]
+            },
+            "mf-club-2024-member": {
+                "company": "9th NCCU Mutual Fund Club",
+                "role": "Research Analyst",
+                "date": "Sep. 2024 – Jun. 2024",
+                "description": [
+                    "Fund Allocation: Constructed a simulated portfolio centered on the power industry using a Top-Down approach, based on predictions of moderate U.S. economic growth",
+                    "Fund Analysis: Analyzed the SMH fund, the current state of semiconductor industry development, and growth momentum, along with an analysis of the top three holdings",
+                    "Industry Research: Researched the electric vehicle industry and analyzed future market development, winning third place in the club's end-of-semester project competition",
+                    "Macroeconomic Research: Conducted research on the European macroeconomy, analyzing fundamental indicators and policy directions to predict short-term and long-term macroeconomic trends"
+                ]
+            },
+            "mf-club-2024-leader": {
+                "company": "10th NCCU Mutual Fund Club",
+                "role": "Marketing Strategy Director",
+                "date": "Jun. 2024 – Jun. 2025",
+                "description": [
+                    "Brand Strategy: Managed social media platforms with over 6,300 followers, converting course and activity content into graphics and text to strengthen the club's brand image",
+                    "Project Management: Coordinated cross-departmental organization of mid-term and final large-scale achievement presentations and led quality control of project presentations"
+                ]
+            }
+        }
     },
     "education": {
         "title": "Education",
-        "subtitle": "Academic foundation in business and technology",
         "achievements": "Achievements",
-        "courses": "Core Courses"
-    },
-    "experience": {
-        "title": "Professional Experience",
-        "subtitle": "A journey through finance, research, and investment banking"
+        "courses": "Core Courses",
+        "items": {
+            "nccu-2022": {
+                "school": "National Chengchi University",
+                "degree": "International Business",
+                "program": "FinTech Program",
+                "date": "Sep. 2022 – Jun. 2026",
+                "achievements": [
+                    "Academic Achievement: 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J. Presented at 18th NTCIR Conference, Tokyo, 2025. (Oral Presentation)",
+                    "M&A Case Study Project: Served as Strategy Lead for the E.SUN Bank team in a simulated merger with Nan Shan Life Insurance, responsible for valuation models and strategic analysis"
+                ],
+                "courses": [
+                    "M&A Case Study",
+                    "Advanced Accounting",
+                    "Intermediate Accounting",
+                    "Auditing",
+                    "Introduction to AI",
+                    "Introduction to Computer Science"
+                ]
+            }
+        }
     },
     "awards": {
         "title": "Awards & Achievements",
-        "subtitle": "Recognition for excellence in competition and research"
+        "items": {
+            "ai-cup-2024": {
+                "title": "2024 AI CUP E.SUN AI Open Challenge",
+                "organization": "E.SUN Bank & Academia Sinica",
+                "achievement": "Ranked in the top 8% professionally (38/487). Designed and implemented a financial intelligent QA system based on RAG architecture, improving accuracy and generation quality.",
+                "rank": "Top 8%"
+            },
+            "mbs-2024": {
+                "title": "2024 NCCU MBS Business Simulation Competition",
+                "organization": "National Chengchi University",
+                "achievement": "Integrated finance, marketing, and market strategies to make decisions in business simulation, aiming to maximize Net Present Value (NPV).",
+                "rank": "Runner-up"
+            },
+            "gtsm-2023": {
+                "title": "2023 Taipei Exchange Portfolio Competition",
+                "organization": "Taipei Exchange",
+                "achievement": "Adopted Top-Down analysis method to allocate assets based on macroeconomic trends, standing out among over 160 teams.",
+                "rank": "Finalist Award"
+            }
+        }
     },
     "skills": {
         "title": "Skills & Certifications",
-        "subtitle": "Technical expertise and professional qualifications"
+        "items": {
+            "valuation": {
+                "category": "Valuation & Financial Modeling",
+                "items": [
+                    "DCF",
+                    "Comparable Company Analysis"
+                ]
+            },
+            "certifications": {
+                "category": "Financial Certifications",
+                "items": [
+                    "Senior Securities Specialist",
+                    "Securities Specialist",
+                    "Financial Ethics & Knowledge"
+                ]
+            },
+            "programming": {
+                "category": "Programming",
+                "items": [
+                    "Python",
+                    "Java"
+                ]
+            },
+            "databases": {
+                "category": "Financial Databases",
+                "items": [
+                    "Bloomberg",
+                    "TEJ"
+                ]
+            },
+            "languages": {
+                "category": "Languages",
+                "items": [
+                    "Chinese (Native)",
+                    "English (TOEIC 875)"
+                ]
+            }
+        }
+    },
+    "detailedExperience": {
+        "aboutCompany": "About Company",
+        "overview": "Overview",
+        "keyMetrics": "Key Metrics",
+        "responsibilities": "Key Responsibilities",
+        "coreAchievements": "Core Achievements",
+        "keyProjects": "Key Projects",
+        "skillsAndTools": "Skills & Tools",
+        "backToHome": "Back to Home",
+        "breadcrumbs": {
+            "home": "Home",
+            "experience": "Experience"
+        }
     },
     "footer": {
-        "copyright": "All rights reserved",
-        "builtWith": "Built with Next.js, Tailwind CSS, and Framer Motion"
+        "copyright": "All rights reserved.",
+        "builtWith": "Designed for Investment Banking Standards"
     }
 }

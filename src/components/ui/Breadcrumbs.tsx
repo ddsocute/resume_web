@@ -26,16 +26,16 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                         <>
                             <Link
                                 href={item.href}
-                                className="text-blue-400 hover:text-blue-300 transition-colors"
+                                className="text-gray-500 hover:text-blue-600 transition-colors font-medium"
                             >
                                 {item.label}
                             </Link>
-                            <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                         </>
                     ) : (
-                        <span className="text-slate-400">{item.label}</span>
+                        <span className="text-gray-900 font-semibold">{item.label}</span>
                     )}
                 </div>
             ))}
