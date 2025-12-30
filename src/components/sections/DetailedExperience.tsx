@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import PDFViewer from "@/components/ui/PDFViewer";
 
 interface DetailedExperiencePageProps {
     experience: DetailedExperience;
@@ -67,12 +68,12 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
             </div>
 
             <main className="container mx-auto px-6 lg:px-12 pt-32 pb-24">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
-                    {/* Left Column: Meta Info (Sticky Sidebar) */}
-                    <div className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start space-y-8 h-fit">
+                    {/* Left Column: Meta Info (Sticky Sidebar - 3 Columns) */}
+                    <div className="lg:col-span-3 lg:sticky lg:top-32 lg:self-start space-y-8 h-fit border-r border-gray-100 pr-0 lg:pr-8">
                         {/* Logo */}
-                        <div className="relative w-24 h-24 border border-gray-100 bg-white p-2">
+                        <div className="relative w-24 h-24 border border-gray-100 bg-white p-2 mb-6">
                             {logoSrc ? (
                                 <Image
                                     src={logoSrc}
@@ -89,10 +90,10 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                         {/* Title & Company */}
                         <div>
-                            <h1 className="text-3xl font-serif font-medium text-black leading-tight mb-3">
+                            <h1 className="text-3xl font-serif font-medium text-[#0A192F] leading-tight mb-3">
                                 {experience.role}
                             </h1>
-                            <div className="text-lg text-gray-600 font-medium">
+                            <div className="text-base text-gray-500 font-medium font-sans">
                                 {experience.company}
                             </div>
                         </div>
@@ -100,7 +101,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         {/* Meta Data */}
                         <div className="space-y-6 pt-6 border-t border-gray-100">
                             <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-sans">
                                     {t("timeline")}
                                 </h3>
                                 <p className="font-mono text-sm text-gray-700">
@@ -110,10 +111,10 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                             {experience.location && (
                                 <div>
-                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-sans">
                                         {t("location")}
                                     </h3>
-                                    <p className="text-sm text-gray-700">
+                                    <p className="text-sm text-gray-700 font-sans">
                                         {experience.location}
                                     </p>
                                 </div>
@@ -121,10 +122,10 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                             {experience.department && (
                                 <div>
-                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">
+                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-sans">
                                         {t("department")}
                                     </h3>
-                                    <p className="text-sm text-gray-700">
+                                    <p className="text-sm text-gray-700 font-sans">
                                         {experience.department}
                                     </p>
                                 </div>
@@ -134,14 +135,14 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         {/* Skills / Tools */}
                         {experience.skills && experience.skills.length > 0 && (
                             <div className="pt-6 border-t border-gray-100">
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 font-sans">
                                     {t("skillsAndTools")}
                                 </h3>
                                 <div className="flex flex-wrap gap-2">
                                     {experience.skills.map((skill, index) => (
                                         <span
                                             key={index}
-                                            className="px-2 py-1 bg-gray-50 text-gray-600 text-xs border border-gray-100 font-medium"
+                                            className="px-2 py-1 bg-gray-50 text-gray-600 text-xs border border-gray-100 font-medium font-mono"
                                         >
                                             {skill}
                                         </span>
@@ -151,32 +152,32 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         )}
                     </div>
 
-                    {/* Right Column: Main Content (Scrollable) */}
-                    <div className="lg:col-span-8">
+                    {/* Right Column: Main Content (Scrollable - 9 Columns) */}
+                    <div className="lg:col-span-9 pl-0 lg:pl-4">
 
                         {/* Section 1: Overview */}
-                        <section className="mb-12 pb-12 border-b border-gray-100">
-                            <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                        <section className="mb-16 pb-12 border-b border-gray-100">
+                            <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                 {t("overview")}
                             </h2>
-                            <p className="text-gray-700 leading-relaxed text-lg">
+                            <p className="text-gray-700 leading-loose text-lg font-sans">
                                 {experience.overview}
                             </p>
                         </section>
 
                         {/* Section 2: Detailed Responsibilities */}
                         {experience.responsibilities && experience.responsibilities.length > 0 && (
-                            <section className="mb-12 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                            <section className="mb-16 pb-12 border-b border-gray-100">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                     {t("responsibilities")}
                                 </h2>
-                                <ul className="space-y-4">
+                                <ul className="space-y-6">
                                     {experience.responsibilities.map((resp, index) => (
-                                        <li key={index} className="flex gap-4 items-start group">
-                                            <span className="font-mono text-xs text-gray-400 mt-1.5 opacity-50 group-hover:opacity-100 transition-opacity">
+                                        <li key={index} className="flex gap-5 items-start group">
+                                            <span className="font-mono text-sm text-gray-300 mt-1 shrink-0 group-hover:text-[#0A192F] transition-colors">
                                                 {(index + 1).toString().padStart(2, '0')}
                                             </span>
-                                            <span className="text-gray-700 leading-relaxed text-base group-hover:text-black transition-colors">
+                                            <span className="text-gray-700 leading-relaxed text-base group-hover:text-black transition-colors font-sans">
                                                 {resp}
                                             </span>
                                         </li>
@@ -185,72 +186,40 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                             </section>
                         )}
 
-                        {/* Section 3: Insights */}
+                        {/* Section 3: Insights - Full Width Highlight */}
                         {experience.insights && (
-                            <section className="mb-12 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                            <section className="mb-16 pb-12 border-b border-gray-100">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                     {t("insights")}
                                 </h2>
-                                <div className="bg-gray-50 p-8 border-l-2 border-[#0A192F]">
-                                    <p className="text-gray-700 leading-relaxed text-base italic">
+                                <div className="bg-[#F8FAFC] p-8 md:p-10 border-l-4 border-[#0A192F]">
+                                    <p className="text-[#334155] leading-relaxed text-lg italic font-serif">
                                         &ldquo;{experience.insights}&rdquo;
                                     </p>
                                 </div>
                             </section>
                         )}
 
-                        {/* Section A: Professional Project Files (Files) */}
+                        {/* Section A: Project Files (using PDFViewer) */}
                         {experience.files && experience.files.length > 0 && (
-                            <section className="mb-12 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                            <section className="mb-16 pb-12 border-b border-gray-100">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                     Project Files
                                 </h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {experience.files.map((file, idx) => (
-                                        <div key={idx} className="border border-gray-200 p-5 flex flex-col justify-between hover:border-gray-400 transition-colors bg-white h-full">
-                                            <div className="flex items-start gap-4 mb-4">
-                                                <div className="w-10 h-10 bg-gray-50 flex items-center justify-center text-gray-400 shrink-0 border border-gray-100">
-                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-medium text-base text-black mb-1 leading-snug">{file.title}</h4>
-                                                    <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{file.description}</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center justify-between pt-4 border-t border-gray-50">
-                                                <span className="text-xs font-mono text-gray-400 uppercase">
-                                                    {file.type || "PDF"}
-                                                </span>
-                                                <a
-                                                    href={file.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition-colors"
-                                                >
-                                                    Download
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                <PDFViewer files={experience.files} />
                             </section>
                         )}
 
                         {/* Section B: Activity Gallery (Images Slider) */}
                         {experience.images && experience.images.length > 0 ? (
-                            <section className="mb-12 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                            <section className="mb-12">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                     Activity Gallery
                                 </h2>
 
-                                <div className="relative group">
+                                <div className="relative group bg-gray-50 p-2 border border-gray-100">
                                     {/* Main Image Stage */}
-                                    <div className="relative w-full aspect-[16/9] bg-gray-50 border border-gray-100 overflow-hidden">
+                                    <div className="relative w-full aspect-[16/9] overflow-hidden bg-white">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={currentImageIndex}
@@ -264,17 +233,17 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                                     src={experience.images[currentImageIndex].url}
                                                     alt={experience.images[currentImageIndex].caption}
                                                     fill
-                                                    className="object-cover"
+                                                    className="object-contain"
                                                 />
                                             </motion.div>
                                         </AnimatePresence>
 
-                                        {/* Navigation Arrows (Desktop overlay, can be always visible or hover) */}
+                                        {/* Navigation Arrows */}
                                         {experience.images.length > 1 && (
                                             <>
                                                 <button
                                                     onClick={prevImage}
-                                                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white text-black border border-gray-200 shadow-sm opacity-0 group-hover:opacity-100 transition-all z-10"
+                                                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/80 hover:bg-white text-black border border-gray-200 shadow-sm transition-all z-10 rounded-full"
                                                     aria-label="Previous Image"
                                                 >
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -283,7 +252,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                                 </button>
                                                 <button
                                                     onClick={nextImage}
-                                                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white text-black border border-gray-200 shadow-sm opacity-0 group-hover:opacity-100 transition-all z-10"
+                                                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/80 hover:bg-white text-black border border-gray-200 shadow-sm transition-all z-10 rounded-full"
                                                     aria-label="Next Image"
                                                 >
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,7 +262,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                             </>
                                         )}
 
-                                        {/* Mobile Swipe support area - simplistic implementation */}
+                                        {/* Mobile Swipe support area */}
                                         <div
                                             className="absolute inset-0 md:hidden z-0"
                                             onTouchEnd={(e) => {
@@ -305,8 +274,8 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                     </div>
 
                                     {/* Caption & Indicators */}
-                                    <div className="mt-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <p className="text-sm font-medium text-gray-600 border-l-2 border-[#0A192F] pl-3 py-1">
+                                    <div className="mt-4 px-4 pb-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <p className="text-sm font-medium text-gray-600 border-l-2 border-[#0A192F] pl-3 py-1 font-serif">
                                             {experience.images[currentImageIndex].caption}
                                         </p>
 
@@ -326,9 +295,8 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                 </div>
                             </section>
                         ) : experience.images && (
-                            /* Placeholder for when images array exists but is empty (as per user request: "若目前無資料，請先預留位置") */
-                            <section className="mb-12 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-black mb-6">
+                            <section className="mb-12">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
                                     Activity Gallery
                                 </h2>
                                 <div className="w-full aspect-[16/9] bg-gray-50 border border-gray-100 border-dashed flex flex-col items-center justify-center text-gray-400">
