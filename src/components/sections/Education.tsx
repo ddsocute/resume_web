@@ -9,7 +9,11 @@ const LOGO_MAP: Record<string, string> = {
     "nccu-2022": "/images/schools/nccu.png",
 };
 
-export default function EducationSection() {
+interface EducationSectionProps {
+    locale: string;
+}
+
+export default function EducationSection({ locale }: EducationSectionProps) {
     const { education } = resumeData;
     const t = useTranslations("education");
 
@@ -115,6 +119,30 @@ export default function EducationSection() {
                                             </div>
                                         )}
                                     </div>
+
+                                    {/* Sub-page Links for NCCU */}
+                                    {id === 'nccu-2022' && (
+                                        <div className="w-full md:w-auto mt-6 md:mt-0 md:ml-4 flex flex-row md:flex-col gap-3 shrink-0">
+                                            <a
+                                                href={`/${locale}/education/nccu-academic-2025`}
+                                                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#0A192F] text-white text-xs font-medium hover:bg-[#112240] transition-colors min-w-[140px]"
+                                            >
+                                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                </svg>
+                                                {t("viewPaper")}
+                                            </a>
+                                            <a
+                                                href={`/${locale}/education/nccu-ma-project-2025`}
+                                                className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-[#0A192F] text-[#0A192F] text-xs font-medium hover:bg-gray-50 transition-colors min-w-[140px]"
+                                            >
+                                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                </svg>
+                                                {t("viewCaseStudy")}
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </motion.div>
                         );

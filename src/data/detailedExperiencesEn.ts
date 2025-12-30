@@ -150,7 +150,20 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         ],
         skills: ["Equity Research", "Financial Modeling", "Valuation (P/E)", "Semiconductor Industry", "Stock Pitch"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "Sheng Yang Semi (8028) Research Report",
+                url: "/files/tmba-semi-report.pdf",
+                description: "Full Buy-side investment report with rating and financial model",
+                type: "PDF"
+            },
+            {
+                title: "Sheng Yang Semi (8028) Stock Pitch",
+                url: "/files/tmba-semi-pitch.pdf",
+                description: "End-of-term Stock Pitch Presentation",
+                type: "PDF"
+            }
+        ],
         images: []
     },
     "mf-club-2024-member": {
@@ -188,7 +201,32 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         ],
         skills: ["Top-Down Analysis", "Portfolio Management", "ETF Analysis", "Electric Vehicle Industry", "Macroeconomics"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "EV Industry Research Report",
+                url: "/files/ev-industry-report.pdf",
+                description: "Global EV market supply/demand analysis and supply chain mapping",
+                type: "PDF"
+            },
+            {
+                title: "SMH Semiconductor ETF Analysis",
+                url: "/files/smh-fund-analysis.pdf",
+                description: "VanEck Semiconductor ETF Fund Analysis Report",
+                type: "PDF"
+            },
+            {
+                title: "European Macroeconomic Research",
+                url: "/files/eu-macro-report.pdf",
+                description: "Macroeconomic trend forecast based on key indicators and policies",
+                type: "PDF"
+            },
+            {
+                title: "Power & Energy Fund Research",
+                url: "/files/power-fund-report.pdf",
+                description: "Simulated portfolio construction report focused on the Power Industry",
+                type: "PDF"
+            }
+        ],
         images: []
     },
     "mf-club-2024-leader": {
@@ -277,7 +315,20 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         projects: [],
         skills: ["M&A Strategy", "Valuation Modeling", "Negotiation", "Team Leadership", "Deal Structuring"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "E.SUN FHC (2884) M&A Project Report",
+                url: "/files/ma-esun-project.pdf",
+                description: "Strategy analysis and valuation model for simulated M&A deal",
+                type: "PDF"
+            },
+            {
+                title: "M&A Final Joint Report",
+                url: "/files/ma-final-report.pdf",
+                description: "Comprehensive deal structure and negotiation results",
+                type: "PDF"
+            }
+        ],
         images: []
     }
 };

@@ -164,7 +164,20 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         ],
         skills: ["Equity Research", "Financial Modeling", "Valuation (P/E)", "Semiconductor Industry", "Stock Pitch"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "昇陽半導體 (8028) 投資研究報告",
+                url: "/files/tmba-semi-report.pdf",
+                description: "完整 Buy-side 格式投資報告，包含各股評級與財務模型",
+                type: "PDF"
+            },
+            {
+                title: "昇陽半導體 (8028) Stock Pitch",
+                url: "/files/tmba-semi-pitch.pdf",
+                description: "期末 Stock Pitch 簡報檔",
+                type: "PDF"
+            }
+        ],
         images: []
     },
     "mf-club-2024-member": {
@@ -207,7 +220,32 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         ],
         skills: ["Top-Down Analysis", "Portfolio Management", "ETF Analysis", "Electric Vehicle Industry", "Macroeconomics"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "電動車產業研究報告",
+                url: "/files/ev-industry-report.pdf",
+                description: "針對全球電動車市場進行供需分析與供應鏈盤點",
+                type: "PDF"
+            },
+            {
+                title: "SMH 半導體 ETF 評析",
+                url: "/files/smh-fund-analysis.pdf",
+                description: "VanEck Semiconductor ETF 基金評析報告",
+                type: "PDF"
+            },
+            {
+                title: "歐洲總體經濟研究",
+                url: "/files/eu-macro-report.pdf",
+                description: "分析基本指標和政策方向，預測宏觀經濟趨勢",
+                type: "PDF"
+            },
+            {
+                title: "電力能源基金研究",
+                url: "/files/power-fund-report.pdf",
+                description: "以電力產業為核心之模擬投組建構報告",
+                type: "PDF"
+            }
+        ],
         images: []
     },
     "mf-club-2024-leader": {
@@ -299,7 +337,20 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         projects: [],
         skills: ["M&A Strategy", "Valuation Modeling", "Negotiation", "Team Leadership", "Deal Structuring"],
         metrics: [],
-        files: [],
+        files: [
+            {
+                title: "玉山金控 (2884) 併購專案報告",
+                url: "/files/ma-esun-project.pdf",
+                description: "模擬併購交易策略分析與估值模型",
+                type: "PDF"
+            },
+            {
+                title: "企業併購期末共同報告",
+                url: "/files/ma-final-report.pdf",
+                description: "完整交易架構與談判結果彙整",
+                type: "PDF"
+            }
+        ],
         images: []
     }
 };

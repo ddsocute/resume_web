@@ -6,11 +6,16 @@ import AwardsSection from "@/components/sections/Awards";
 import SkillsSection from "@/components/sections/Skills";
 import Footer from "@/components/sections/Footer";
 
-export default function Home() {
+interface HomeProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: HomeProps) {
+  const { locale } = await params;
   return (
     <main className="min-h-screen">
       <Hero />
-      <EducationSection />
+      <EducationSection locale={locale} />
       <ExperienceSection />
       <ExtracurricularSection />
       <AwardsSection />
