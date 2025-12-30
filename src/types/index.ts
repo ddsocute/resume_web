@@ -47,7 +47,7 @@ export interface ExperienceAchievement {
     description: string;
     impact?: string;
     metrics?: string[];
-    category: "quantitative" | "qualitative" | "recognition";
+    category: "quantitative" | "qualitative" | "recognition" | "leadership";
 }
 
 export interface ExperienceProject {

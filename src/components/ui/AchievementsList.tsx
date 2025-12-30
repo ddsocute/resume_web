@@ -37,6 +37,16 @@ const categoryStyles = {
         labelColor: "text-amber-800",
         metricBg: "bg-white",
         metricText: "text-amber-700"
+    },
+    leadership: {
+        label: "Leadership & Strategy",
+        icon: "🚀",
+        cardBg: "bg-emerald-50",
+        cardBorder: "border-emerald-100",
+        iconColor: "text-emerald-600",
+        labelColor: "text-emerald-800",
+        metricBg: "bg-white",
+        metricText: "text-emerald-700"
     }
 };
 
