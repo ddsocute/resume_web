@@ -2,17 +2,19 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const SECTIONS = [
-    { id: "education", label: "I. Education" },
-    { id: "experience", label: "II. Experience" },
-    { id: "extracurricular", label: "III. Extracurricular" },
-    { id: "awards", label: "IV. Awards" },
-    { id: "skills", label: "V. Skills" },
+    { id: "education", key: "education" },
+    { id: "experience", key: "experience" },
+    { id: "extracurricular", key: "projects" },
+    { id: "awards", key: "awards" },
+    { id: "skills", key: "skills" },
 ];
 
 export default function SideNav() {
     const [activeSection, setActiveSection] = useState<string>("");
+    const t = useTranslations('Nav');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -70,7 +72,7 @@ export default function SideNav() {
                                 className={`font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-300 ${isActive ? "text-[#0A192F] font-medium" : "text-gray-400 group-hover:text-gray-600"
                                     }`}
                             >
-                                {section.label}
+                                {t(section.key)}
                             </span>
                         </button>
                     );

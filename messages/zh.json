@@ -9,6 +9,18 @@
         "projects": "專案",
         "contact": "聯絡資訊"
     },
+    "Hero": {
+        "name": "林靖迪",
+        "subtitle": "金融科技與 AI 策略 | 政大國貿",
+        "description": "專注於企業併購、財務估值與 MLLM 應用研究。致力於利用人工智慧技術優化金融決策流程。"
+    },
+    "Nav": {
+        "education": "一、學術背景",
+        "experience": "二、專業經歷",
+        "projects": "三、實務專案",
+        "awards": "四、榮譽獎項",
+        "skills": "五、專業技能"
+    },
     "hero": {
         "title": "林靖迪",
         "subtitle": "Finance & AI Professional | 政大國貿",
