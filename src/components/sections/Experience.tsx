@@ -70,7 +70,7 @@ export default function ExperienceSection() {
                                         <div className="flex-1 min-w-0">
                                             {/* Header Row: Company & Date */}
                                             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                                <h3 className="font-serif text-xl font-medium text-[#0A192F] group-hover:text-blue-900 transition-colors">
+                                                <h3 className="font-serif text-xl font-medium text-[#0A192F] group-hover:text-blue-900 transition-colors leading-tight">
                                                     {companyName}
                                                 </h3>
                                                 <span className="font-sans text-sm text-gray-500 font-medium whitespace-nowrap mt-1 md:mt-0">
@@ -80,7 +80,7 @@ export default function ExperienceSection() {
 
                                             {/* Role Title */}
                                             <div className="mb-4">
-                                                <p className="font-sans text-base font-semibold text-[#0A192F] uppercase tracking-wide">
+                                                <p className="font-sans text-base font-semibold text-[#0A192F] uppercase tracking-wide leading-tight">
                                                     {role}
                                                 </p>
                                             </div>
