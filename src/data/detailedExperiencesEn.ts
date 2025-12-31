@@ -291,7 +291,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         startDate: "",
         endDate: "",
         logoUrl: "/images/schools/nccu.png",
-        department: "M&A Case Study Course",
+        // department removed
         companyDescription: "Flagship course of NCCU College of Commerce, guided by senior industry M&A lawyers and bankers, simulating real-world M&A transaction processes.",
         overview: "Served as Strategy Lead for the E.SUN Bank (Acquirer) team in a simulated M&A transaction targeting Nan Shan Life Insurance. Led strategic analysis and valuation efforts. Coordinated legal, financial, and strategy subgroups, formulated negotiation strategies, and fought for optimal deal terms at the negotiation table.",
         insights: "This course was my closest experience to a real M&A deal. As Strategy Lead, I had to master financial modeling and understand how to maximize business interests within legal frameworks. In high-pressure simulated negotiations, I learned the importance of 'perspective-taking'—understanding the counterpart's pain points and bottom lines to create win-win (or winning) situations.",
