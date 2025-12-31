@@ -52,7 +52,7 @@ export default function ExperienceCard({
                 <div>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
-                            <h3 className={`font-serif font-bold text-[#0A192F] group-hover:text-blue-900 transition-colors ${highlightDate ? 'text-2xl' : 'text-xl'}`}>
+                            <h3 className="font-serif font-bold text-2xl text-[#0A192F] group-hover:text-blue-900 transition-colors">
                                 {title}
                             </h3>
                             <p className="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">

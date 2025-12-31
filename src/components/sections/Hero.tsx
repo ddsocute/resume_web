@@ -56,10 +56,10 @@ export default function Hero() {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="lg:col-span-5 relative"
                     >
-                        <div className="relative aspect-[4/5] overflow-hidden bg-slate-50 border border-slate-100 shadow-2xl">
+                        <div className="relative aspect-[4/5] overflow-hidden bg-slate-50 shadow-2xl">
                             <Image src={profile.avatarUrl ?? "/images/profile.png"} alt={profile.name} fill className="object-cover object-top" priority />
                         </div>
-                        <div className="absolute -z-10 -bottom-8 -right-8 w-full h-full border border-slate-200 opacity-50" />
+                        <div className="absolute -z-10 -bottom-8 -right-8 w-full h-full opacity-50" />
                     </motion.div>
                 </div>
             </div>

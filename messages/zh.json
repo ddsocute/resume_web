@@ -113,8 +113,8 @@
                 ]
             },
             "tmba-2023-algo": {
-                "company": "第二十三屆TMBA程式交易部",
-                "role": "專案生",
+                "company": "第二十三屆TMBA",
+                "role": "程式交易部專案生",
                 "date": "2023年7月 – 2023年8月",
                 "description": [
                     "量化交易：使用 Python 開發基於布林通道（Bollinger Bands）策略的台指期量化交易專案",
@@ -134,8 +134,8 @@
         "items": {
             "nccu-2022": {
                 "school": "國立政治大學",
-                "degree": "國際經營與貿易學系",
-                "program": "金融科技學程",
+                "degree": "國際經營與貿易學系 | 金融科技學程",
+                "program": "",
                 "date": "2022年9月 – 2026年6月",
                 "paperSummary": "發表於 18th NTCIR Conference (全球三大資訊檢索評測會議之一)",
                 "projectSummary": "擔任小組策略長，負責估值模型與策略分析",
