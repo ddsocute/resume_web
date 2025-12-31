@@ -100,7 +100,7 @@ export default function Education() {
                                     <ExperienceCard
                                         title={t("paperTitle")}
                                         company="KAP: MLLM-assisted OCR Text Enhancement"
-                                        date="2025"
+                                        date=""
                                         summary={paperSummary}
                                         link={`/${locale}/education/nccu-academic-2025`}
                                         linkText={t("viewPaper")}
@@ -109,7 +109,7 @@ export default function Education() {
                                     <ExperienceCard
                                         title={t("projectTitle")}
                                         company="E.SUN Bank M&A Strategy"
-                                        date="2024 Fall - 2025 Spring"
+                                        date=""
                                         summary={projectSummary}
                                         link={`/${locale}/education/nccu-ma-project-2025`}
                                         linkText={t("viewCaseStudy")}
