@@ -163,14 +163,16 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                         {/* Meta Data */}
                         <div className="space-y-6 pt-6 border-t border-gray-100">
-                            <div>
-                                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-sans">
-                                    {t("timeline")}
-                                </h3>
-                                <p className="font-mono text-sm text-gray-700">
-                                    {experience.startDate} {experience.endDate ? `— ${experience.endDate}` : ''}
-                                </p>
-                            </div>
+                            {experience.startDate && (
+                                <div>
+                                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-sans">
+                                        {t("timeline")}
+                                    </h3>
+                                    <p className="font-mono text-sm text-gray-700">
+                                        {experience.startDate} {experience.endDate ? `— ${experience.endDate}` : ''}
+                                    </p>
+                                </div>
+                            )}
 
                             {experience.location && (
                                 <div>

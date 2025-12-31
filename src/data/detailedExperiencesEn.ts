@@ -16,11 +16,9 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "My internship at O-Bank provided deep insights into how financial institutions evaluate emerging tech investments. Through hands-on DD and writing Investment Memos, I honed both hard skills (financial modeling, market analysis) and strategic thinking. The Stablecoin project taught me how to translate complex tech concepts into actionable business insights, crucial for my future in FinTech.",
         description: [], // Not used in detailed view main text usually, but good to keep
         responsibilities: [
-            "Conducted preliminary Due Diligence on potential investment targets, including business model analysis, financial health assessment, and market positioning research",
-            "Assisted in drafting and revising Investment Memos, consolidating key financial data and risk assessments for the Investment Committee",
-            "Tracked and compiled weekly global FinTech and banking M&A and fundraising updates into market intelligence reports",
-            "Participated in Stablecoin research, analyzing global regulations, technical architectures, and business use cases, and assisted in drafting strategic recommendation reports for the Board",
-            "Supported external forums and seminars attended by the department, responsible for real-time recording and summary compilation"
+            "M&A Support: Supporting M&A evaluation by analyzing key indicators and insights from comparable transactions",
+            "Thematic Research: Independently completed the initial draft of a Stablecoin report presented to the Board. Regularly produced monthly market analysis reports and bi-weekly industry updates. Participated in five forums and drafted meeting minutes",
+            "Deal Sourcing: Responsible for preliminary analysis and screening of potential investment cases. Completed qualitative assessments for over 10 companies and produced Call Memos, highlighting clear investment merits and risk assessments to the team"
         ],
         keyAchievements: [],
         projects: [
@@ -54,12 +52,9 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "The high-intensity environment at Huatai United Securities immersed me in top-tier investment banking operations. Handling massive data and executing IPO DD instilled in me extreme rigor and data sensitivity. Solving complex cross-border verification challenges taught me that in capital markets, details often determine success, and professional skepticism is key to deal quality.",
         description: [],
         responsibilities: [
-            "Assisted in BSE IPO execution for a lithium battery manufacturer, participating in on-site DD and working paper preparation",
-            "Designed and executed look-through verification procedures for overseas distributors, verifying sales authenticity through interviews and data cross-checking",
-            "Drafted the Industry Analysis chapter of the Prospectus, collecting and analyzing supply chain data and competitor financial performance",
-            "Executed Revenue Cut-off Testing, reconciling logistics documents with invoice dates to ensure correct revenue recognition periods",
-            "Assisted in verifying bank statements of senior management and key personnel to identify abnormal fund flows or potential conflicts of interest",
-            "Organized and analyzed over 1.2 million post-sales equipment operation data records to assist in evaluating product quality and maintenance costs"
+            "IPO Execution: Deeply involved in the BSE IPO project of a lithium battery manufacturer. Designed look-through verification procedures for overseas distributors, participated in drafting memos, prepared preliminary industry analysis chapters for the prospectus, and executed revenue cut-off testing and senior management bank account verification",
+            "Data Verification: Independently audited the compliance of over 20,000 sales invoices and organized over 1.2 million post-sales equipment data records",
+            "Case Studies: Supported multiple parallel projects and independently completed case studies on key topics such as ERP system integration and equity incentives"
         ],
         keyAchievements: [],
         projects: [
@@ -93,10 +88,8 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "Interning at TIER broadened my macroeconomic perspective. Transitioning from an observer to a researcher producing policy recommendations, I learned to distill key industry drivers from geopolitical and economic data. This experience strengthened my logical reasoning and ability to construct data-driven arguments.",
         description: [],
         responsibilities: [
-            "Researched Taiwan's startup ecosystem, tracking funding, business development, and trends for 3,000+ companies",
-            "Collected and analyzed domestic and international startup ecosystem news and reports to assist in drafting industry trend analysis",
-            "Participated in geopolitical impact assessment projects, conducting in-depth research on the historical background, economic impact, and potential supply chain impact of the India-Pakistan conflict",
-            "Assisted in organizing and analyzing economic data (e.g., GDP, CPI, PMI) and creating charts for researchers' macroeconomic reports"
+            "Market Research: Conducted in-depth research on Taiwan's startup market, maintaining and updating a dynamic database of over 3,000 companies",
+            "Special Reports: Analyzed the India-Pakistan conflict for a geopolitical current affairs project; findings were included in the final report submitted"
         ],
         keyAchievements: [],
         projects: [
@@ -118,7 +111,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
     },
     "tmba-2025": {
         id: "tmba-2025",
-        company: "TMBA",
+        company: "25th TMBA",
         role: "Equity Research Analyst",
         location: "Taipei, Taiwan",
         startDate: "Feb. 2025",
@@ -130,10 +123,8 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "TMBA's rigorous training was pivotal in establishing my equity research framework. From modeling to report writing, I mastered core Sell-side analyst skills. In semiconductor research, I learned to connect upstream/downstream insights to form independent investment theses. This cemented my passion for professional investment research.",
         description: [],
         responsibilities: [
-            "Executed full research on 8028.TW, including business analysis and modeling",
-            "Applied P/E valuation method to derive target price and wrote a complete Buy/Hold/Sell investment recommendation report",
-            "Participated in advanced semiconductor process industry research, analyzing technology roadmaps (e.g., GAA, 3nm) and supply chain beneficiaries",
-            "Participated in weekly equity research meetings, pitching stocks and answering challenges from members and industry mentors"
+            "Equity Research: Focused on Sheng Yang Semiconductor (8028.TW), responsible for valuation using P/E ratio, and produced a research report including complete investment logic and stock rating",
+            "Industry Research: Conducted industry research on advanced semiconductor manufacturing processes, covering industry overview, technology introduction, industry momentum, and stock recommendations"
         ],
         keyAchievements: [],
         projects: [
@@ -168,7 +159,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
     },
     "mf-club-2024-member": {
         id: "mf-club-2024-member",
-        company: "NCCU MF Club",
+        company: "9th NCCU Mutual Fund Club",
         role: "Research Analyst",
         location: "Taipei, Taiwan",
         startDate: "Sep. 2024",
@@ -180,11 +171,10 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "Practicing Top-Down portfolio construction highlighted the importance of macroeconomics in asset allocation. In team competitions, I learned to integrate diverse views (Power, Semi, EV) into logical investment strategies. This experience expanded my research breadth and taught me that successful investing often comes from critical thinking against market consensus.",
         description: [],
         responsibilities: [
-            "Executed Top-Down macro analysis for portfolio construction, assessing economic cycles and asset allocation",
-            "Constructed a simulated portfolio centered on the power industry, screening relevant ETFs and stocks",
-            "Wrote fund analysis reports for SMH (VanEck Semiconductor ETF), breaking down holdings and performance attribution",
-            "Deeply researched the EV industry supply chain and market trends, analyzing investment opportunities in lithium batteries and charging piles",
-            "Participated in final project competition, presenting a complete investment strategy deck to judges"
+            "Fund Allocation: Constructed a simulated portfolio centered on the power industry using a Top-Down approach, based on predictions of moderate U.S. economic growth",
+            "Fund Analysis: Analyzed the SMH fund, the current state of semiconductor industry development, and growth momentum, along with an analysis of the top three holdings",
+            "Industry Research: Researched the electric vehicle industry and analyzed future market development, winning third place in the club's end-of-semester project competition",
+            "Macroeconomic Research: Conducted research on the European macroeconomy, analyzing fundamental indicators and policy directions to predict short-term and long-term macroeconomic trends"
         ],
         keyAchievements: [],
         projects: [
@@ -231,7 +221,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
     },
     "mf-club-2024-leader": {
         id: "mf-club-2024-leader",
-        company: "NCCU MF Club",
+        company: "10th NCCU Mutual Fund Club",
         role: "Marketing Strategy Director",
         location: "Taipei, Taiwan",
         startDate: "Jun. 2024",
@@ -243,11 +233,8 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         insights: "Serving as Marketing Strategy Director transformed me from an analyst to a brand manager. I learned to translate dense financial concepts into engaging social content, similar to pitching ideas to investors. Leading a team and organizing major events honed my project management and communication skills—soft skills vital for my future finance career.",
         description: [],
         responsibilities: [
-            "Developed annual brand strategy",
-            "Managed social media accounts with 6,300+ followers",
-            "Converted financial concepts into infographics",
-            "Coordinated mid-term and final showcase events",
-            "Led marketing team and quality control"
+            "Brand Strategy: Managed social media platforms with over 6,300 followers, converting course and activity content into graphics and text to strengthen the club's brand image",
+            "Project Management: Coordinated cross-departmental organization of mid-term and final large-scale achievement presentations and led quality control of project presentations"
         ],
         keyAchievements: [],
         projects: [],
@@ -262,7 +249,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         company: "National Chengchi University (NCCU)",
         role: "Academic Achievement",
         location: "Tokyo, Japan",
-        startDate: "2025",
+        startDate: "",
         endDate: "",
         logoUrl: "/images/awards/academic_paper_final.png",
         // department removed
@@ -301,8 +288,8 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         company: "National Chengchi University (NCCU)",
         role: "M&A Case Study Project",
         location: "Taipei, Taiwan",
-        startDate: "2024 Fall",
-        endDate: "2025 Spring",
+        startDate: "",
+        endDate: "",
         logoUrl: "/images/schools/nccu.png",
         department: "M&A Case Study Course",
         companyDescription: "Flagship course of NCCU College of Commerce, guided by senior industry M&A lawyers and bankers, simulating real-world M&A transaction processes.",

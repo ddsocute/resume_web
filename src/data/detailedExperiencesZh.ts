@@ -4,7 +4,7 @@ import { DetailedExperience } from "@/types";
 export const detailedExperiences: Record<string, DetailedExperience> = {
     "o-bank-2025": {
         id: "o-bank-2025",
-        company: "王道商業銀行 (O-Bank)",
+        company: "王道商業銀行",
         role: "策略投資部實習生",
         location: "台北, 台灣",
         startDate: "2025年9月",
@@ -20,11 +20,9 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "案源分析：負責潛在投資案的初步分析篩選，已完成十多家公司的質化評估，並產出 Call Memo，向團隊提出明確的投資亮點與風險評估"
         ],
         responsibilities: [
-            "針對潛在投資標的進行初步盡職調查（DD），包含商業模式分析、財務體質檢視、及市場競爭定位調查",
-            "協助撰寫及修訂投資備忘錄（Investment Memo），匯整關鍵財務數據與風險評估，供投資委員會決策參考",
-            "每週追蹤並彙整全球 Fintech 與銀行業之重大併購案與募資動態，編製成市場情報週報供部門內部參考",
-            "參與穩定幣（Stablecoin）專題研究，深入分析各國監管政策、技術架構、及商業應用場景，並協助撰寫呈報董事會之策略建議報告",
-            "支援部門參與之外部論壇與研討會，負責即時紀錄與重點摘要整理"
+            "併購支援：透過分析可比交易的關鍵指標與洞見，支援併購案的評估",
+            "主題研究：獨自完成提報至董事會穩定幣報告初稿，定期產出市場分析月報與產業動態雙週刊，並參與過五場論壇撰寫紀要",
+            "案源分析：負責潛在投資案的初步分析篩選，已完成十多家公司的質化評估，並產出 Call Memo，向團隊提出明確的投資亮點與風險評估"
         ],
         keyAchievements: [],
         projects: [
@@ -46,7 +44,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
     },
     "huatai-2025": {
         id: "huatai-2025",
-        company: "華泰聯合證券 (Huatai United Securities)",
+        company: "華泰聯合證券",
         role: "投資銀行部實習生",
         location: "南京项目组, 中國",
         startDate: "2025年7月",
@@ -62,12 +60,9 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "案例研究：支援多個並行專案，獨立完成了包含 ERP 系統整合、股權激勵等關鍵議題的案例研究"
         ],
         responsibilities: [
-            "協助執行鋰電池製造商之北交所 IPO 專案，參與現場盡職調查與底稿編制",
-            "設計並執行境外經銷商穿透核查程序，透過訪談與數據交叉比對，驗證終端銷售真實性",
-            "撰寫公開說明書（Prospectus）之產業分析章節，蒐集並分析上下游供應鏈數據與競爭對手財務表現",
-            "執行收入截止性測試（Revenue Cut-off Testing），核對物流單據與發票日期，確保收入認列期間正確",
-            "協助查核高管與關鍵人員之銀行流水，辨識是否有異常資金往來或潛在利益衝突",
-            "整理並分析逾 120 萬筆售後設備營運數據，協助評估產品品質與維修成本"
+            "IPO 執行：深度參與鋰電池製作商之北交所 IPO 專案，設計境外經銷商穿透核查程序並參與備忘錄撰寫，負責公開說明書中產業分析章節的初步撰寫，並執行收入截止性測試與高管銀行帳目核查等程序",
+            "數據驗證：獨立審核了超過 2 萬筆銷售單據的合規性，並完成了逾 120 萬筆售後設備數據的整理",
+            "案例研究：支援多個並行專案，獨立完成了包含 ERP 系統整合、股權激勵等關鍵議題的案例研究"
         ],
         keyAchievements: [],
         projects: [
@@ -89,7 +84,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
     },
     "tier-2025": {
         id: "tier-2025",
-        company: "財團法人臺灣經濟研究院 (TIER)",
+        company: "財團法人臺灣經濟研究院",
         role: "研究六所實習生",
         location: "台北, 台灣",
         startDate: "2025年3月",
@@ -104,10 +99,8 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "專題報告：於地緣時事專案中，分析印巴衝突，成果獲納入最終呈報的報告中"
         ],
         responsibilities: [
-            "負責台灣新創企業數據庫之維護與更新，追蹤逾 3,000 家新創之募資進度、產品發布、及營運狀況",
-            "蒐集並整理國內外新創生態系相關新聞與報告，協助撰寫產業趨勢分析",
-            "參與地緣政治影響評估專案，針對印巴衝突之歷史背景、經濟影響、及對台供應鏈之潛在衝擊進行深度研究",
-            "協助整理與分析經濟數據（如 GDP, CPI, PMI 等），製作圖表供研究員撰寫總經報告使用"
+            "市場研究：深入研究台灣新創市場，維護並更新包含逾 3,000 家企業的動態數據庫",
+            "專題報告：於地緣時事專案中，分析印巴衝突，成果獲納入最終呈報的報告中"
         ],
         keyAchievements: [],
         projects: [
@@ -129,7 +122,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
     },
     "tmba-2025": {
         id: "tmba-2025",
-        company: "台大商學研究社 (TMBA)",
+        company: "第二十五屆 TMBA",
         role: "個股研究部專案生",
         location: "台北, 台灣",
         startDate: "2025年2月",
@@ -144,10 +137,8 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "產業研究：以半導體先進製程產業主題，製作涵蓋產業概況、技術介紹、產業動能、個股推薦的產業報告"
         ],
         responsibilities: [
-            "選定昇陽半導體（8028.TW）進行個股深度研究，搭建財務模型進行營收預測與獲利估算",
-            "運用本益比法（P/E Valuation）進行目標價推估，並撰寫完整之投資推薦報告（Buy/Hold/Sell）",
-            "參與半導體先進製程產業專題研究，負責技術路線演進（如 GAA, 3nm 製程）與相關供應鏈受惠程度之分析",
-            "每週參與個股研究部會議，進行股票推介（Stock Pitch）並接受社員與業師之提問挑戰"
+            "個股研究：以昇陽半導體（8028.TW）為標的，負責估值部分並使用 P/E 估值法，製作包含完整投資邏輯與個股評級的研究報告",
+            "產業研究：以半導體先進製程產業主題，製作涵蓋產業概況、技術介紹、產業動能、個股推薦的產業報告"
         ],
         keyAchievements: [],
         projects: [
@@ -182,7 +173,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
     },
     "mf-club-2024-member": {
         id: "mf-club-2024-member",
-        company: "政大共同基金研究社 (NCCU MF Club)",
+        company: "第九屆政大共同基金研究社",
         role: "研究專案生",
         location: "台北, 台灣",
         startDate: "2024年9月",
@@ -199,11 +190,10 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "總經研究：對歐洲總體經濟進行研究，透過分析基本指標和政策方向，預測短期和長期的宏觀經濟趨勢"
         ],
         responsibilities: [
-            "運用 Top-Down 策略進行宏觀經濟分析（以美國與歐洲市場為主），判斷景氣循環位置與資產配置方向",
-            "構建以電力產業為核心之模擬投資組合，篩選相關 ETF 與個股進行配置",
-            "撰寫 SMH（VanEck Semiconductor ETF）基金評析報告，拆解其持股結構與績效歸因",
-            "深入研究電動車產業供應鏈與市場趨勢，分析鋰電池、充電樁等次產業之投資機會",
-            "參與期末專案競賽，與團隊合作產出完整之投資策略簡報，並向評審進行報告"
+            "基金配置：基於美國經濟溫和增長的預測，採用 Top-Down 方式，構建以電力產業為核心的模擬投組",
+            "基金評析：對 SMH 基金進行評析，並分析半導體產業發展現況與成長動能並針對前三大持股進行分析",
+            "產業研究：研究電動車產業，分析市場未來發展，並在上學期社內期末專案競賽中得到第三名",
+            "總經研究：對歐洲總體經濟進行研究，透過分析基本指標和政策方向，預測短期和長期的宏觀經濟趨勢"
         ],
         keyAchievements: [],
         projects: [
@@ -250,7 +240,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
     },
     "mf-club-2024-leader": {
         id: "mf-club-2024-leader",
-        company: "政大共同基金研究社 (NCCU MF Club)",
+        company: "第十屆政大共同基金研究社",
         role: "行銷策略長",
         location: "台北, 台灣",
         startDate: "2024年6月",
@@ -265,11 +255,8 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "專案管理：跨部門協調期中、期末兩場大型成果發表會的籌辦工作，並主導專案簡報的品質控管"
         ],
         responsibilities: [
-            "制定並執行年度行銷策略，管理 FB、IG 等社群平台，追蹤人數突破 6,300 人",
-            "製作高品質財經知識圖文（Infographics），將複雜的投資概念轉化為易懂的內容",
-            "統籌期中與期末大型成果發表會，協調研究部、學術部等跨部門資源，確保活動順利執行",
-            "負責社團對外公關事務與贊助商洽談，維護社團品牌聲譽",
-            "指導行銷部部員進行文案撰寫與視覺設計，提升團隊整體產出品質"
+            "品牌策略：管理超過 6,300 人追蹤之社群平台，將社課與活動內容轉化為圖文，強化社團品牌形象",
+            "專案管理：跨部門協調期中、期末兩場大型成果發表會的籌辦工作，並主導專案簡報的品質控管"
         ],
         keyAchievements: [],
         projects: [],
@@ -284,7 +271,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         company: "國立政治大學 (NCCU)",
         role: "學術成果發表",
         location: "東京, 日本",
-        startDate: "2025年",
+        startDate: "",
         endDate: "",
         logoUrl: "/images/awards/academic_paper_final.png",
         // department removed
@@ -323,8 +310,8 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         company: "國立政治大學 (NCCU)",
         role: "企業併購模擬專案",
         location: "台北, 台灣",
-        startDate: "2024 Fall",
-        endDate: "2025 Spring",
+        startDate: "",
+        endDate: "",
         logoUrl: "/images/schools/nccu.png",
         department: "併購實例研習課程",
         companyDescription: "政大商學院招牌課程，由業界資深併購律師與銀行家共同指導，模擬真實企業併購交易流程。",
