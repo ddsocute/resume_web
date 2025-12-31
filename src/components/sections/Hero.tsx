@@ -5,115 +5,81 @@ import { useTranslations } from "next-intl";
 import { resumeData } from "@/data/resume";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Image from "next/image";
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 export default function Hero() {
     const { profile } = resumeData;
     const t = useTranslations("hero");
 
     return (
-        <section id="hero" className="relative bg-[#0A192F] text-white min-h-[95vh] flex items-center justify-center overflow-hidden">
+        <section id="hero" className="relative bg-[#FAFAFA] min-h-[70vh] flex items-center justify-center py-20 lg:py-32">
             {/* Language Switcher */}
             <div className="absolute top-8 right-8 z-20">
                 <LanguageSwitcher />
             </div>
 
-            {/* Content Container */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    {/* Left Column (Text): lg:col-span-7 */}
-                    <div className="col-span-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left z-10">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                        >
-                            {/* Subtitle - Mono & Tracking Widest - The "Tag" */}
-                            <p className="font-mono text-sm pl-1 lg:pl-0 text-blue-200 uppercase tracking-widest mb-6 block w-full">
-                                {t("subtitle")}
-                            </p>
+                    {/* Left Column: Typography */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-center lg:text-left"
+                    >
+                        {/* Name - Flagship Scale */}
+                        <h1 className="font-serif text-6xl md:text-7xl font-medium text-[#0A192F] mb-6 leading-[0.95] tracking-tight">
+                            {profile.name}
+                        </h1>
 
-                            {/* Name - Huge Typography */}
-                            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-medium text-white mb-2 leading-none tracking-tight">
-                                {profile.name}
-                            </h1>
+                        {/* Subtitle - Rigorous Mono */}
+                        <p className="font-mono text-xs md:text-sm text-[#0A192F] uppercase tracking-[0.2em] mb-10 opacity-80">
+                            Finance x AI Strategy | NCCU International Business
+                        </p>
 
-                            {/* Horizontal Line Indicator for details */}
-                            <div className="w-32 h-[2px] bg-white/20 my-10 mx-auto lg:mx-0"></div>
+                        {/* Contact Actions */}
+                        <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                            <a
+                                href={`mailto:${profile.email}`}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#0A192F] rounded-sm text-[#0A192F] hover:bg-[#0A192F] hover:text-white transition-all duration-300 group"
+                            >
+                                <Mail className="w-4 h-4" />
+                                <span className="font-mono text-xs tracking-wider uppercase">Email</span>
+                            </a>
 
-                            {/* Introduction / Impact Line */}
-                            <p className="font-sans text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light mb-12">
-                                Integrating <span className="text-white font-medium">Financial Rigor</span> with <span className="text-white font-medium">AI Intelligence</span> to quantify value and drive strategic innovation.
-                            </p>
+                            <a
+                                href={`https://${profile.linkedin}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-[#0A192F] rounded-sm text-[#0A192F] hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300"
+                            >
+                                <Linkedin className="w-4 h-4" />
+                                <span className="font-mono text-xs tracking-wider uppercase">LinkedIn</span>
+                            </a>
+                        </div>
+                    </motion.div>
 
-                            {/* Contact Links */}
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-8">
-                                <a
-                                    href={`mailto:${profile.email}`}
-                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
-                                >
-                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors">
-                                        <Mail className="w-5 h-5" />
-                                    </div>
-                                    <span className="font-mono text-sm tracking-wider uppercase">Email</span>
-                                </a>
-
-                                <a
-                                    href={`https://${profile.linkedin}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
-                                >
-                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-[#0077b5] group-hover:border-[#0077b5] group-hover:text-white transition-colors">
-                                        <Linkedin className="w-5 h-5" />
-                                    </div>
-                                    <span className="font-mono text-sm tracking-wider uppercase">LinkedIn</span>
-                                </a>
-
-                                <a
-                                    href={`tel:${profile.phone}`}
-                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
-                                >
-                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-green-700 group-hover:border-green-700 group-hover:text-white transition-colors">
-                                        <Phone className="w-5 h-5" />
-                                    </div>
-                                    <span className="font-mono text-sm tracking-wider uppercase">Phone</span>
-                                </a>
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    {/* Right Column (Visual): lg:col-span-5 */}
-                    <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-end relative items-center">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                            className="relative w-full max-w-md aspect-[4/5]"
-                        >
-                            {/* Glassmorphism Container */}
-                            <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl z-0 transform translate-x-4 translate-y-4"></div>
-
-                            {/* Image Container with Micro-border */}
-                            <div className="relative w-full h-full bg-[#050f1e] overflow-hidden border border-gray-700 z-10 shadow-2xl">
-                                <Image
-                                    src={profile.avatarUrl ?? "/images/profile.png"}
-                                    alt={profile.name}
-                                    fill
-                                    className="object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-700"
-                                    priority
-                                />
-                                {/* Cinematic Grain/Overlay */}
-                                <div className="absolute inset-0 bg-[#0A192F]/20 mix-blend-overlay"></div>
-                            </div>
-                        </motion.div>
-                    </div>
+                    {/* Right Column: Magazine-style Portrait */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.98 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                        className="flex justify-center lg:justify-end"
+                    >
+                        <div className="relative w-full max-w-sm aspect-[3/4] border border-gray-100 bg-white shadow-lg overflow-hidden">
+                            <Image
+                                src={profile.avatarUrl ?? "/images/profile.png"}
+                                alt={profile.name}
+                                fill
+                                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                                priority
+                            />
+                        </div>
+                    </motion.div>
 
                 </div>
             </div>
-
-            {/* Background Texture/Noise could be added here for more texture */}
         </section>
     );
 }

@@ -13,15 +13,15 @@ export default function SectionHeading({ title, subtitle, centered = false }: Se
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`mb-24 ${centered ? 'text-center' : 'text-left'}`}
+            className={`mb-16 ${centered ? 'text-center' : 'text-left'}`}
         >
-            <h2 className="font-serif text-4xl md:text-5xl font-medium text-[#0A192F] tracking-tight leading-tight mb-4">
+            <h2 className="font-serif text-4xl font-medium text-[#0A192F] tracking-tight leading-tight mb-4">
                 {title}
             </h2>
             {subtitle && (
                 <div className="flex items-center gap-4">
-                    <div className="h-[1px] w-12 bg-[#0A192F]"></div>
-                    <span className="font-mono text-sm text-gray-500 uppercase tracking-widest">
+                    <div className="h-[1px] w-12 bg-gray-300"></div>
+                    <span className="font-mono text-[10px] text-gray-400 uppercase tracking-[0.2em]">
                         {subtitle}
                     </span>
                 </div>

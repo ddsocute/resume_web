@@ -57,21 +57,22 @@ export default async function RootLayout({
                 className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
             >
                 <NextIntlClientProvider messages={messages}>
-                    {/* Global Grid Container */}
+                    {/* Global Container with Paper White Background */}
                     <div className="min-h-screen bg-[#FAFAFA] text-gray-900">
-                        <div className="mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-12">
+                        {/* Grid Container - max-w-7xl with proper spacing */}
+                        <main className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-                            {/* Main Content Area (Span 9) */}
-                            <main className="order-2 lg:order-1 lg:col-span-9 bg-[#FAFAFA]">
+                            {/* Main Content Area (10 columns) */}
+                            <div className="lg:col-span-10">
                                 {children}
-                            </main>
+                            </div>
 
-                            {/* Sticky Sidebar Area (Span 3) */}
-                            <aside className="order-1 lg:order-2 lg:col-span-3 hidden lg:block relative">
+                            {/* Sticky Sidebar Navigation (2 columns) */}
+                            <aside className="hidden lg:block lg:col-span-2">
                                 <SideNav />
                             </aside>
 
-                        </div>
+                        </main>
                     </div>
                 </NextIntlClientProvider>
             </body>
