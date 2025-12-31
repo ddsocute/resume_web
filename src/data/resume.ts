@@ -14,7 +14,7 @@ export const resumeData = {
 
     internships: ["o-bank-2025", "huatai-2025", "tier-2025"],
 
-    extracurriculars: ["tmba-2025", "nccu-ambassador-2024", "mf-club-2024-member", "mf-club-2024-leader", "tmba-2023-algo"],
+    extracurriculars: ["tmba-2025", "mf-club-2024-leader", "nccu-ambassador-2024", "mf-club-2024-member", "tmba-2023-algo"],
 
     projects: [
         {

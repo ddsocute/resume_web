@@ -88,8 +88,7 @@ export default function Extracurricular() {
                                             {/* Description */}
                                             <ul className="space-y-2 mb-4">
                                                 {descriptionList.map((item, i) => (
-                                                    <li key={i} className="flex items-start gap-3">
-                                                        <span className="text-[#0A192F] mt-1.5 text-[0.6rem]">•</span>
+                                                    <li key={i} className="block pb-1">
                                                         <span className="font-sans text-sm text-[#4B5563] leading-relaxed">
                                                             {item}
                                                         </span>
