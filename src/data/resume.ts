@@ -7,7 +7,7 @@ export const resumeData = {
         email: "111301029@g.nccu.edu.tw",
         phone: "(+886)912-992213",
         linkedin: "www.linkedin.com/in/jing-di-lin",
-        avatarUrl: "/images/profile.png",
+        avatarUrl: "/logo/profile_photo.png",
     },
 
     education: ["nccu-2022"],
