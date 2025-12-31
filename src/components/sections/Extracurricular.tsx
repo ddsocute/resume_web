@@ -12,6 +12,7 @@ const LOGO_MAP: Record<string, string> = {
     "mf-club-2024-leader": "/images/orgs/mf-club.png",
     "nccu-ambassador-2024": "/images/orgs/nccu_ambassador.jpg",
     "tmba-2023-algo": "/images/orgs/tmba.jpg",
+    "nccu-rugby-2023": "/images/orgs/nccu-rugby.jpg",
 };
 
 import SectionHeading from "@/components/ui/SectionHeading";

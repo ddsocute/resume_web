@@ -40,7 +40,16 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         skills: ["Financial Analysis", "Market Research", "Due Diligence", "Investment Memo Writing", "Fintech Trends"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/companies/o-bank/activity/photo1.jpg",
+                caption: "策略投資部門合影"
+            },
+            {
+                url: "/images/companies/o-bank/activity/photo2.jpg",
+                caption: "實習成果發表"
+            }
+        ]
     },
     "huatai-2025": {
         id: "huatai-2025",
