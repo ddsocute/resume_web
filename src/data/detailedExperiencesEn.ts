@@ -326,36 +326,35 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
             }
         ],
         images: []
-    }
-},
-"nccu-rugby-2023": {
-    id: "nccu-rugby-2023",
+    },
+    "nccu-rugby-2023": {
+        id: "nccu-rugby-2023",
         company: "NCCU Rugby Team",
-            role: "Team Member",
-                location: "Taipei, Taiwan",
-                    startDate: "Sep. 2022",
-                        endDate: "Mar. 2023",
-                            logoUrl: "/images/orgs/nccu-rugby.jpg",
-                                department: "Athletic Department",
-                                    companyDescription: "NCCU Rugby Team represents the university in collegiate leagues, emphasizing discipline, tactics, and grit.",
-                                        overview: "Joined the varsity rugby team during freshman year, participating in high-intensity weekly training. This experience not only built physical strength but also taught me to maintain composure under extreme exhaustion. It instilled a deep understanding of 'Team before Self'.",
-                                            insights: "Rugby is the ultimate team sport where individual brilliance cannot survive without collective support. On the field, trust and coordination are paramount. This journey taught me two things: Discipline is the foundation of excellence, and resilience means getting up immediately after every tackle. This mindset has become my greatest asset in facing high-pressure academic and professional challenges.",
-                                                description: [
-                                                    "Teamwork: Collaborated with teammates in high-intensity training and tactical drills, fostering team cohesion and discipline",
-                                                    "Physical Training: Participated in weekly strength and technical training, enhancing physical resilience and stress endurance",
-                                                    "Competition: Represented the university in collegiate rugby championships, demonstrating sportsmanship and determination"
-                                                ],
-                                                    responsibilities: [
-                                                        "Participated in rigorous weekly training sessions (3x/week), including fitness conditioning, drills, and scrimmages",
-                                                        "Mastered rugby tactics and positional responsibilities, executing strategies effectively during matches",
-                                                        "Assisted in team logistics and equipment management to ensure smooth operations",
-                                                        "Represented NCCU in intercalary friendly matches and National Collegiate Championships"
-                                                    ],
-                                                        keyAchievements: [],
-                                                            projects: [],
-                                                                skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
-                                                                    metrics: [],
-                                                                        files: [],
-                                                                            images: []
-}
+        role: "Team Member",
+        location: "Taipei, Taiwan",
+        startDate: "Sep. 2022",
+        endDate: "Mar. 2023",
+        logoUrl: "/images/orgs/nccu-rugby.jpg",
+        department: "Athletic Department",
+        companyDescription: "NCCU Rugby Team represents the university in collegiate leagues, emphasizing discipline, tactics, and grit.",
+        overview: "Joined the varsity rugby team during freshman year, participating in high-intensity weekly training. This experience not only built physical strength but also taught me to maintain composure under extreme exhaustion. It instilled a deep understanding of 'Team before Self'.",
+        insights: "Rugby is the ultimate team sport where individual brilliance cannot survive without collective support. On the field, trust and coordination are paramount. This journey taught me two things: Discipline is the foundation of excellence, and resilience means getting up immediately after every tackle. This mindset has become my greatest asset in facing high-pressure academic and professional challenges.",
+        description: [
+            "Teamwork: Collaborated with teammates in high-intensity training and tactical drills, fostering team cohesion and discipline",
+            "Physical Training: Participated in weekly strength and technical training, enhancing physical resilience and stress endurance",
+            "Competition: Represented the university in collegiate rugby championships, demonstrating sportsmanship and determination"
+        ],
+        responsibilities: [
+            "Participated in rigorous weekly training sessions (3x/week), including fitness conditioning, drills, and scrimmages",
+            "Mastered rugby tactics and positional responsibilities, executing strategies effectively during matches",
+            "Assisted in team logistics and equipment management to ensure smooth operations",
+            "Represented NCCU in intercalary friendly matches and National Collegiate Championships"
+        ],
+        keyAchievements: [],
+        projects: [],
+        skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
+        metrics: [],
+        files: [],
+        images: []
+    }
 };

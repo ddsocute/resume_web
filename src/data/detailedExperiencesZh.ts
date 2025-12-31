@@ -348,36 +348,35 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             }
         ],
         images: []
-    }
-},
-"nccu-rugby-2023": {
-    id: "nccu-rugby-2023",
+    },
+    "nccu-rugby-2023": {
+        id: "nccu-rugby-2023",
         company: "政大橄欖球校隊",
-            role: "隊員",
-                location: "台北, 台灣",
-                    startDate: "2022年9月",
-                        endDate: "2023年3月",
-                            logoUrl: "/images/orgs/nccu-rugby.jpg",
-                                department: "體育室",
-                                    companyDescription: "政大橄欖球隊是學校具代表性的運動校隊，強調團隊紀律、戰術執行與頑強拼搏的精神。",
-                                        overview: "在大一期間加入政大橄欖球校隊，參與每週高強度的體能與戰術訓練。這段經歷不僅鍛鍊了我的體魄，更重要的是讓我學會了如何在體力透支的極限下保持冷靜判斷，以及深刻體會到『團隊利益高於個人』的運動精神。",
-                                            insights: "橄欖球是一項無法單打獨鬥的運動。在球場上，無論是進攻還是防守，都需要與隊友保持高度默契與信任。這段經歷教會了我兩件事：第一，紀律是卓越的基石；第二，在面對衝撞與跌倒時，唯一的選擇就是立刻站起來繼續戰鬥。這種韌性（Resilience）後來也成為我面對高壓學業與實習挑戰時的重要心理資產。",
-                                                description: [
-                                                    "團隊合作：與隊友共同進行高強度訓練與戰術演練，培養團隊默契與紀律",
-                                                    "體能訓練：參與每週固定體能與技術訓練，提升個人體能素質與抗壓性",
-                                                    "比賽參與：代表學校參與大學橄欖球錦標賽，展現拼搏精神"
-                                                ],
-                                                    responsibilities: [
-                                                        "參與每週三次之例行球隊訓練，包含體能強化、基本動作演練、及分組對抗",
-                                                        "熟習橄欖球戰術規則與位置職責，在比賽中確實執行戰術指令",
-                                                        "協助球隊後勤事務與裝備管理，確保訓練活動順利進行",
-                                                        "參與校際友誼賽與全國大專盃賽事，與團隊共同爭取榮譽"
-                                                    ],
-                                                        keyAchievements: [],
-                                                            projects: [],
-                                                                skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
-                                                                    metrics: [],
-                                                                        files: [],
-                                                                            images: []
-}
+        role: "隊員",
+        location: "台北, 台灣",
+        startDate: "2022年9月",
+        endDate: "2023年3月",
+        logoUrl: "/images/orgs/nccu-rugby.jpg",
+        department: "體育室",
+        companyDescription: "政大橄欖球隊是學校具代表性的運動校隊，強調團隊紀律、戰術執行與頑強拼搏的精神。",
+        overview: "在大一期間加入政大橄欖球校隊，參與每週高強度的體能與戰術訓練。這段經歷不僅鍛鍊了我的體魄，更重要的是讓我學會了如何在體力透支的極限下保持冷靜判斷，以及深刻體會到『團隊利益高於個人』的運動精神。",
+        insights: "橄欖球是一項無法單打獨鬥的運動。在球場上，無論是進攻還是防守，都需要與隊友保持高度默契與信任。這段經歷教會了我兩件事：第一，紀律是卓越的基石；第二，在面對衝撞與跌倒時，唯一的選擇就是立刻站起來繼續戰鬥。這種韌性（Resilience）後來也成為我面對高壓學業與實習挑戰時的重要心理資產。",
+        description: [
+            "團隊合作：與隊友共同進行高強度訓練與戰術演練，培養團隊默契與紀律",
+            "體能訓練：參與每週固定體能與技術訓練，提升個人體能素質與抗壓性",
+            "比賽參與：代表學校參與大學橄欖球錦標賽，展現拼搏精神"
+        ],
+        responsibilities: [
+            "參與每週三次之例行球隊訓練，包含體能強化、基本動作演練、及分組對抗",
+            "熟習橄欖球戰術規則與位置職責，在比賽中確實執行戰術指令",
+            "協助球隊後勤事務與裝備管理，確保訓練活動順利進行",
+            "參與校際友誼賽與全國大專盃賽事，與團隊共同爭取榮譽"
+        ],
+        keyAchievements: [],
+        projects: [],
+        skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
+        metrics: [],
+        files: [],
+        images: []
+    }
 };
