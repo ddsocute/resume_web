@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css";
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 const inter = Inter({
     subsets: ["latin"],
@@ -56,6 +57,7 @@ export default async function RootLayout({
                 className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
             >
                 <NextIntlClientProvider messages={messages}>
+                    <ScrollProgress />
                     {children}
                 </NextIntlClientProvider>
             </body>
