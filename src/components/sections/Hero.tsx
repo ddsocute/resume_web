@@ -27,7 +27,7 @@ export default function Hero() {
                     >
                         <div className="space-y-4 text-center lg:text-left">
                             <h1 className="font-serif text-7xl lg:text-8xl font-medium text-slate-900 leading-tight tracking-tighter">
-                                {profile.name}
+                                {t("name")}
                             </h1>
                             <div className="inline-block border-l-2 border-slate-900 pl-4">
                                 <p className="font-mono text-sm lg:text-base text-slate-500 uppercase tracking-[0.2em]">
