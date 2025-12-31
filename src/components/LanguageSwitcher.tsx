@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
                 className={`px-4 py-1.5 text-xs font-mono transition-all ${locale === "zh" ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
                     }`}
             >
-                ZH
+                中
             </button>
             <button
                 onClick={() => handleSwitch("en")}

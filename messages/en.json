@@ -16,10 +16,10 @@
     },
     "Nav": {
         "education": "I. Education",
-        "experience": "II. Experience",
-        "projects": "III. Extracurriculars",
+        "experience": "II. Internship Experience",
+        "projects": "III. Extracurricular Activities",
         "awards": "IV. Competition Experience",
-        "skills": "V. Skills"
+        "skills": "V. Skills & Certifications"
     },
     "hero": {
         "title": "LIN, JING-DI",
@@ -113,7 +113,7 @@
                 ]
             },
             "tmba-2023-algo": {
-                "company": "23rd TMBA",
+                "company": "23th TMBA",
                 "role": "Algorithm Trading Department Project Member",
                 "date": "Jul. 2023 – Aug. 2023",
                 "description": [
