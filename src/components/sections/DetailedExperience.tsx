@@ -27,6 +27,7 @@ const LOGO_MAP: Record<string, string> = {
     "tmba-2025": "/images/orgs/tmba.jpg",
     "mf-club-2024-member": "/images/orgs/mf-club.png",
     "mf-club-2024-leader": "/images/orgs/mf-club.png",
+    "nccu-rugby-2023": "/images/orgs/nccu-rugby.jpg",
     // Awards
     "ai-cup-2024": "/images/awards/ntcir.png",
     "gtsm-2023": "/images/awards/gtsm.jpg",
