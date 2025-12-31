@@ -50,9 +50,9 @@ export default function ExperienceCard({
             {/* Content Section */}
             <div className="flex-1 min-w-0 flex flex-col justify-between">
                 <div>
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
-                            <h3 className="font-serif font-bold text-xl text-[#0A192F] group-hover:text-blue-900 transition-colors leading-tight">
+                            <h3 className="font-serif font-bold text-xl text-[#0A192F] group-hover:text-blue-900 transition-colors leading-normal">
                                 {title}
                             </h3>
                             <p className="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">
@@ -64,7 +64,7 @@ export default function ExperienceCard({
                         </span>
                     </div>
 
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 md:line-clamp-3 mb-4">
+                    <p className="text-sm text-gray-600 leading-loose line-clamp-2 md:line-clamp-3 mb-6">
                         {summary}
                     </p>
                 </div>
