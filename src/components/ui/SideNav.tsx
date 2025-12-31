@@ -69,7 +69,7 @@ export default function SideNav() {
                             )}
 
                             <span
-                                className={`font-mono text-[10px] uppercase tracking-[0.2em] transition-colors duration-300 ${isActive ? "text-[#0A192F] font-medium" : "text-gray-400 group-hover:text-gray-600"
+                                className={`font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-300 ${isActive ? "text-[#0A192F] font-medium" : "text-gray-400 group-hover:text-gray-600"
                                     }`}
                             >
                                 {t(section.key)}

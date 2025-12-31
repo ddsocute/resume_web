@@ -18,7 +18,7 @@
         "education": "一、教育背景",
         "experience": "二、實習經歷",
         "projects": "三、課外活動",
-        "awards": "四、比賽與學術",
+        "awards": "四、競賽經歷",
         "skills": "五、專業技能"
     },
     "hero": {
@@ -151,7 +151,7 @@
         }
     },
     "awards": {
-        "title": "比賽與學術",
+        "title": "競賽經歷",
         "items": {
             "ai-cup-2024": {
                 "title": "2024 AI CUP 玉山人工智慧公開挑戰賽",
