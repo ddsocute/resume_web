@@ -59,7 +59,7 @@ export default function ExperienceCard({
                                 {company}
                             </p>
                         </div>
-                        <span className={`font-mono whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-base font-bold text-[#0A192F]' : 'text-xs text-gray-400 tracking-widest'}`}>
+                        <span className={`font-mono whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-lg font-bold text-[#0A192F] bg-gray-100 px-4 py-2 rounded-sm' : 'text-xs text-gray-400 tracking-widest'}`}>
                             {date}
                         </span>
                     </div>
