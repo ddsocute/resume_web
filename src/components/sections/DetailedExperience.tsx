@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { DetailedExperience } from "@/types";
+import { resumeData } from "@/data/resume";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
