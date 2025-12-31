@@ -15,7 +15,7 @@ export default async function Home({ params }: HomeProps) {
   return (
     <main className="min-h-screen">
       <Hero />
-      <EducationSection locale={locale} />
+      <EducationSection />
       <ExperienceSection />
       <ExtracurricularSection />
       <AwardsSection />
