@@ -159,12 +159,14 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                 {resumeData.internships.includes(experience.id) ? (
                                     <>
                                         <span>II.</span>
-                                        <span>Internship Experience</span>
+                                        <span>Internship</span>
+                                        <span>Experience</span>
                                     </>
                                 ) : resumeData.extracurriculars.includes(experience.id) ? (
                                     <>
                                         <span>III.</span>
-                                        <span>Extracurricular Activities</span>
+                                        <span>Extracurricular</span>
+                                        <span>Activities</span>
                                     </>
                                 ) : (
                                     <>
