@@ -105,7 +105,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                                     {t("timeline")}
                                 </h3>
                                 <p className="font-mono text-sm text-gray-700">
-                                    {experience.startDate} — {experience.endDate}
+                                    {experience.startDate} {experience.endDate ? `— ${experience.endDate}` : ''}
                                 </p>
                             </div>
 
