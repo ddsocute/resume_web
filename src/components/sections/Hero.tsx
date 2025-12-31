@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { resumeData } from "@/data/resume";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { Mail, Linkedin } from "lucide-react";
 export default function Hero() {
     const { profile } = resumeData;
     const t = useTranslations("hero");
+    const locale = useLocale();
 
     return (
         <section id="hero" className="relative bg-white min-h-[60vh] flex items-center pt-20 pb-16 lg:pt-32 lg:pb-20">
