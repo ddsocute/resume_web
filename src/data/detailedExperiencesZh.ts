@@ -286,20 +286,16 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         location: "東京, 日本",
         startDate: "2025年",
         endDate: "",
-        logoUrl: "/images/awards/academic_paper.png",
+        logoUrl: "/images/awards/academic_paper_final.png",
         // department removed
         companyDescription: "國立政治大學是台灣頂尖的研究型大學，在商學、人文、社會科學領域享有盛譽。",
         overview: "於 2025 年 NTCIR-18 會議（東京）發表學術論文，題目為 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents'。該研究提出了一種結合多模態大型語言模型（MLLM）與混合檢索技術的新架構，顯著提升了中文非敘述性文檔的檢索準確率。參與國際學術會議並進行口頭發表，是我大學生涯中極具挑戰性也最具成就感的經歷。",
         // insights removed
-        description: [
-            "論文發表：'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J.",
-            "會議層級：18th NTCIR Conference (NTCIR-18) @ Tokyo, Japan",
-            "貢獻：提出結合 MLLM 修正 OCR 錯誤之創新流程，顯著提升 RAG 系統在金融報表等複雜文檔上的檢索效能"
-        ],
+        description: [],
         responsibilities: [],
         keyAchievements: [],
         projects: [],
-        skills: ["Academic Research", "Public Speaking", "NLP", "RAG", "OCR Technology", "Python"],
+        skills: [],
         metrics: [],
         files: [],
         images: [

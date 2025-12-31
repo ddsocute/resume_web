@@ -264,20 +264,16 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         location: "Tokyo, Japan",
         startDate: "2025",
         endDate: "",
-        logoUrl: "/images/awards/academic_paper.png",
+        logoUrl: "/images/awards/academic_paper_final.png",
         // department removed
         companyDescription: "National Chengchi University is a top research university in Taiwan, renowned for Business, Humanities, and Social Sciences.",
         overview: "Presented academic paper 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' at NTCIR-18 Conference (Tokyo). The research proposes a novel architecture combining Multimodal LLMs (MLLM) and hybrid retrieval to significantly improve retrieval accuracy for Chinese non-narrative documents. Participating in an international academic conference and delivering an oral presentation was a challenging and rewarding highlight of my undergraduate career.",
         // insights removed
-        description: [
-            "Paper: 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J.",
-            "Conference: 18th NTCIR Conference (NTCIR-18) @ Tokyo, Japan",
-            "Contribution: Proposed innovative workflow combining MLLM to correct OCR errors, significantly improving RAG system performance on complex documents like financial reports"
-        ],
+        description: [],
         responsibilities: [],
         keyAchievements: [],
         projects: [],
-        skills: ["Academic Research", "Public Speaking", "NLP", "RAG", "OCR Technology", "Python"],
+        skills: [],
         metrics: [],
         files: [],
         images: [
