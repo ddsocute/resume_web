@@ -52,14 +52,14 @@ export default function ExperienceCard({
                 <div>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
-                            <h3 className="font-serif text-lg font-medium text-[#0A192F] group-hover:text-blue-900 transition-colors">
+                            <h3 className={`font-serif font-bold text-[#0A192F] group-hover:text-blue-900 transition-colors ${highlightDate ? 'text-xl md:text-2xl' : 'text-lg'}`}>
                                 {title}
                             </h3>
                             <p className="text-sm font-medium text-gray-600 mb-1">
                                 {company}
                             </p>
                         </div>
-                        <span className={`font-mono text-xs whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-[#0A192F] font-bold bg-gray-100 px-2 py-1 rounded' : 'text-gray-500'}`}>
+                        <span className={`font-mono whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-base md:text-lg text-[#0A192F] font-bold bg-amber-50 text-amber-900 border border-amber-200 px-3 py-1 rounded-md shadow-sm' : 'text-xs text-gray-500'}`}>
                             {date}
                         </span>
                     </div>

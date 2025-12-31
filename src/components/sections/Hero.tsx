@@ -86,7 +86,7 @@ export default function Hero() {
                                     src={profile.avatarUrl ?? "/images/profile.png"} // Fallback or use updated path if avatarUrl in resume.ts isn't updated
                                     alt={profile.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-top"
                                     priority
                                 />
                                 {/* Overlay gradient for better blending */}
