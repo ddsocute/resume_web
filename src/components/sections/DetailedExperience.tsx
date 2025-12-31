@@ -152,6 +152,19 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                             )}
                         </div>
 
+                        {/* Category Label (English Only) */}
+                        {locale === 'en' && (
+                            <div className="font-serif text-[#0A192F] font-bold text-xl mb-4 leading-normal">
+                                {resumeData.internships.includes(experienceId) ? (
+                                    <>II.<br />Internship<br />Experience</>
+                                ) : resumeData.extracurriculars.includes(experienceId) ? (
+                                    <>III.<br />Extracurricular<br />Activity</>
+                                ) : (
+                                    <>I.<br />Education<br />Achievement</>
+                                )}
+                            </div>
+                        )}
+
                         {/* Title & Company */}
                         <div className="space-y-2">
                             <h1 className="text-2xl font-serif font-medium text-[#0A192F] leading-snug text-balance">
