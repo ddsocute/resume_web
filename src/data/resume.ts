@@ -3,7 +3,7 @@ import { ResumeData } from "@/types";
 export const resumeData = {
     profile: {
         name: "林靖迪",
-        nameEN: "JING-DI, LIN",
+        nameEN: "LIN JING-DI",
         email: "111301029@g.nccu.edu.tw",
         phone: "(+886)912-992213",
         linkedin: "www.linkedin.com/in/jing-di-lin",
