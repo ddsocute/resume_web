@@ -261,7 +261,11 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         ],
         images: [
             {
-                url: "/images/orgs/mf-club/member/photo.jpg",
+                url: "/images/orgs/mf-club/member/photo1.jpg",
+                caption: ""
+            },
+            {
+                url: "/images/orgs/mf-club/member/photo2.jpg",
                 caption: ""
             }
         ]
@@ -387,6 +391,37 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             }
         ]
     },
+    "mbs-2024": {
+        id: "mbs-2024",
+        company: "國立政治大學",
+        role: "MBS 模擬商業管理比賽",
+        location: "台北, 台灣",
+        startDate: "",
+        endDate: "",
+        logoUrl: "/images/schools/nccu.png",
+        companyDescription: "國立政治大學 MBS 商業模擬競賽，旨在透過模擬真實商業環境，培養學生的決策制定與策略規劃能力。",
+        overview: "綜合運用財務、行銷與市場策略，在企業經營模擬中制定決策，以最大化淨現值 (NPV) 為目標。榮獲亞軍。",
+        insights: "透過模擬競賽，深刻體會到企業經營中各部門決策的連動性。財務預測必須支持行銷支出，而研發投入又需對齊長期市場策略。這次經驗強化了我的全局觀與跨部門協調能力。",
+        description: [
+            "決策制定：在模擬環境中制定定價、行銷、研發等策略",
+            "財務分析：分析財報以優化資本支出與營運成本"
+        ],
+        responsibilities: [
+            "決策制定：在模擬環境中制定定價、行銷、研發等策略",
+            "財務分析：分析財報以優化資本支出與營運成本"
+        ],
+        keyAchievements: [],
+        projects: [],
+        skills: ["Business Strategy", "Financial Analysis", "Teamwork"],
+        metrics: [],
+        files: [],
+        images: [
+            {
+                url: "/images/awards/mbs/photo.jpg",
+                caption: ""
+            }
+        ]
+    },
     "nccu-rugby-2023": {
         id: "nccu-rugby-2023",
         company: "政大橄欖球校隊",
@@ -408,14 +443,19 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
             "參與每週三次之例行球隊訓練，包含體能強化、基本動作演練、及分組對抗",
             "熟習橄欖球戰術規則與位置職責，在比賽中確實執行戰術指令",
             "協助球隊後勤事務與裝備管理，確保訓練活動順利進行",
-            "參與校際友誼賽與全國大專盃賽事，與團隊共同爭取榮譽"
+            "代表學校參與大專橄欖球錦標賽與友誼賽"
         ],
         keyAchievements: [],
         projects: [],
         skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/orgs/nccu-rugby/photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "nccu-ambassador-2024": {
         id: "nccu-ambassador-2024",

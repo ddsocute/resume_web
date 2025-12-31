@@ -19,7 +19,7 @@ export default function Awards() {
         "nccu-ma-project-2025": "/images/awards/academic_paper.png"
     };
 
-    const NO_DATE_IDS = ["nccu-academic-2025", "nccu-ma-project-2025"];
+    const NO_DATE_IDS = ['nccu-academic-2025', 'nccu-ma-project-2025', 'mbs-2024'];
 
     return (
         <section id="awards" className="py-20 bg-white">

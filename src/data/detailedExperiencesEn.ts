@@ -242,7 +242,11 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         ],
         images: [
             {
-                url: "/images/orgs/mf-club/member/photo.jpg",
+                url: "/images/orgs/mf-club/member/photo1.jpg",
+                caption: ""
+            },
+            {
+                url: "/images/orgs/mf-club/member/photo2.jpg",
                 caption: ""
             }
         ]
@@ -259,7 +263,10 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         companyDescription: "NCCU MF Club is a premier finance club educating investment talent.",
         overview: "As Marketing Strategy Director, managed social platforms with 6,300+ followers. Converted technical content into engaging visuals. Led organization of two major showcase events and controlled presentation quality.",
         insights: "Serving as Marketing Strategy Director transformed me from an analyst to a brand manager. I learned to translate dense financial concepts into engaging social content, similar to pitching ideas to investors. Leading a team and organizing major events honed my project management and communication skills—soft skills vital for my future finance career.",
-        description: [],
+        description: [
+            "Brand Strategy: Managed social media platforms with over 6,300 followers, converting course and activity content into graphics and text to strengthen the club's brand image",
+            "Project Management: Coordinated cross-departmental organization of mid-term and final large-scale achievement presentations and led quality control of project presentations"
+        ],
         responsibilities: [
             "Brand Strategy: Managed social media platforms with over 6,300 followers, converting course and activity content into graphics and text to strengthen the club's brand image",
             "Project Management: Coordinated cross-departmental organization of mid-term and final large-scale achievement presentations and led quality control of project presentations"
@@ -365,6 +372,37 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
             }
         ]
     },
+    "mbs-2024": {
+        id: "mbs-2024",
+        company: "National Chengchi University (NCCU)",
+        role: "MBS Business Simulation Competition",
+        location: "Taipei, Taiwan",
+        startDate: "",
+        endDate: "",
+        logoUrl: "/images/schools/nccu.png",
+        companyDescription: "NCCU MBS Business Simulation Competition aims to cultivate decision-making and strategic planning skills through realistic business environment simulations.",
+        overview: "Integrated financial, marketing, and market strategies to make decisions in business simulations, aiming to maximize Net Present Value (NPV). Won 2nd Place (Runner-up).",
+        insights: "Through the simulation competition, I deeply appreciated the interconnectedness of departmental decisions in business operations. Financial forecasts must support marketing spend, while R&D investment needs to align with long-term market strategy. This experience strengthened my holistic view and cross-functional coordination skills.",
+        description: [
+            "Decision Making: Formulated pricing, marketing, and R&D strategies in a simulated environment",
+            "Financial Analysis: Analyzed financial reports to optimize capital expenditure and operating costs"
+        ],
+        responsibilities: [
+            "Decision Making: Formulated pricing, marketing, and R&D strategies in a simulated environment",
+            "Financial Analysis: Analyzed financial reports to optimize capital expenditure and operating costs"
+        ],
+        keyAchievements: [],
+        projects: [],
+        skills: ["Business Strategy", "Financial Analysis", "Teamwork"],
+        metrics: [],
+        files: [],
+        images: [
+            {
+                url: "/images/awards/mbs/photo.jpg",
+                caption: ""
+            }
+        ]
+    },
     "nccu-rugby-2023": {
         id: "nccu-rugby-2023",
         company: "NCCU Rugby Team",
@@ -393,7 +431,12 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         skills: ["Teamwork", "Discipline", "Resilience", "Physical Training", "Sportsmanship"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/orgs/nccu-rugby/photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "nccu-ambassador-2024": {
         id: "nccu-ambassador-2024",
