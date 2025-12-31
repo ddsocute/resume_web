@@ -187,7 +187,12 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
                 type: "PDF"
             }
         ],
-        images: []
+        images: [
+            {
+                url: "/images/orgs/tmba/equity/photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "mf-club-2024-member": {
         id: "mf-club-2024-member",
@@ -254,7 +259,12 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
                 type: "PDF"
             }
         ],
-        images: []
+        images: [
+            {
+                url: "/images/orgs/mf-club/member/photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "mf-club-2024-leader": {
         id: "mf-club-2024-leader",
@@ -281,7 +291,12 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         skills: ["Social Media Marketing", "Brand Strategy", "Project Management", "Leadership", "Content Creation"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/orgs/mf-club/leader/photo.jpg",
+                caption: ""
+            }
+        ]
     },
     // Education Detail Pages
     "nccu-academic-2025": {
@@ -401,5 +416,31 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         metrics: [],
         files: [],
         images: []
+    },
+    "nccu-ambassador-2024": {
+        id: "nccu-ambassador-2024",
+        company: "政大商學院具生涯大使",
+        role: "大使",
+        location: "台北, 台灣",
+        startDate: "2024",
+        endDate: "2025",
+        logoUrl: "/images/orgs/nccu_ambassador.jpg",
+        department: "",
+        companyDescription: "",
+        overview: "",
+        insights: "",
+        description: [],
+        responsibilities: [],
+        keyAchievements: [],
+        projects: [],
+        skills: [],
+        metrics: [],
+        files: [],
+        images: [
+            {
+                url: "/images/orgs/nccu-ambassador/photo.jpg",
+                caption: ""
+            }
+        ]
     }
 };
