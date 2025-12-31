@@ -13,6 +13,7 @@ interface ExperienceCardProps {
     summary: string;
     link?: string;
     linkText?: string;
+    highlightDate?: boolean;
 }
 
 export default function ExperienceCard({
@@ -22,7 +23,8 @@ export default function ExperienceCard({
     date,
     summary,
     link,
-    linkText = "View Detailed Case Study"
+    linkText = "View Detailed Case Study",
+    highlightDate = false
 }: ExperienceCardProps) {
     return (
         <motion.div
@@ -57,7 +59,7 @@ export default function ExperienceCard({
                                 {company}
                             </p>
                         </div>
-                        <span className="font-mono text-xs text-gray-500 whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0">
+                        <span className={`font-mono text-xs whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-[#0A192F] font-bold bg-gray-100 px-2 py-1 rounded' : 'text-gray-500'}`}>
                             {date}
                         </span>
                     </div>

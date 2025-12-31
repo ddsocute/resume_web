@@ -28,7 +28,7 @@ export default function SkillsSection() {
     const t = useTranslations("skills");
 
     return (
-        <section className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="container mx-auto max-w-6xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
