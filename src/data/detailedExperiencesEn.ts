@@ -51,7 +51,7 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         id: "huatai-2025",
         company: "Huatai United Securities",
         role: "Investment Banking Intern",
-        location: "Nanjing Project Team, China",
+        location: "Shenzhen, China",
         startDate: "Jul. 2025",
         endDate: "Aug. 2025",
         logoUrl: "/images/companies/huatai.jpeg",
@@ -81,7 +81,16 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         skills: ["IPO Execution", "Due Diligence", "Financial Auditing", "Data Verification", "Prospectus Drafting"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/companies/huatai/activity/photo1.jpg",
+                caption: ""
+            },
+            {
+                url: "/images/companies/huatai/activity/photo2.jpg",
+                caption: ""
+            }
+        ]
     },
     "tier-2025": {
         id: "tier-2025",

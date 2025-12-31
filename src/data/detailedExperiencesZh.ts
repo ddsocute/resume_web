@@ -55,7 +55,7 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         id: "huatai-2025",
         company: "華泰聯合證券",
         role: "投資銀行部實習生",
-        location: "南京项目组, 中國",
+        location: "深圳, 中國",
         startDate: "2025年7月",
         endDate: "2025年8月",
         logoUrl: "/images/companies/huatai.jpeg",
