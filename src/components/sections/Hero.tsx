@@ -12,106 +12,108 @@ export default function Hero() {
     const t = useTranslations("hero");
 
     return (
-        <section id="hero" className="relative bg-[#0A192F] text-white min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Language Switcher - Top Right */}
+        <section id="hero" className="relative bg-[#0A192F] text-white min-h-[95vh] flex items-center justify-center overflow-hidden">
+            {/* Language Switcher */}
             <div className="absolute top-8 right-8 z-20">
                 <LanguageSwitcher />
             </div>
 
-            {/* Content */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center max-w-7xl mx-auto">
+            {/* Content Container */}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                    {/* Left Column: Text Content */}
-                    <div className="order-2 lg:order-1 text-center lg:text-left">
+                    {/* Left Column (Text): lg:col-span-7 */}
+                    <div className="col-span-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left z-10">
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            {/* Name - Large Serif Font */}
-                            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-medium text-white mb-6 md:mb-8 tracking-tight leading-none">
+                            {/* Subtitle - Mono & Tracking Widest - The "Tag" */}
+                            <p className="font-mono text-sm pl-1 lg:pl-0 text-blue-200 uppercase tracking-widest mb-6 block w-full">
+                                {t("subtitle")}
+                            </p>
+
+                            {/* Name - Huge Typography */}
+                            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-medium text-white mb-2 leading-none tracking-tight">
                                 {profile.name}
                             </h1>
 
-                            {/* Value Proposition / Subtitle - Mono & Tagged */}
-                            <div className="flex justify-center lg:justify-start mb-8 md:mb-10">
-                                <span className="font-mono text-sm md:text-base text-blue-200 bg-blue-900/30 border border-blue-800/50 px-4 py-2 rounded-full tracking-widest uppercase backdrop-blur-sm">
-                                    {t("subtitle")}
-                                </span>
-                            </div>
+                            {/* Horizontal Line Indicator for details */}
+                            <div className="w-32 h-[2px] bg-white/20 my-10 mx-auto lg:mx-0"></div>
 
-                            {/* English Name - Subtle */}
-                            <p className="font-sans text-xl text-gray-400 mb-10 tracking-widest uppercase opacity-60 hidden lg:block">
-                                {profile.nameEN}
+                            {/* Introduction / Impact Line */}
+                            <p className="font-sans text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light mb-12">
+                                Integrating <span className="text-white font-medium">Financial Rigor</span> with <span className="text-white font-medium">AI Intelligence</span> to quantify value and drive strategic innovation.
                             </p>
 
-                            {/* Contact Icons - Horizontal Row */}
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+                            {/* Contact Links */}
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-8">
                                 <a
                                     href={`mailto:${profile.email}`}
-                                    className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/10 hover:bg-white hover:text-[#0A192F] transition-all duration-300 relative"
-                                    aria-label="Email"
+                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                                 >
-                                    <Mail className="w-5 h-5" />
-                                    <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs font-mono text-gray-300 transition-opacity whitespace-nowrap bg-[#0A192F]/80 px-2 py-1 rounded pointer-events-none">
-                                        Email
-                                    </span>
+                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors">
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <span className="font-mono text-sm tracking-wider uppercase">Email</span>
                                 </a>
 
                                 <a
                                     href={`https://${profile.linkedin}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/10 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300 relative"
-                                    aria-label="LinkedIn"
+                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                                 >
-                                    <Linkedin className="w-5 h-5" />
-                                    <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs font-mono text-gray-300 transition-opacity whitespace-nowrap bg-[#0A192F]/80 px-2 py-1 rounded pointer-events-none">
-                                        LinkedIn
-                                    </span>
+                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-[#0077b5] group-hover:border-[#0077b5] group-hover:text-white transition-colors">
+                                        <Linkedin className="w-5 h-5" />
+                                    </div>
+                                    <span className="font-mono text-sm tracking-wider uppercase">LinkedIn</span>
                                 </a>
 
                                 <a
                                     href={`tel:${profile.phone}`}
-                                    className="group flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/10 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all duration-300 relative"
-                                    aria-label="Phone"
+                                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                                 >
-                                    <Phone className="w-5 h-5" />
-                                    <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs font-mono text-gray-300 transition-opacity whitespace-nowrap bg-[#0A192F]/80 px-2 py-1 rounded pointer-events-none">
-                                        Phone
-                                    </span>
+                                    <div className="p-3 rounded-sm bg-white/5 border border-white/10 group-hover:bg-green-700 group-hover:border-green-700 group-hover:text-white transition-colors">
+                                        <Phone className="w-5 h-5" />
+                                    </div>
+                                    <span className="font-mono text-sm tracking-wider uppercase">Phone</span>
                                 </a>
                             </div>
                         </motion.div>
                     </div>
 
-                    {/* Right Column: Profile Image */}
-                    <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    {/* Right Column (Visual): lg:col-span-5 */}
+                    <div className="col-span-1 lg:col-span-5 flex justify-center lg:justify-end relative items-center">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]"
+                            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                            className="relative w-full max-w-md aspect-[4/5]"
                         >
-                            <div className="w-full h-full relative rounded-3xl overflow-hidden border border-gray-100 shadow-2xl shadow-black/30">
+                            {/* Glassmorphism Container */}
+                            <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl z-0 transform translate-x-4 translate-y-4"></div>
+
+                            {/* Image Container with Micro-border */}
+                            <div className="relative w-full h-full bg-[#050f1e] overflow-hidden border border-gray-700 z-10 shadow-2xl">
                                 <Image
                                     src={profile.avatarUrl ?? "/images/profile.png"}
                                     alt={profile.name}
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-700"
                                     priority
                                 />
-                                {/* Overlay gradient for better blending */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/20 to-transparent"></div>
+                                {/* Cinematic Grain/Overlay */}
+                                <div className="absolute inset-0 bg-[#0A192F]/20 mix-blend-overlay"></div>
                             </div>
-
-                            {/* Decorative Layer - Abstract Tech/Finance Feel */}
-                            <div className="hidden lg:block absolute -z-10 top-6 -right-6 w-full h-full rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"></div>
                         </motion.div>
                     </div>
+
                 </div>
             </div>
+
+            {/* Background Texture/Noise could be added here for more texture */}
         </section>
     );
 }

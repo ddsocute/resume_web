@@ -5,36 +5,25 @@ import { resumeData } from "@/data/resume";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ExperienceCard from "@/components/ui/ExperienceCard";
+import SectionHeading from "@/components/ui/SectionHeading";
+import { useLocale } from "next-intl";
 
 const LOGO_MAP: Record<string, string> = {
     "nccu-2022": "/images/schools/nccu.png",
 };
 
-interface EducationSectionProps {
-    locale: string;
-}
-
-export default function EducationSection({ locale }: EducationSectionProps) {
+export default function Education() {
     const { education } = resumeData;
     const t = useTranslations("education");
+    const locale = useLocale();
 
     return (
-        <section id="education" className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white text-[#333333]">
+        <section id="education" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white text-[#333333]">
             <div className="container mx-auto max-w-5xl">
                 {/* Section Title */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16 border-b border-gray-200 pb-4"
-                >
-                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
-                        {t("title")}
-                    </h2>
-                </motion.div>
+                <SectionHeading title={t("title")} subtitle="Academic Foundation" />
 
-                <div className="space-y-12">
+                <div className="grid grid-cols-1 gap-8">
                     {education.map((id, index) => {
                         const itemKey = `items.${id}`;
                         const school = t(`${itemKey}.school`);

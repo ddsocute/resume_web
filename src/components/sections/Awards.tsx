@@ -7,7 +7,9 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ExperienceCard from "@/components/ui/ExperienceCard";
 
-export default function AwardsSection() {
+import SectionHeading from "@/components/ui/SectionHeading";
+
+export default function Awards() {
     const { awards } = resumeData;
     const t = useTranslations("awards");
     const locale = useLocale();
@@ -19,22 +21,12 @@ export default function AwardsSection() {
     };
 
     return (
-        <section id="awards" className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white text-[#333333]">
+        <section id="awards" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white text-[#333333]">
             <div className="container mx-auto max-w-5xl">
                 {/* Section Title */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16 border-b border-gray-200 pb-4"
-                >
-                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
-                        {t("title")}
-                    </h2>
-                </motion.div>
+                <SectionHeading title={t("title")} subtitle="Honors & Achievements" />
 
-                <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     {awards.map((id, index) => {
                         const itemKey = `items.${id}`;
                         const title = t(`${itemKey}.title`);

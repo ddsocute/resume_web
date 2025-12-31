@@ -28,12 +28,12 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
     return (
         <motion.div
-            whileHover={{ y: -4 }}
-            className="group relative bg-white border border-gray-100 p-6 flex flex-col md:flex-row gap-6 hover:border-[#0A192F] hover:shadow-sm transition-all duration-300"
+            whileHover={{ y: -2 }}
+            className="group relative bg-white border border-gray-100 p-8 hover:border-[#0A192F] hover:shadow-lg transition-all duration-300 rounded-sm"
         >
             {/* Logo Section */}
-            <div className="shrink-0">
-                <div className="w-16 h-16 relative bg-gray-50 border border-gray-100 p-1 flex items-center justify-center">
+            <div className="shrink-0 mb-6 md:mb-0 md:mr-8">
+                <div className="w-16 h-16 relative bg-gray-50 border border-gray-100 p-1 flex items-center justify-center rounded-sm">
                     {logo ? (
                         <Image
                             src={logo}
@@ -52,14 +52,14 @@ export default function ExperienceCard({
                 <div>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
-                            <h3 className={`font-serif font-bold text-[#0A192F] group-hover:text-blue-900 transition-colors ${highlightDate ? 'text-xl md:text-2xl' : 'text-lg'}`}>
+                            <h3 className={`font-serif font-bold text-[#0A192F] group-hover:text-blue-900 transition-colors ${highlightDate ? 'text-2xl' : 'text-xl'}`}>
                                 {title}
                             </h3>
-                            <p className="text-sm font-medium text-gray-600 mb-1">
+                            <p className="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">
                                 {company}
                             </p>
                         </div>
-                        <span className={`font-mono whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-base md:text-lg text-[#0A192F] font-bold bg-gray-100 px-3 py-1 rounded-md' : 'text-xs text-gray-500'}`}>
+                        <span className={`font-mono whitespace-nowrap md:ml-4 shrink-0 mt-1 md:mt-0 ${highlightDate ? 'text-base font-bold text-[#0A192F]' : 'text-xs text-gray-400 tracking-widest'}`}>
                             {date}
                         </span>
                     </div>

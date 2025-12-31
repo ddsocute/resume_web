@@ -14,30 +14,22 @@ const LOGO_MAP: Record<string, string> = {
     "tmba-2023-algo": "/images/orgs/tmba.jpg",
 };
 
-export default function ExtracurricularSection() {
-    const { extracurriculars } = resumeData;
+import SectionHeading from "@/components/ui/SectionHeading";
+
+export default function Extracurricular() {
+    const { extracurriculars: extracurricular } = resumeData;
     const t = useTranslations("extracurricular");
     const locale = useLocale();
 
     return (
-        <section id="extracurricular" className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
+        <section id="extracurricular" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
             <div className="container mx-auto max-w-5xl">
                 {/* Section Title */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16 border-b border-gray-200 pb-4"
-                >
-                    <h2 className="font-serif text-3xl font-medium text-[#0A192F] uppercase tracking-widest">
-                        {t("title")}
-                    </h2>
-                </motion.div>
+                <SectionHeading title={t("title")} subtitle="Leadership & Projects" />
 
                 {/* List Items (similar to Experience) */}
-                <div className="space-y-12">
-                    {extracurriculars.map((id, index) => {
+                <div className="grid grid-cols-1 gap-8">
+                    {extracurricular.map((id, index) => {
                         const itemKey = `items.${id}`;
                         const companyName = t(`${itemKey}.company`);
                         const role = t(`${itemKey}.role`);
@@ -116,7 +108,7 @@ export default function ExtracurricularSection() {
                                     </div>
                                 </Link>
                                 {/* Separator */}
-                                {index < extracurriculars.length - 1 && (
+                                {index < extracurricular.length - 1 && (
                                     <div className="h-px bg-gray-200 mt-12 w-full"></div>
                                 )}
                             </motion.div>
