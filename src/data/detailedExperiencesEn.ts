@@ -36,7 +36,16 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         skills: ["Financial Analysis", "Market Research", "Due Diligence", "Investment Memo Writing", "Fintech Trends"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/companies/o-bank/activity/photo1.jpg",
+                caption: ""
+            },
+            {
+                url: "/images/companies/o-bank/activity/photo2.jpg",
+                caption: ""
+            }
+        ]
     },
     "huatai-2025": {
         id: "huatai-2025",
@@ -325,7 +334,12 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
                 type: "PDF"
             }
         ],
-        images: []
+        images: [
+            {
+                url: "/images/course/ma-project/group_photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "nccu-rugby-2023": {
         id: "nccu-rugby-2023",

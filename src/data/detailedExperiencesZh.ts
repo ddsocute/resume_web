@@ -43,11 +43,11 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         images: [
             {
                 url: "/images/companies/o-bank/activity/photo1.jpg",
-                caption: "策略投資部門合影"
+                caption: ""
             },
             {
                 url: "/images/companies/o-bank/activity/photo2.jpg",
-                caption: "實習成果發表"
+                caption: ""
             }
         ]
     },
@@ -89,7 +89,16 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
         skills: ["IPO Execution", "Due Diligence", "Financial Auditing", "Data Verification", "Prospectus Drafting"],
         metrics: [],
         files: [],
-        images: []
+        images: [
+            {
+                url: "/images/companies/huatai/activity/photo1.jpg",
+                caption: ""
+            },
+            {
+                url: "/images/companies/huatai/activity/photo2.jpg",
+                caption: ""
+            }
+        ]
     },
     "tier-2025": {
         id: "tier-2025",
@@ -356,7 +365,12 @@ export const detailedExperiences: Record<string, DetailedExperience> = {
                 type: "PDF"
             }
         ],
-        images: []
+        images: [
+            {
+                url: "/images/course/ma-project/group_photo.jpg",
+                caption: ""
+            }
+        ]
     },
     "nccu-rugby-2023": {
         id: "nccu-rugby-2023",
