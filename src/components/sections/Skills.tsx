@@ -30,7 +30,7 @@ export default function SkillsSection() {
     const t = useTranslations("skills");
 
     return (
-        <section id="skills" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="skills" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
             <div className="container mx-auto max-w-6xl">
                 <SectionHeading title={t("title")} subtitle="Technical & Financial Expertise" />
 

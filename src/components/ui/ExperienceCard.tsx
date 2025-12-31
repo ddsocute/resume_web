@@ -29,20 +29,20 @@ export default function ExperienceCard({
     return (
         <motion.div
             whileHover={{ y: -2 }}
-            className="group relative bg-white border border-gray-100 p-8 hover:border-[#0A192F] hover:shadow-lg transition-all duration-300 rounded-sm"
+            className="group relative bg-white border border-gray-100 p-8 hover:border-[#0A192F] hover:shadow-xl transition-all duration-300 rounded-sm"
         >
-            {/* Logo Section */}
+            {/* Logo Section - Standardized 48x48 (w-12 h-12) */}
             <div className="shrink-0 mb-6 md:mb-0 md:mr-8">
-                <div className="w-16 h-16 relative bg-gray-50 border border-gray-100 p-1 flex items-center justify-center rounded-sm">
+                <div className="w-16 h-16 relative bg-white border border-gray-100 p-1 flex items-center justify-center rounded-sm group-hover:border-gray-200 transition-colors">
                     {logo ? (
                         <Image
                             src={logo}
                             alt={company}
                             fill
-                            className="object-contain p-1"
+                            className="object-contain p-2"
                         />
                     ) : (
-                        <span className="text-2xl font-serif text-gray-400">{company.charAt(0)}</span>
+                        <span className="text-2xl font-serif text-gray-300">{company.charAt(0)}</span>
                     )}
                 </div>
             </div>

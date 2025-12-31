@@ -57,8 +57,22 @@ export default async function RootLayout({
                 className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
             >
                 <NextIntlClientProvider messages={messages}>
-                    <SideNav />
-                    {children}
+                    {/* Global Grid Container */}
+                    <div className="min-h-screen bg-[#FAFAFA] text-gray-900">
+                        <div className="mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-12">
+
+                            {/* Main Content Area (Span 9) */}
+                            <main className="order-2 lg:order-1 lg:col-span-9 bg-[#FAFAFA]">
+                                {children}
+                            </main>
+
+                            {/* Sticky Sidebar Area (Span 3) */}
+                            <aside className="order-1 lg:order-2 lg:col-span-3 hidden lg:block relative">
+                                <SideNav />
+                            </aside>
+
+                        </div>
+                    </div>
                 </NextIntlClientProvider>
             </body>
         </html>

@@ -7,7 +7,7 @@ export default function Footer() {
     const t = useTranslations("footer");
 
     return (
-        <footer className="bg-[#374151] text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <footer className="bg-[#F3F4F6] border-t border-gray-200 text-gray-500 py-12 px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto max-w-5xl">
                 <div className="text-center">
                     <motion.p
