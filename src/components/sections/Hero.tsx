@@ -81,7 +81,7 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                         >
-                            <div className="w-full h-full relative rounded-[2rem] overflow-hidden border border-gray-100/10 shadow-2xl shadow-black/20">
+                            <div className="w-full h-full relative rounded-[2rem] overflow-hidden shadow-2xl shadow-black/20">
                                 <Image
                                     src={profile.avatarUrl ?? "/images/profile.png"} // Fallback or use updated path if avatarUrl in resume.ts isn't updated
                                     alt={profile.name}
@@ -92,10 +92,6 @@ export default function Hero() {
                                 {/* Overlay gradient for better blending */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/30 to-transparent"></div>
                             </div>
-
-                            {/* Decorative Elements */}
-                            <div className="absolute -z-10 top-4 -right-4 w-full h-full rounded-[2rem] border border-white/5"></div>
-                            <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-[2rem] border border-white/5"></div>
                         </motion.div>
                     </div>
                 </div>
