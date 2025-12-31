@@ -267,13 +267,22 @@ export const detailedExperiencesEn: Record<string, DetailedExperience> = {
         logoUrl: "/images/awards/academic_paper_final.png",
         // department removed
         companyDescription: "National Chengchi University is a top research university in Taiwan, renowned for Business, Humanities, and Social Sciences.",
-        overview: "Presented academic paper 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' at NTCIR-18 Conference (Tokyo). The research proposes a novel architecture combining Multimodal LLMs (MLLM) and hybrid retrieval to significantly improve retrieval accuracy for Chinese non-narrative documents. Participating in an international academic conference and delivering an oral presentation was a challenging and rewarding highlight of my undergraduate career.",
-        // insights removed
-        description: [],
-        responsibilities: [],
+        overview: "Presented academic paper 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' at NTCIR-18 Conference (Tokyo). The research proposes a novel architecture combining Multimodal LLMs (MLLM) and hybrid retrieval to significantly improve retrieval accuracy for Chinese non-narrative documents.",
+        insights: "Participating in an international academic conference and delivering an oral presentation was a challenging and rewarding highlight of my undergraduate career. This research required deep technical expertise (OCR, RAG, LLM) and tested my ability to convey innovative technical concepts to international scholars. This experience reinforced that 'speaking with data' and 'clear logical argumentation' are core competencies in both academia and finance.",
+        description: [
+            "Paper: 'KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents' - Hsu, H-L., Lin, P-S., Lin, Jing-Di, & Tzeng, J.",
+            "Conference: 18th NTCIR Conference (NTCIR-18) @ Tokyo, Japan",
+            "Contribution: Proposed innovative workflow combining MLLM to correct OCR errors, significantly improving RAG system performance on complex documents like financial reports"
+        ],
+        responsibilities: [
+            "Responsible for experimental design and data analysis, verifying KAP architecture performance across datasets",
+            "Assisted in developing MLLM-assisted OCR correction module to optimize Traditional Chinese recognition",
+            "Participated in paper writing and revision, responsible for Introduction and Experiment Results sections",
+            "Traveled to Tokyo for NTCIR-18 Conference Oral Presentation and Q&A"
+        ],
         keyAchievements: [],
         projects: [],
-        skills: [],
+        skills: ["Academic Research", "Public Speaking", "NLP", "RAG", "OCR Technology", "Python"],
         metrics: [],
         files: [],
         images: [

@@ -21,7 +21,7 @@ const LOGO_MAP: Record<string, string> = {
     "tier-2025": "/images/companies/tier.png",
     // Education
     "nccu-2022": "/images/schools/nccu.png",
-    "nccu-academic-2025": "/images/schools/nccu.png",
+    "nccu-academic-2025": "/images/awards/academic_paper_final.png",
     "nccu-ma-project-2025": "/images/schools/nccu.png",
     // Extracurricular
     "tmba-2025": "/images/orgs/tmba.jpg",
@@ -39,13 +39,16 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
     // Image Slider State
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isZoomed, setIsZoomed] = useState(false);
 
-    const nextImage = () => {
+    const nextImage = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
         if (!experience.images) return;
         setCurrentImageIndex((prev) => (prev + 1) % experience.images!.length);
     };
 
-    const prevImage = () => {
+    const prevImage = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
         if (!experience.images) return;
         setCurrentImageIndex((prev) => (prev - 1 + experience.images!.length) % experience.images!.length);
     };
@@ -66,6 +69,66 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                     </Link>
                 </div>
             </div>
+
+            {/* Lightbox / Zoom Modal */}
+            <AnimatePresence>
+                {isZoomed && experience.images && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsZoomed(false)}
+                        className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
+                    >
+                        <div className="relative w-full h-full max-w-7xl max-h-[90vh]">
+                            <Image
+                                src={experience.images[currentImageIndex].url}
+                                alt={experience.images[currentImageIndex].caption}
+                                fill
+                                className="object-contain"
+                                quality={100}
+                            />
+
+                            {/* Zoom Caption */}
+                            <div className="absolute bottom-4 left-0 right-0 text-center text-white/80 font-serif text-lg bg-black/50 p-2 rounded">
+                                {experience.images[currentImageIndex].caption}
+                            </div>
+
+                            {/* Zoom Navigation */}
+                            {experience.images.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevImage}
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+                                    >
+                                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        onClick={nextImage}
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+                                    >
+                                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </>
+                            )}
+
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setIsZoomed(false)}
+                                className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             <main className="container mx-auto px-6 lg:px-12 pt-32 pb-24">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -219,7 +282,10 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                                 <div className="relative group bg-gray-50 p-2 border border-gray-100">
                                     {/* Main Image Stage */}
-                                    <div className="relative w-full aspect-[16/9] overflow-hidden bg-white">
+                                    <div
+                                        className="relative w-full aspect-[16/9] overflow-hidden bg-white cursor-zoom-in"
+                                        onClick={() => setIsZoomed(true)}
+                                    >
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={currentImageIndex}
