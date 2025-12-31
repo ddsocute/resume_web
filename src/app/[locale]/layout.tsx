@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import SideNav from '@/components/ui/SideNav';
+import { routing } from '@/i18n/routing';
 import "../globals.css";
 
 const inter = Inter({
@@ -59,20 +59,7 @@ export default async function RootLayout({
                 <NextIntlClientProvider messages={messages}>
                     {/* Global Container with Paper White Background */}
                     <div className="min-h-screen bg-[#FAFAFA] text-gray-900">
-                        {/* Grid Container - max-w-7xl with proper spacing */}
-                        <main className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-
-                            {/* Main Content Area (10 columns) */}
-                            <div className="lg:col-span-10">
-                                {children}
-                            </div>
-
-                            {/* Sticky Sidebar Navigation (2 columns) */}
-                            <aside className="hidden lg:block lg:col-span-2">
-                                <SideNav />
-                            </aside>
-
-                        </main>
+                        {children}
                     </div>
                 </NextIntlClientProvider>
             </body>
