@@ -115,7 +115,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                         summary={paperSummary}
                                         link={`/${locale}/education/nccu-academic-2025`}
                                         linkText={t("viewPaper")}
-                                        logo="/images/awards/ntcir.png"
+                                        logo="/images/awards/academic_paper.png"
                                     />
                                     <ExperienceCard
                                         title={t("projectTitle")}
@@ -124,7 +124,7 @@ export default function EducationSection({ locale }: EducationSectionProps) {
                                         summary={projectSummary}
                                         link={`/${locale}/education/nccu-ma-project-2025`}
                                         linkText={t("viewCaseStudy")}
-                                        logo="/images/awards/ntcir.png"
+                                        logo="/images/awards/ai_cup.png"
                                     />
                                 </div>
                             </motion.div>

@@ -10,6 +10,8 @@ const LOGO_MAP: Record<string, string> = {
     "tmba-2025": "/images/orgs/tmba.jpg",
     "mf-club-2024-member": "/images/orgs/mf-club.png",
     "mf-club-2024-leader": "/images/orgs/mf-club.png",
+    "nccu-ambassador-2024": "/images/orgs/nccu_ambassador.jpg",
+    "tmba-2023-algo": "/images/orgs/tmba.jpg",
 };
 
 export default function ExtracurricularSection() {

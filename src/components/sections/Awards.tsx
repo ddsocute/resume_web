@@ -13,7 +13,7 @@ export default function AwardsSection() {
     const locale = useLocale();
 
     const LOGO_MAP: Record<string, string> = {
-        "ai-cup-2024": "/images/awards/ntcir.png",
+        "ai-cup-2024": "/images/awards/ai_cup.png",
         "gtsm-2023": "/images/awards/gtsm.jpg",
         "mbs-2024": "/images/awards/mbs.webp",
     };
