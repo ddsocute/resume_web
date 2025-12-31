@@ -157,7 +157,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
 
                         {/* Section 1: Overview */}
                         <section className="mb-16 pb-12 border-b border-gray-100">
-                            <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
+                            <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6 leading-tight">
                                 {t("overview")}
                             </h2>
                             <p className="text-gray-700 leading-loose text-lg font-sans">
@@ -168,7 +168,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         {/* Section 2: Detailed Responsibilities */}
                         {experience.responsibilities && experience.responsibilities.length > 0 && (
                             <section className="mb-16 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6 leading-tight">
                                     {t("responsibilities")}
                                 </h2>
                                 <ul className="space-y-6">
@@ -189,7 +189,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         {/* Section 3: Insights - Full Width Highlight */}
                         {experience.insights && (
                             <section className="mb-16 pb-12 border-b border-gray-100">
-                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6">
+                                <h2 className="font-serif text-2xl font-medium text-[#0A192F] mb-6 leading-tight">
                                     {t("insights")}
                                 </h2>
                                 <div className="bg-[#F8FAFC] p-8 md:p-10 border-l-4 border-[#0A192F]">

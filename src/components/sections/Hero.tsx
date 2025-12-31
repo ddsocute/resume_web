@@ -56,7 +56,7 @@ export default function Hero() {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="lg:col-span-5 relative"
                     >
-                        <div className="relative aspect-[4/5]">
+                        <div className="relative aspect-square">
                             <Image src={profile.avatarUrl ?? "/images/profile.png"} alt={profile.name} fill className="object-cover object-top" priority />
                         </div>
                     </motion.div>
