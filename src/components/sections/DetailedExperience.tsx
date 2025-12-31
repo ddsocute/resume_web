@@ -135,7 +135,7 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
                     {/* Left Column: Meta Info (Sticky Sidebar - 4 Columns) */}
-                    <div className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start space-y-8 h-fit border-r border-gray-100 pr-0 lg:pr-8">
+                    <div className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start space-y-6 h-fit border-r border-gray-100 pr-0 lg:pr-8">
                         {/* Logo */}
                         <div className="relative w-24 h-24 border border-gray-100 bg-white p-2 mb-6">
                             {logoSrc ? (
@@ -153,11 +153,11 @@ export default function DetailedExperiencePage({ experience, locale }: DetailedE
                         </div>
 
                         {/* Title & Company */}
-                        <div>
-                            <h1 className="text-3xl font-serif font-medium text-[#0A192F] leading-tight mb-3">
+                        <div className="space-y-2">
+                            <h1 className="text-2xl font-serif font-medium text-[#0A192F] leading-snug text-balance">
                                 {experience.role}
                             </h1>
-                            <div className="text-base text-gray-500 font-medium font-sans">
+                            <div className="text-base text-gray-500 font-medium font-sans leading-relaxed">
                                 {experience.company}
                             </div>
                         </div>
