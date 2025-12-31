@@ -17,8 +17,8 @@
     "Nav": {
         "education": "I. Education",
         "experience": "II. Experience",
-        "projects": "III. Projects",
-        "awards": "IV. Awards",
+        "projects": "III. Extracurriculars",
+        "awards": "IV. Competition Experience",
         "skills": "V. Skills"
     },
     "hero": {
@@ -95,7 +95,7 @@
             "mf-club-2024-member": {
                 "company": "9th NCCU Mutual Fund Club",
                 "role": "Research Analyst",
-                "date": "Sep. 2024 – Jun. 2024",
+                "date": "Sep. 2023 – Jun. 2024",
                 "description": [
                     "Fund Allocation: Constructed a simulated portfolio centered on the power industry using a Top-Down approach, based on predictions of moderate U.S. economic growth",
                     "Fund Analysis: Analyzed the SMH fund, the current state of semiconductor industry development, and growth momentum, along with an analysis of the top three holdings",
@@ -113,7 +113,7 @@
                 ]
             },
             "tmba-2023-algo": {
-                "company": "TMBA – Taiwan",
+                "company": "23rd TMBA",
                 "role": "Algorithm Trading Department Project Member",
                 "date": "Jul. 2023 – Aug. 2023",
                 "description": [
@@ -134,8 +134,8 @@
         "items": {
             "nccu-2022": {
                 "school": "National Chengchi University",
-                "degree": "International Business",
-                "program": "FinTech Program",
+                "degree": "International Business | FinTech Program",
+                "program": "",
                 "date": "Sep. 2022 – Jun. 2026",
                 "paperSummary": "Presented at 18th NTCIR Conference (Tokyo)",
                 "projectSummary": "Strategy Lead for simulated M&A transaction",
@@ -151,7 +151,7 @@
         }
     },
     "awards": {
-        "title": "Awards & Achievements",
+        "title": "Competition Experience",
         "items": {
             "ai-cup-2024": {
                 "title": "2024 AI CUP E.SUN AI Open Challenge",
