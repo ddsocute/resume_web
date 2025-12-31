@@ -56,4 +56,11 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+
+  /* Force numbers to use monospaced font for precision */
+  .text-data,
+  .font-numeric {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+  }
 }

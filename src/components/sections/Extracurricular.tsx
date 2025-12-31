@@ -20,7 +20,7 @@ export default function ExtracurricularSection() {
     const locale = useLocale();
 
     return (
-        <section id="extracurricular" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
+        <section id="extracurricular" className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#333333]">
             <div className="container mx-auto max-w-5xl">
                 {/* Section Title */}
                 <motion.div
