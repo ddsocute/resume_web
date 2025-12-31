@@ -2,11 +2,8 @@
 
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
-import Link from "next/link";
-import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import ExperienceCard from "@/components/ui/ExperienceCard";
-
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function Awards() {
@@ -21,36 +18,30 @@ export default function Awards() {
     };
 
     return (
-        <section id="awards" className="py-24 lg:py-40 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA] text-[#333333]">
-            <div className="container mx-auto max-w-5xl">
-                {/* Section Title */}
-                <SectionHeading title={t("title")} subtitle="Honors & Achievements" />
+        <section id="awards" className="py-20 bg-white">
+            <div className="container mx-auto px-4 lg:px-8">
+                <SectionHeading title={t("title")} />
 
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {awards.map((id, index) => {
                         const itemKey = `items.${id}`;
-                        const title = t(`${itemKey}.title`);
-                        const organization = t(`${itemKey}.organization`);
-                        const rank = t(`${itemKey}.rank`);
-                        const achievement = t(`${itemKey}.achievement`);
-                        const logoSrc = LOGO_MAP[id];
-
                         return (
                             <motion.div
                                 key={id}
-                                initial={{ opacity: 0, y: 10 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="flex h-full"
                             >
                                 <ExperienceCard
-                                    logo={logoSrc}
-                                    title={title}
-                                    company={organization}
-                                    date={rank}
-                                    summary={achievement}
+                                    logo={LOGO_MAP[id]}
+                                    title={t(`${itemKey}.title`)}
+                                    company={t(`${itemKey}.organization`)}
+                                    date={t(`${itemKey}.rank`)}
+                                    summary={t(`${itemKey}.achievement`)}
                                     link={`/${locale}/awards/${id}`}
-                                    linkText="View Achievement"
+                                    linkText="Explore Details"
                                     highlightDate={true}
                                 />
                             </motion.div>

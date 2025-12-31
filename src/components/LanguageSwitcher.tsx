@@ -1,37 +1,29 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
 
 export default function LanguageSwitcher() {
-    const pathname = usePathname();
+    const locale = useLocale();
     const router = useRouter();
-    const t = useTranslations("nav");
+    const pathname = usePathname();
 
-    const currentLocale = pathname.startsWith("/en") ? "en" : "zh";
-
-    const switchLanguage = (newLocale: string) => {
-        // Replace the locale in the current pathname
-        const newPath = pathname.replace(/^\/(zh|en)/, `/${newLocale}`);
-        router.push(newPath);
+    const handleSwitch = (newLocale: "en" | "zh") => {
+        router.replace(pathname, { locale: newLocale });
     };
 
     return (
-        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+        <div className="flex bg-slate-100 p-1 rounded-sm border border-slate-200">
             <button
-                onClick={() => switchLanguage("zh")}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${currentLocale === "zh"
-                        ? "bg-white text-slate-900"
-                        : "text-white/70 hover:text-white"
+                onClick={() => handleSwitch("zh")}
+                className={`px-4 py-1.5 text-xs font-mono transition-all ${locale === "zh" ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
                     }`}
             >
-                中文
+                ZH
             </button>
             <button
-                onClick={() => switchLanguage("en")}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${currentLocale === "en"
-                        ? "bg-white text-slate-900"
-                        : "text-white/70 hover:text-white"
+                onClick={() => handleSwitch("en")}
+                className={`px-4 py-1.5 text-xs font-mono transition-all ${locale === "en" ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
                     }`}
             >
                 EN
